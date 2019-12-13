@@ -1,0 +1,2 @@
+# DReversi-iOS
+iOSでリバーシ
