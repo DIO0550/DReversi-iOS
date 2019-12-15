@@ -7,9 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A64EF4F23A3A701009DBE36 /* DRTitleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A64EF4E23A3A701009DBE36 /* DRTitleViewController.swift */; };
+		3A64EF5323A3A85C009DBE36 /* DRGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A64EF5223A3A85C009DBE36 /* DRGameViewController.swift */; };
+		3A7C0E3F23A4C00400B931C2 /* DRConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7C0E3E23A4C00400B931C2 /* DRConstants.swift */; };
+		3A7C0E4223A4C9B500B931C2 /* String+Addtional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7C0E4123A4C9B500B931C2 /* String+Addtional.swift */; };
+		3A7C0E4423A503DE00B931C2 /* DRTitleViewController+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7C0E4323A503DE00B931C2 /* DRTitleViewController+Animation.swift */; };
+		3A97E97E23A6506D00E55B1E /* DRevesiControl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A97E97D23A6506D00E55B1E /* DRevesiControl.framework */; };
+		3A97E97F23A6506D00E55B1E /* DRevesiControl.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3A97E97D23A6506D00E55B1E /* DRevesiControl.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3A97E98123A6507100E55B1E /* DReversiUtil.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A97E98023A6507100E55B1E /* DReversiUtil.framework */; };
+		3A97E98223A6507100E55B1E /* DReversiUtil.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3A97E98023A6507100E55B1E /* DReversiUtil.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3A9A5A9123A39279005C0E10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9A5A9023A39279005C0E10 /* AppDelegate.swift */; };
 		3A9A5A9323A39279005C0E10 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9A5A9223A39279005C0E10 /* SceneDelegate.swift */; };
-		3A9A5A9523A39279005C0E10 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9A5A9423A39279005C0E10 /* ViewController.swift */; };
 		3A9A5A9823A39279005C0E10 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A9A5A9623A39279005C0E10 /* Main.storyboard */; };
 		3A9A5A9A23A3927A005C0E10 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A9A5A9923A3927A005C0E10 /* Assets.xcassets */; };
 		3A9A5A9D23A3927A005C0E10 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A9A5A9B23A3927A005C0E10 /* LaunchScreen.storyboard */; };
@@ -34,11 +42,32 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		3A97E8F923A6442C00E55B1E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3A97E98223A6507100E55B1E /* DReversiUtil.framework in Embed Frameworks */,
+				3A97E97F23A6506D00E55B1E /* DRevesiControl.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		3A64EF4E23A3A701009DBE36 /* DRTitleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DRTitleViewController.swift; sourceTree = "<group>"; };
+		3A64EF5223A3A85C009DBE36 /* DRGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DRGameViewController.swift; sourceTree = "<group>"; };
+		3A7C0E3E23A4C00400B931C2 /* DRConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DRConstants.swift; sourceTree = "<group>"; };
+		3A7C0E4123A4C9B500B931C2 /* String+Addtional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Addtional.swift"; sourceTree = "<group>"; };
+		3A7C0E4323A503DE00B931C2 /* DRTitleViewController+Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DRTitleViewController+Animation.swift"; sourceTree = "<group>"; };
+		3A97E97D23A6506D00E55B1E /* DRevesiControl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DRevesiControl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A97E98023A6507100E55B1E /* DReversiUtil.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DReversiUtil.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A9A5A8D23A39279005C0E10 /* DReversi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DReversi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A9A5A9023A39279005C0E10 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3A9A5A9223A39279005C0E10 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3A9A5A9423A39279005C0E10 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3A9A5A9723A39279005C0E10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3A9A5A9923A3927A005C0E10 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A9A5A9C23A3927A005C0E10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,6 +85,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A97E98123A6507100E55B1E /* DReversiUtil.framework in Frameworks */,
+				3A97E97E23A6506D00E55B1E /* DRevesiControl.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +107,65 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A64EF5023A3A70A009DBE36 /* TItle */ = {
+			isa = PBXGroup;
+			children = (
+				3A64EF4E23A3A701009DBE36 /* DRTitleViewController.swift */,
+				3A7C0E4323A503DE00B931C2 /* DRTitleViewController+Animation.swift */,
+			);
+			path = TItle;
+			sourceTree = "<group>";
+		};
+		3A64EF5123A3A844009DBE36 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				3A64EF5223A3A85C009DBE36 /* DRGameViewController.swift */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+		3A64EF5423A3A877009DBE36 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				3A7C0E3E23A4C00400B931C2 /* DRConstants.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		3A64EF5A23A3B0E8009DBE36 /* Reource */ = {
+			isa = PBXGroup;
+			children = (
+				3A64EF5B23A3B108009DBE36 /* storyboard */,
+			);
+			path = Reource;
+			sourceTree = "<group>";
+		};
+		3A64EF5B23A3B108009DBE36 /* storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				3A9A5A9623A39279005C0E10 /* Main.storyboard */,
+				3A9A5A9B23A3927A005C0E10 /* LaunchScreen.storyboard */,
+			);
+			path = storyboard;
+			sourceTree = "<group>";
+		};
+		3A7C0E4023A4C99900B931C2 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				3A7C0E4123A4C9B500B931C2 /* String+Addtional.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		3A97E97C23A6506D00E55B1E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3A97E98023A6507100E55B1E /* DReversiUtil.framework */,
+				3A97E97D23A6506D00E55B1E /* DRevesiControl.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3A9A5A8423A39279005C0E10 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +173,7 @@
 				3A9A5AA623A3927B005C0E10 /* DReversiTests */,
 				3A9A5AB123A3927B005C0E10 /* DReversiUITests */,
 				3A9A5A8E23A39279005C0E10 /* Products */,
+				3A97E97C23A6506D00E55B1E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,10 +192,12 @@
 			children = (
 				3A9A5A9023A39279005C0E10 /* AppDelegate.swift */,
 				3A9A5A9223A39279005C0E10 /* SceneDelegate.swift */,
-				3A9A5A9423A39279005C0E10 /* ViewController.swift */,
-				3A9A5A9623A39279005C0E10 /* Main.storyboard */,
+				3A7C0E4023A4C99900B931C2 /* Extension */,
+				3A64EF5123A3A844009DBE36 /* Game */,
+				3A64EF5023A3A70A009DBE36 /* TItle */,
+				3A64EF5423A3A877009DBE36 /* Util */,
+				3A64EF5A23A3B0E8009DBE36 /* Reource */,
 				3A9A5A9923A3927A005C0E10 /* Assets.xcassets */,
-				3A9A5A9B23A3927A005C0E10 /* LaunchScreen.storyboard */,
 				3A9A5A9E23A3927A005C0E10 /* Info.plist */,
 			);
 			path = DReversi;
@@ -138,6 +231,7 @@
 				3A9A5A8923A39279005C0E10 /* Sources */,
 				3A9A5A8A23A39279005C0E10 /* Frameworks */,
 				3A9A5A8B23A39279005C0E10 /* Resources */,
+				3A97E8F923A6442C00E55B1E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -259,8 +353,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A9A5A9523A39279005C0E10 /* ViewController.swift in Sources */,
+				3A64EF4F23A3A701009DBE36 /* DRTitleViewController.swift in Sources */,
+				3A7C0E4423A503DE00B931C2 /* DRTitleViewController+Animation.swift in Sources */,
+				3A7C0E4223A4C9B500B931C2 /* String+Addtional.swift in Sources */,
 				3A9A5A9123A39279005C0E10 /* AppDelegate.swift in Sources */,
+				3A7C0E3F23A4C00400B931C2 /* DRConstants.swift in Sources */,
+				3A64EF5323A3A85C009DBE36 /* DRGameViewController.swift in Sources */,
 				3A9A5A9323A39279005C0E10 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
