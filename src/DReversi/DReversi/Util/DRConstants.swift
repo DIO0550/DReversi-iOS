@@ -8,6 +8,12 @@
 
 import UIKit
 
+enum GameLevel {
+    case EASY
+    case NORMAL
+    case HARD
+}
+
 struct DRConstants {
     static let DRTitleShadowOffset: CGSize = CGSize(width: 3, height: 3)
     static let DRTitleShadowBlurRadius: CGFloat = 3.0
