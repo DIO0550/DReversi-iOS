@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A49BBF823A7BBFA007E9D48 /* DRGameViewSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A49BBF723A7BBFA007E9D48 /* DRGameViewSegue.swift */; };
 		3A64EF4F23A3A701009DBE36 /* DRTitleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A64EF4E23A3A701009DBE36 /* DRTitleViewController.swift */; };
 		3A64EF5323A3A85C009DBE36 /* DRGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A64EF5223A3A85C009DBE36 /* DRGameViewController.swift */; };
 		3A7C0E3F23A4C00400B931C2 /* DRConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7C0E3E23A4C00400B931C2 /* DRConstants.swift */; };
@@ -58,6 +59,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3A49BBF723A7BBFA007E9D48 /* DRGameViewSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DRGameViewSegue.swift; sourceTree = "<group>"; };
 		3A64EF4E23A3A701009DBE36 /* DRTitleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DRTitleViewController.swift; sourceTree = "<group>"; };
 		3A64EF5223A3A85C009DBE36 /* DRGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DRGameViewController.swift; sourceTree = "<group>"; };
 		3A7C0E3E23A4C00400B931C2 /* DRConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DRConstants.swift; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				3A64EF5223A3A85C009DBE36 /* DRGameViewController.swift */,
+				3A49BBF723A7BBFA007E9D48 /* DRGameViewSegue.swift */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -357,6 +360,7 @@
 				3A7C0E4423A503DE00B931C2 /* DRTitleViewController+Animation.swift in Sources */,
 				3A7C0E4223A4C9B500B931C2 /* String+Addtional.swift in Sources */,
 				3A9A5A9123A39279005C0E10 /* AppDelegate.swift in Sources */,
+				3A49BBF823A7BBFA007E9D48 /* DRGameViewSegue.swift in Sources */,
 				3A7C0E3F23A4C00400B931C2 /* DRConstants.swift in Sources */,
 				3A64EF5323A3A85C009DBE36 /* DRGameViewController.swift in Sources */,
 				3A9A5A9323A39279005C0E10 /* SceneDelegate.swift in Sources */,

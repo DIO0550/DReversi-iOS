@@ -9,5 +9,18 @@
 import UIKit
 
 class DRGameViewSegue: UIStoryboardSegue {
-
+    override func perform() {
+        let destVC = self.destination
+        let sourceVC = self.source
+        
+        if destVC is DRGameViewController && sourceVC is DRTitleViewController {
+            (destVC as! DRGameViewController).gameLevel = (sourceVC as! DRTitleViewController).gameLevel
+        }
+        
+        UIView.transition(with: source.view, duration: 0.5, options: .transitionFlipFromTop, animations: {
+            sourceVC.view.addSubview(destVC.view)
+        }) { finish in
+            sourceVC.dismiss(animated: false, completion:nil)
+        }
+    }
 }

@@ -112,6 +112,9 @@
                                                 <integer key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="xe1-gq-w80" kind="custom" identifier="DRSegueGameView" customClass="DRGameViewSegue" customModule="DReversi" customModuleProvider="target" id="zkb-0D-odU"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pez-je-tI0">
                                         <rect key="frame" x="40" y="187" width="306" height="58"/>
@@ -126,6 +129,9 @@
                                                 <integer key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="xe1-gq-w80" kind="custom" identifier="DRSegueGameView" customClass="DRGameViewSegue" customModule="DReversi" customModuleProvider="target" id="UjR-1X-wiG"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ido-Ms-tS8">
                                         <rect key="frame" x="40" y="255" width="306" height="58"/>
@@ -220,4 +226,7 @@
             <point key="canvasLocation" x="132" y="1072"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="zkb-0D-odU"/>
+    </inferredMetricsTieBreakers>
 </document>
