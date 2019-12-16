@@ -9,6 +9,7 @@
 import UIKit
 
 class DRGameViewController: UIViewController {
+    public var gameLevel: GameLevel = .NORMAL
 
     override func viewDidLoad() {
         super.viewDidLoad()

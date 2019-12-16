@@ -22,6 +22,7 @@ class DRTitleViewController: UIViewController {
     
     
     var isAnimating: Bool = false
+    public var gameLevel: GameLevel = .NORMAL
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +35,17 @@ class DRTitleViewController: UIViewController {
         self.adjustSecondControls()
     }
     @IBAction func touchLevelButton(_ sender: Any) {
+        switch sender as! UIButton {
+        case self.easyButton:
+            self.gameLevel = .EASY
+        case self.normalButton:
+            self.gameLevel = .NORMAL
+        case self.hardButton:
+            self.gameLevel = .HARD
+        default:
+            self.gameLevel = .NORMAL
+        }
+        
         self.levelControlFadeOutAnimation()
     }
     @IBAction func touchBackButton(_ sender: Any) {
