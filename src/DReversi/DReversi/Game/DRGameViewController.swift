@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import DRevesiControl
 
 class DRGameViewController: UIViewController {
     public var gameLevel: GameLevel = .NORMAL
 
+    @IBOutlet weak var boardView: DRBoardView!
     override func viewDidLoad() {
         super.viewDidLoad()
     }
