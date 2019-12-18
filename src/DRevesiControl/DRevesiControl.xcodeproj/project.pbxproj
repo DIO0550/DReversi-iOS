@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A832E5923AA2C3400D9674B /* DRBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A832E5823AA2C3400D9674B /* DRBoardView.swift */; };
+		3A832E5B23AA44D900D9674B /* DRStonePosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A832E5A23AA44D900D9674B /* DRStonePosition.swift */; };
 		3A97E96523A644FB00E55B1E /* DRevesiControl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A97E95B23A644FB00E55B1E /* DRevesiControl.framework */; };
 		3A97E96A23A644FB00E55B1E /* DRevesiControlTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A97E96923A644FB00E55B1E /* DRevesiControlTests.swift */; };
 		3A97E96C23A644FB00E55B1E /* DRevesiControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A97E95E23A644FB00E55B1E /* DRevesiControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -25,6 +27,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3A832E5823AA2C3400D9674B /* DRBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DRBoardView.swift; sourceTree = "<group>"; };
+		3A832E5A23AA44D900D9674B /* DRStonePosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DRStonePosition.swift; sourceTree = "<group>"; };
 		3A97E95B23A644FB00E55B1E /* DRevesiControl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DRevesiControl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A97E95E23A644FB00E55B1E /* DRevesiControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DRevesiControl.h; sourceTree = "<group>"; };
 		3A97E95F23A644FB00E55B1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -77,6 +81,7 @@
 			children = (
 				3A97E95E23A644FB00E55B1E /* DRevesiControl.h */,
 				3A97E97723A64F7700E55B1E /* UIView */,
+				3A832E5A23AA44D900D9674B /* DRStonePosition.swift */,
 				3A97E95F23A644FB00E55B1E /* Info.plist */,
 			);
 			path = DRevesiControl;
@@ -96,6 +101,7 @@
 			children = (
 				3A97E97923A64FA400E55B1E /* DRStoneCircleView.swift */,
 				3A97E97823A64FA400E55B1E /* DRStoneView.swift */,
+				3A832E5823AA2C3400D9674B /* DRBoardView.swift */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -211,7 +217,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A97E97B23A64FA400E55B1E /* DRStoneCircleView.swift in Sources */,
+				3A832E5923AA2C3400D9674B /* DRBoardView.swift in Sources */,
 				3A97E97A23A64FA400E55B1E /* DRStoneView.swift in Sources */,
+				3A832E5B23AA44D900D9674B /* DRStonePosition.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
