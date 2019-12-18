@@ -8,11 +8,11 @@
 
 import UIKit
 
-public enum StoneType {
+public enum DRStoneType {
     case BLACK_STONE
     case WHITE_STONE
     
-    func reverse() -> StoneType {
+    func reverse() -> DRStoneType {
         switch self {
         case .BLACK_STONE:
             return .WHITE_STONE
@@ -26,11 +26,11 @@ public enum StoneType {
     }
 }
 public class DRStoneView: UIView {
-    public var stoneType: StoneType = .BLACK_STONE;
+    public var stoneType: DRStoneType = .BLACK_STONE;
     public var blackStoneView: DRStoneCircleView!
     public var whiteStoneView: DRStoneCircleView!
     
-    public init(frame: CGRect, type: StoneType) {
+    public init(frame: CGRect, type: DRStoneType) {
         super.init(frame: frame)
         let size = frame.width > frame.height ? frame.height : frame.width
         self.blackStoneView = DRStoneCircleView.init(frame: CGRect(x: 0, y: 0, width: size, height: size),  color: .black)
