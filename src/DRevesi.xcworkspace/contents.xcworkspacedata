@@ -5,7 +5,7 @@
       location = "group:DReversi/DReversi.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:DRevesiControl/DRevesiControl.xcodeproj">
+      location = "group:DReversiControl/DReversiControl.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:DReversiUtil/DReversiUtil.xcodeproj">

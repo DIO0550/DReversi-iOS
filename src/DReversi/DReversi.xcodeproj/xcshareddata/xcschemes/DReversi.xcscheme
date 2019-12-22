@@ -48,16 +48,6 @@
                ReferencedContainer = "container:DReversi.xcodeproj">
             </BuildableReference>
          </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3A97E8E923A6442C00E55B1E"
-               BuildableName = "DReversiUtilTests.xctest"
-               BlueprintName = "DReversiUtilTests"
-               ReferencedContainer = "container:DReversi.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
