@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import DReversiUtil
 
 public class DRBoardView: UIView {
     // 背景色
@@ -15,26 +16,27 @@ public class DRBoardView: UIView {
     private static let BoardColor: UIColor = .systemGreen
     // マージン
     private static let BoardMargin: CGFloat = 8.0
-    // ブロック数
-    private static let BlockNumber: Int = 8
     // 線の太さ
     private static let BlockBorderWidth = 2.0
     
     private var blockSize: CGFloat = 0
     private var boardRect: CGRect = CGRect.zero
     
+    // TODO: 選択中のインデックス
+    public private(set) var selectStonePosition: DRStonePosition = DRStonePosition(column: -1, row: -1)
     
     override public func layoutSubviews() {
         super.layoutSubviews()
         self.adjustBoardRect()
     }
     
+    
     private func adjustBoardRect() {
         // 小さい方のサイズ取得
         let smallerSize: CGFloat = min(self.bounds.height, self.bounds.width)
         let boardSize: CGFloat = smallerSize - ((DRBoardView.BoardMargin) * 2)
         // 1つのブロックのサイズ
-        self.blockSize = boardSize / CGFloat(DRBoardView.BlockNumber)
+        self.blockSize = boardSize / CGFloat(DReversiControlConst.BlockCount)
         let startPosX: CGFloat
         let startPosY: CGFloat
         if self.bounds.height > self.bounds.width {
@@ -51,6 +53,7 @@ public class DRBoardView: UIView {
         super.draw(rect)
         self.drawBackground(rect)
         self.drawBoard(rect)
+        self.drawSelectBorder()
     }
     
 
@@ -76,19 +79,19 @@ public class DRBoardView: UIView {
         guard let context = UIGraphicsGetCurrentContext() else { return }
         context.saveGState()
         let path = UIBezierPath()
-        for index in 0 ..< (DRBoardView.BlockNumber + 1) {
+        for index in 0 ..< (DReversiControlConst.BlockCount + 1) {
             let x: CGFloat = self.boardRect.origin.x + (CGFloat(index) * blockSize)
             var y: CGFloat = self.boardRect.origin.y
             path.move(to: CGPoint(x: x, y: y))
-            y = self.boardRect.origin.y + (CGFloat(DRBoardView.BlockNumber) * blockSize)
+            y = self.boardRect.origin.y + (CGFloat(DReversiControlConst.BlockCount) * blockSize)
             path.addLine(to: CGPoint(x: x, y: y))
         }
         
-        for index in 0 ..< (DRBoardView.BlockNumber + 1) {
+        for index in 0 ..< (DReversiControlConst.BlockCount + 1) {
             var x: CGFloat = self.boardRect.origin.x
             let y: CGFloat = self.boardRect.origin.y + (CGFloat(index) * blockSize)
             path.move(to: CGPoint(x: x, y: y))
-            x = self.boardRect.origin.x  + (CGFloat(DRBoardView.BlockNumber) * blockSize)
+            x = self.boardRect.origin.x + (CGFloat(DReversiControlConst.BlockCount) * blockSize)
             path.addLine(to: CGPoint(x: x, y: y))
         }
         path.lineWidth = CGFloat(DRBoardView.BlockBorderWidth)
@@ -100,7 +103,47 @@ public class DRBoardView: UIView {
         context.saveGState()
     }
     
-    private func addStoneView(stonePos: DRStonePosition, stoneType: DRStoneType) {
+    private func drawSelectBorder() {
+        if self.selectStonePosition.isOutOfRange() { return }
+        let rect = self.stonePositionRect(self.selectStonePosition)
+        guard let context = UIGraphicsGetCurrentContext() else { return }
+        context.saveGState()
+        let bezierPath = UIBezierPath(rect: rect)
+        UIColor.systemYellow.setStroke()
+        bezierPath.lineWidth = 2.0
+        bezierPath.strokeInside()
+        context.restoreGState()
+    }
+    
+    public func stonePositionRect(_ stonePosition: DRStonePosition) -> CGRect {
+        let x = self.boardRect.origin.x + self.blockSize * CGFloat(stonePosition.column)
+        let y = self.boardRect.origin.y + self.blockSize * CGFloat(stonePosition.row)
         
+        return CGRect(x: x, y: y, width: self.blockSize, height: self.blockSize)
+    }
+    
+    override public func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        guard let firstTouche = touches.first else { return }
+        let touchePoint = firstTouche.location(in: self)
+        
+        self.selectStonePosition = self.stonePositionFromPoint(touchePoint)
+        self.setNeedsDisplay()
+    }
+    
+}
+
+extension DRBoardView {
+    private func stonePositionFromPoint(_ point: CGPoint) -> DRStonePosition {
+        for row in 0 ..< DReversiControlConst.BlockCount {
+            for column in 0 ..< DReversiControlConst.BlockCount {
+                let stonePosition = DRStonePosition(column: column, row: row)
+                let rect = self.stonePositionRect(stonePosition)
+                if rect.contains(point) {
+                    return stonePosition
+                }
+                
+            }
+        }
+        return DRStonePosition(column: -1, row: -1)
     }
 }

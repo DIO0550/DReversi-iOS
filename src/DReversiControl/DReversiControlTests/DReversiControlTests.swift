@@ -1,15 +1,14 @@
 //
-//  DRevesiControlTests.swift
-//  DRevesiControlTests
+//  DReversiControlTests.swift
+//  DReversiControlTests
 //
-//  Created by DIO on 2019/12/15.
+//  Created by DIO on 2019/12/22.
 //  Copyright © 2019 DIO. All rights reserved.
 //
 
 import XCTest
-@testable import DRevesiControl
 
-class DRevesiControlTests: XCTestCase {
+class DReversiControlTests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -26,7 +25,7 @@ class DRevesiControlTests: XCTestCase {
 
     func testPerformanceExample() {
         // This is an example of a performance test case.
-        self.measure {
+        measure {
             // Put the code you want to measure the time of here.
         }
     }

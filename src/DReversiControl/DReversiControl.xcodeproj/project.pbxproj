@@ -7,93 +7,126 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A2ABC8D23AF20020042BC54 /* DReversiControlConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2ABC8C23AF20020042BC54 /* DReversiControlConst.swift */; };
+		3A2ABC9923AF29590042BC54 /* DRMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2ABC9823AF29590042BC54 /* DRMenuView.swift */; };
+		3A2ABCBB23AF9D8F0042BC54 /* DReversiUtil.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A2ABCBA23AF9D8F0042BC54 /* DReversiUtil.framework */; };
+		3A2ABCBC23AF9D8F0042BC54 /* DReversiUtil.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3A2ABCBA23AF9D8F0042BC54 /* DReversiUtil.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3A2ABCC723AF9DCB0042BC54 /* DReversiControl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A97E95B23A644FB00E55B1E /* DReversiControl.framework */; };
+		3A2ABCCF23AF9DE40042BC54 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3A2ABCCD23AF9DE40042BC54 /* Info.plist */; };
+		3A2ABCD023AF9DE40042BC54 /* DReversiControlTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2ABCCE23AF9DE40042BC54 /* DReversiControlTests.swift */; };
 		3A832E5923AA2C3400D9674B /* DRBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A832E5823AA2C3400D9674B /* DRBoardView.swift */; };
 		3A832E5B23AA44D900D9674B /* DRStonePosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A832E5A23AA44D900D9674B /* DRStonePosition.swift */; };
-		3A97E96523A644FB00E55B1E /* DRevesiControl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A97E95B23A644FB00E55B1E /* DRevesiControl.framework */; };
-		3A97E96A23A644FB00E55B1E /* DRevesiControlTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A97E96923A644FB00E55B1E /* DRevesiControlTests.swift */; };
-		3A97E96C23A644FB00E55B1E /* DRevesiControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A97E95E23A644FB00E55B1E /* DRevesiControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3A97E96C23A644FB00E55B1E /* DReversiControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A97E95E23A644FB00E55B1E /* DReversiControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3A97E97A23A64FA400E55B1E /* DRStoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A97E97823A64FA400E55B1E /* DRStoneView.swift */; };
 		3A97E97B23A64FA400E55B1E /* DRStoneCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A97E97923A64FA400E55B1E /* DRStoneCircleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		3A97E96623A644FB00E55B1E /* PBXContainerItemProxy */ = {
+		3A2ABCC823AF9DCB0042BC54 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 3A97E95223A644FB00E55B1E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 3A97E95A23A644FB00E55B1E;
-			remoteInfo = DRevesiControl;
+			remoteInfo = DReversiControl;
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		3A2ABCBD23AF9D8F0042BC54 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3A2ABCBC23AF9D8F0042BC54 /* DReversiUtil.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		3A2ABC8C23AF20020042BC54 /* DReversiControlConst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DReversiControlConst.swift; path = DReversiControl/DReversiControlConst.swift; sourceTree = SOURCE_ROOT; };
+		3A2ABC9823AF29590042BC54 /* DRMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DRMenuView.swift; sourceTree = "<group>"; };
+		3A2ABCBA23AF9D8F0042BC54 /* DReversiUtil.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DReversiUtil.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A2ABCC223AF9DCB0042BC54 /* DReversiControlTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DReversiControlTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A2ABCCD23AF9DE40042BC54 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A2ABCCE23AF9DE40042BC54 /* DReversiControlTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DReversiControlTests.swift; sourceTree = "<group>"; };
 		3A832E5823AA2C3400D9674B /* DRBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DRBoardView.swift; sourceTree = "<group>"; };
 		3A832E5A23AA44D900D9674B /* DRStonePosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DRStonePosition.swift; sourceTree = "<group>"; };
-		3A97E95B23A644FB00E55B1E /* DRevesiControl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DRevesiControl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3A97E95E23A644FB00E55B1E /* DRevesiControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DRevesiControl.h; sourceTree = "<group>"; };
+		3A97E95B23A644FB00E55B1E /* DReversiControl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DReversiControl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A97E95E23A644FB00E55B1E /* DReversiControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DReversiControl.h; sourceTree = "<group>"; };
 		3A97E95F23A644FB00E55B1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3A97E96423A644FB00E55B1E /* DRevesiControlTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DRevesiControlTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3A97E96923A644FB00E55B1E /* DRevesiControlTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DRevesiControlTests.swift; sourceTree = "<group>"; };
-		3A97E96B23A644FB00E55B1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A97E97823A64FA400E55B1E /* DRStoneView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DRStoneView.swift; sourceTree = "<group>"; };
 		3A97E97923A64FA400E55B1E /* DRStoneCircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DRStoneCircleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		3A2ABCBF23AF9DCB0042BC54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A2ABCC723AF9DCB0042BC54 /* DReversiControl.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3A97E95823A644FB00E55B1E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3A97E96123A644FB00E55B1E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3A97E96523A644FB00E55B1E /* DRevesiControl.framework in Frameworks */,
+				3A2ABCBB23AF9D8F0042BC54 /* DReversiUtil.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A2ABC9023AF28020042BC54 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3A2ABCBA23AF9D8F0042BC54 /* DReversiUtil.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3A2ABCC323AF9DCB0042BC54 /* DReversiControlTests */ = {
+			isa = PBXGroup;
+			children = (
+				3A2ABCCE23AF9DE40042BC54 /* DReversiControlTests.swift */,
+				3A2ABCCD23AF9DE40042BC54 /* Info.plist */,
+			);
+			path = DReversiControlTests;
+			sourceTree = "<group>";
+		};
 		3A97E95123A644FB00E55B1E = {
 			isa = PBXGroup;
 			children = (
-				3A97E95D23A644FB00E55B1E /* DRevesiControl */,
-				3A97E96823A644FB00E55B1E /* DRevesiControlTests */,
+				3A97E95D23A644FB00E55B1E /* DReversiControl */,
+				3A2ABCC323AF9DCB0042BC54 /* DReversiControlTests */,
 				3A97E95C23A644FB00E55B1E /* Products */,
+				3A2ABC9023AF28020042BC54 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		3A97E95C23A644FB00E55B1E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3A97E95B23A644FB00E55B1E /* DRevesiControl.framework */,
-				3A97E96423A644FB00E55B1E /* DRevesiControlTests.xctest */,
+				3A97E95B23A644FB00E55B1E /* DReversiControl.framework */,
+				3A2ABCC223AF9DCB0042BC54 /* DReversiControlTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3A97E95D23A644FB00E55B1E /* DRevesiControl */ = {
+		3A97E95D23A644FB00E55B1E /* DReversiControl */ = {
 			isa = PBXGroup;
 			children = (
-				3A97E95E23A644FB00E55B1E /* DRevesiControl.h */,
+				3A97E95E23A644FB00E55B1E /* DReversiControl.h */,
 				3A97E97723A64F7700E55B1E /* UIView */,
 				3A832E5A23AA44D900D9674B /* DRStonePosition.swift */,
+				3A2ABC8C23AF20020042BC54 /* DReversiControlConst.swift */,
 				3A97E95F23A644FB00E55B1E /* Info.plist */,
 			);
-			path = DRevesiControl;
-			sourceTree = "<group>";
-		};
-		3A97E96823A644FB00E55B1E /* DRevesiControlTests */ = {
-			isa = PBXGroup;
-			children = (
-				3A97E96923A644FB00E55B1E /* DRevesiControlTests.swift */,
-				3A97E96B23A644FB00E55B1E /* Info.plist */,
-			);
-			path = DRevesiControlTests;
+			path = DReversiControl;
 			sourceTree = "<group>";
 		};
 		3A97E97723A64F7700E55B1E /* UIView */ = {
@@ -102,6 +135,7 @@
 				3A97E97923A64FA400E55B1E /* DRStoneCircleView.swift */,
 				3A97E97823A64FA400E55B1E /* DRStoneView.swift */,
 				3A832E5823AA2C3400D9674B /* DRBoardView.swift */,
+				3A2ABC9823AF29590042BC54 /* DRMenuView.swift */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -113,48 +147,49 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A97E96C23A644FB00E55B1E /* DRevesiControl.h in Headers */,
+				3A97E96C23A644FB00E55B1E /* DReversiControl.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		3A97E95A23A644FB00E55B1E /* DRevesiControl */ = {
+		3A2ABCC123AF9DCB0042BC54 /* DReversiControlTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3A97E96F23A644FB00E55B1E /* Build configuration list for PBXNativeTarget "DRevesiControl" */;
+			buildConfigurationList = 3A2ABCCA23AF9DCB0042BC54 /* Build configuration list for PBXNativeTarget "DReversiControlTests" */;
+			buildPhases = (
+				3A2ABCBE23AF9DCB0042BC54 /* Sources */,
+				3A2ABCBF23AF9DCB0042BC54 /* Frameworks */,
+				3A2ABCC023AF9DCB0042BC54 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3A2ABCC923AF9DCB0042BC54 /* PBXTargetDependency */,
+			);
+			name = DReversiControlTests;
+			productName = DReversiControlTests;
+			productReference = 3A2ABCC223AF9DCB0042BC54 /* DReversiControlTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3A97E95A23A644FB00E55B1E /* DReversiControl */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A97E96F23A644FB00E55B1E /* Build configuration list for PBXNativeTarget "DReversiControl" */;
 			buildPhases = (
 				3A97E95623A644FB00E55B1E /* Headers */,
 				3A97E95723A644FB00E55B1E /* Sources */,
 				3A97E95823A644FB00E55B1E /* Frameworks */,
 				3A97E95923A644FB00E55B1E /* Resources */,
+				3A2ABCBD23AF9D8F0042BC54 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = DRevesiControl;
+			name = DReversiControl;
 			productName = DRevesiControl;
-			productReference = 3A97E95B23A644FB00E55B1E /* DRevesiControl.framework */;
+			productReference = 3A97E95B23A644FB00E55B1E /* DReversiControl.framework */;
 			productType = "com.apple.product-type.framework";
-		};
-		3A97E96323A644FB00E55B1E /* DRevesiControlTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3A97E97223A644FB00E55B1E /* Build configuration list for PBXNativeTarget "DRevesiControlTests" */;
-			buildPhases = (
-				3A97E96023A644FB00E55B1E /* Sources */,
-				3A97E96123A644FB00E55B1E /* Frameworks */,
-				3A97E96223A644FB00E55B1E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				3A97E96723A644FB00E55B1E /* PBXTargetDependency */,
-			);
-			name = DRevesiControlTests;
-			productName = DRevesiControlTests;
-			productReference = 3A97E96423A644FB00E55B1E /* DRevesiControlTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -166,16 +201,16 @@
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = DIO;
 				TargetAttributes = {
+					3A2ABCC123AF9DCB0042BC54 = {
+						CreatedOnToolsVersion = 11.3;
+					};
 					3A97E95A23A644FB00E55B1E = {
 						CreatedOnToolsVersion = 11.3;
 						LastSwiftMigration = 1130;
 					};
-					3A97E96323A644FB00E55B1E = {
-						CreatedOnToolsVersion = 11.3;
-					};
 				};
 			};
-			buildConfigurationList = 3A97E95523A644FB00E55B1E /* Build configuration list for PBXProject "DRevesiControl" */;
+			buildConfigurationList = 3A97E95523A644FB00E55B1E /* Build configuration list for PBXProject "DReversiControl" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -188,21 +223,22 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3A97E95A23A644FB00E55B1E /* DRevesiControl */,
-				3A97E96323A644FB00E55B1E /* DRevesiControlTests */,
+				3A97E95A23A644FB00E55B1E /* DReversiControl */,
+				3A2ABCC123AF9DCB0042BC54 /* DReversiControlTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		3A97E95923A644FB00E55B1E /* Resources */ = {
+		3A2ABCC023AF9DCB0042BC54 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A2ABCCF23AF9DE40042BC54 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3A97E96223A644FB00E55B1E /* Resources */ = {
+		3A97E95923A644FB00E55B1E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -212,6 +248,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		3A2ABCBE23AF9DCB0042BC54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A2ABCD023AF9DE40042BC54 /* DReversiControlTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3A97E95723A644FB00E55B1E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -219,29 +263,61 @@
 				3A97E97B23A64FA400E55B1E /* DRStoneCircleView.swift in Sources */,
 				3A832E5923AA2C3400D9674B /* DRBoardView.swift in Sources */,
 				3A97E97A23A64FA400E55B1E /* DRStoneView.swift in Sources */,
+				3A2ABC9923AF29590042BC54 /* DRMenuView.swift in Sources */,
 				3A832E5B23AA44D900D9674B /* DRStonePosition.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3A97E96023A644FB00E55B1E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3A97E96A23A644FB00E55B1E /* DRevesiControlTests.swift in Sources */,
+				3A2ABC8D23AF20020042BC54 /* DReversiControlConst.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		3A97E96723A644FB00E55B1E /* PBXTargetDependency */ = {
+		3A2ABCC923AF9DCB0042BC54 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3A97E95A23A644FB00E55B1E /* DRevesiControl */;
-			targetProxy = 3A97E96623A644FB00E55B1E /* PBXContainerItemProxy */;
+			target = 3A97E95A23A644FB00E55B1E /* DReversiControl */;
+			targetProxy = 3A2ABCC823AF9DCB0042BC54 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		3A2ABCCB23AF9DCB0042BC54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RMVJT9K8W3;
+				INFOPLIST_FILE = DReversiControlTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = DIO.DReversiControlTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3A2ABCCC23AF9DCB0042BC54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RMVJT9K8W3;
+				INFOPLIST_FILE = DReversiControlTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = DIO.DReversiControlTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		3A97E96D23A644FB00E55B1E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -372,7 +448,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = DRevesiControl/Info.plist;
+				INFOPLIST_FILE = DReversiControl/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -380,7 +456,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = DIO.DRevesiControl;
+				PRODUCT_BUNDLE_IDENTIFIER = DIO.DReversiControl;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -399,7 +475,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = DRevesiControl/Info.plist;
+				INFOPLIST_FILE = DReversiControl/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -407,47 +483,9 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = DIO.DRevesiControl;
+				PRODUCT_BUNDLE_IDENTIFIER = DIO.DReversiControl;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		3A97E97323A644FB00E55B1E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = RMVJT9K8W3;
-				INFOPLIST_FILE = DRevesiControlTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = DIO.DRevesiControlTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		3A97E97423A644FB00E55B1E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = RMVJT9K8W3;
-				INFOPLIST_FILE = DRevesiControlTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = DIO.DRevesiControlTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -456,7 +494,16 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3A97E95523A644FB00E55B1E /* Build configuration list for PBXProject "DRevesiControl" */ = {
+		3A2ABCCA23AF9DCB0042BC54 /* Build configuration list for PBXNativeTarget "DReversiControlTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A2ABCCB23AF9DCB0042BC54 /* Debug */,
+				3A2ABCCC23AF9DCB0042BC54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3A97E95523A644FB00E55B1E /* Build configuration list for PBXProject "DReversiControl" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3A97E96D23A644FB00E55B1E /* Debug */,
@@ -465,20 +512,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3A97E96F23A644FB00E55B1E /* Build configuration list for PBXNativeTarget "DRevesiControl" */ = {
+		3A97E96F23A644FB00E55B1E /* Build configuration list for PBXNativeTarget "DReversiControl" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3A97E97023A644FB00E55B1E /* Debug */,
 				3A97E97123A644FB00E55B1E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		3A97E97223A644FB00E55B1E /* Build configuration list for PBXNativeTarget "DRevesiControlTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3A97E97323A644FB00E55B1E /* Debug */,
-				3A97E97423A644FB00E55B1E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

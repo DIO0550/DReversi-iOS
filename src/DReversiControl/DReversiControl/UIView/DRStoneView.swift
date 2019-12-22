@@ -12,7 +12,7 @@ public enum DRStoneType {
     case BLACK_STONE
     case WHITE_STONE
     
-    func reverse() -> DRStoneType {
+    public func reverse() -> DRStoneType {
         switch self {
         case .BLACK_STONE:
             return .WHITE_STONE
@@ -29,14 +29,15 @@ public class DRStoneView: UIView {
     public var stoneType: DRStoneType = .BLACK_STONE;
     public var blackStoneView: DRStoneCircleView!
     public var whiteStoneView: DRStoneCircleView!
+    private let stoneMargin: CGFloat = 4.0
     
     public init(frame: CGRect, type: DRStoneType) {
         super.init(frame: frame)
         let size = frame.width > frame.height ? frame.height : frame.width
-        self.blackStoneView = DRStoneCircleView.init(frame: CGRect(x: 0, y: 0, width: size, height: size),  color: .black)
-        self.blackStoneView.center = self.center
-        self.whiteStoneView = DRStoneCircleView.init(frame: CGRect(x: 0, y: 0, width: size, height: size),  color: .white)
-        self.whiteStoneView.center = self.center
+        self.blackStoneView = DRStoneCircleView.init(frame: CGRect(x: self.stoneMargin, y: self.stoneMargin, width: size - self.stoneMargin * 2, height: size - self.stoneMargin * 2),  color: .black)
+        self.blackStoneView.center = CGPoint(x: self.bounds.midX, y: self.bounds.midY)
+        self.whiteStoneView = DRStoneCircleView.init(frame: CGRect(x: self.stoneMargin, y: self.stoneMargin, width: size - self.stoneMargin * 2, height: size - self.stoneMargin * 2),  color: .white)
+        self.whiteStoneView.center = CGPoint(x: self.bounds.midX, y: self.bounds.midY)
         self.stoneType = type
         
         if self.stoneType.isBlack() {
