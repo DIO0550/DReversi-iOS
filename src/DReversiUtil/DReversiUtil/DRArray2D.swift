@@ -7,9 +7,9 @@
 //
 
 import UIKit
-public class DRArray2D: Any {
+public class DRArray2D {
     /// 実際に使用する配列
-    private var array: [[Any]] = []
+    private var array: [[Any?]] = []
     private let width: Int;
     private let height: Int;
     
@@ -18,11 +18,11 @@ public class DRArray2D: Any {
     ///   - width: 配列の幅
     ///   - height: 配列の高さ
     ///   - value: 初期化する値
-    init(width: Int, height: Int, value: Any) {
+    public init(width: Int, height: Int, value: Any?) {
         self.width = width
         self.height = height
         for _ in (0 ..< width) {
-            self.array.append([Any](repeating: value, count: height))
+            self.array.append([Any?](repeating: value, count: height))
         }
     }
     
@@ -53,8 +53,8 @@ public class DRArray2D: Any {
 // MARK: Private Method
 extension DRArray2D {
     private func isOutOfBounds(x: Int, y: Int) -> Bool {
-        if x < 0 || self.width <= 0 { return true }
-        if y < 0 || self.height <= 0 { return true}
+        if x < 0 || self.width <= x { return true }
+        if y < 0 || self.height <= y { return true }
         
         return false
     }
