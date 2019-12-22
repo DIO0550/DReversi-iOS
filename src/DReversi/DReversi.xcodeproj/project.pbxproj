@@ -7,16 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A24930E23AB882500E04C22 /* DRGameAIBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A24930D23AB882500E04C22 /* DRGameAIBase.swift */; };
+		3A24931023AB88B200E04C22 /* DRGameAIEasy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A24930F23AB88B200E04C22 /* DRGameAIEasy.swift */; };
+		3A24931223AB893900E04C22 /* DRGameAINormal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A24931123AB893900E04C22 /* DRGameAINormal.swift */; };
+		3A24931423AB89BB00E04C22 /* DRGameAIHard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A24931323AB89BB00E04C22 /* DRGameAIHard.swift */; };
+		3A24931623AB8A3D00E04C22 /* DRGameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A24931523AB8A3D00E04C22 /* DRGameManager.swift */; };
+		3A2ABCA023AF8B570042BC54 /* DRGameManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2ABC9F23AF8B570042BC54 /* DRGameManagerTests.swift */; };
+		3A2ABCB323AF991E0042BC54 /* DReversiControl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A2ABCB123AF991E0042BC54 /* DReversiControl.framework */; };
+		3A2ABCB423AF991E0042BC54 /* DReversiControl.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3A2ABCB123AF991E0042BC54 /* DReversiControl.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3A2ABCB523AF991E0042BC54 /* DReversiUtil.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A2ABCB223AF991E0042BC54 /* DReversiUtil.framework */; };
+		3A2ABCB623AF991E0042BC54 /* DReversiUtil.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3A2ABCB223AF991E0042BC54 /* DReversiUtil.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3A49BBF823A7BBFA007E9D48 /* DRGameViewSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A49BBF723A7BBFA007E9D48 /* DRGameViewSegue.swift */; };
 		3A64EF4F23A3A701009DBE36 /* DRTitleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A64EF4E23A3A701009DBE36 /* DRTitleViewController.swift */; };
 		3A64EF5323A3A85C009DBE36 /* DRGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A64EF5223A3A85C009DBE36 /* DRGameViewController.swift */; };
 		3A7C0E3F23A4C00400B931C2 /* DRConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7C0E3E23A4C00400B931C2 /* DRConstants.swift */; };
 		3A7C0E4223A4C9B500B931C2 /* String+Addtional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7C0E4123A4C9B500B931C2 /* String+Addtional.swift */; };
 		3A7C0E4423A503DE00B931C2 /* DRTitleViewController+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7C0E4323A503DE00B931C2 /* DRTitleViewController+Animation.swift */; };
-		3A97E97E23A6506D00E55B1E /* DRevesiControl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A97E97D23A6506D00E55B1E /* DRevesiControl.framework */; };
-		3A97E97F23A6506D00E55B1E /* DRevesiControl.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3A97E97D23A6506D00E55B1E /* DRevesiControl.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		3A97E98123A6507100E55B1E /* DReversiUtil.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A97E98023A6507100E55B1E /* DReversiUtil.framework */; };
-		3A97E98223A6507100E55B1E /* DReversiUtil.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3A97E98023A6507100E55B1E /* DReversiUtil.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3A9A5A9123A39279005C0E10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9A5A9023A39279005C0E10 /* AppDelegate.swift */; };
 		3A9A5A9323A39279005C0E10 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9A5A9223A39279005C0E10 /* SceneDelegate.swift */; };
 		3A9A5A9823A39279005C0E10 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A9A5A9623A39279005C0E10 /* Main.storyboard */; };
@@ -50,8 +56,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				3A97E98223A6507100E55B1E /* DReversiUtil.framework in Embed Frameworks */,
-				3A97E97F23A6506D00E55B1E /* DRevesiControl.framework in Embed Frameworks */,
+				3A2ABCB623AF991E0042BC54 /* DReversiUtil.framework in Embed Frameworks */,
+				3A2ABCB423AF991E0042BC54 /* DReversiControl.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -59,14 +65,20 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3A24930D23AB882500E04C22 /* DRGameAIBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DRGameAIBase.swift; sourceTree = "<group>"; };
+		3A24930F23AB88B200E04C22 /* DRGameAIEasy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DRGameAIEasy.swift; sourceTree = "<group>"; };
+		3A24931123AB893900E04C22 /* DRGameAINormal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DRGameAINormal.swift; sourceTree = "<group>"; };
+		3A24931323AB89BB00E04C22 /* DRGameAIHard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DRGameAIHard.swift; sourceTree = "<group>"; };
+		3A24931523AB8A3D00E04C22 /* DRGameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DRGameManager.swift; sourceTree = "<group>"; };
+		3A2ABC9F23AF8B570042BC54 /* DRGameManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DRGameManagerTests.swift; sourceTree = "<group>"; };
+		3A2ABCB123AF991E0042BC54 /* DReversiControl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DReversiControl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A2ABCB223AF991E0042BC54 /* DReversiUtil.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DReversiUtil.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A49BBF723A7BBFA007E9D48 /* DRGameViewSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DRGameViewSegue.swift; sourceTree = "<group>"; };
 		3A64EF4E23A3A701009DBE36 /* DRTitleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DRTitleViewController.swift; sourceTree = "<group>"; };
 		3A64EF5223A3A85C009DBE36 /* DRGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DRGameViewController.swift; sourceTree = "<group>"; };
 		3A7C0E3E23A4C00400B931C2 /* DRConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DRConstants.swift; sourceTree = "<group>"; };
 		3A7C0E4123A4C9B500B931C2 /* String+Addtional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Addtional.swift"; sourceTree = "<group>"; };
 		3A7C0E4323A503DE00B931C2 /* DRTitleViewController+Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DRTitleViewController+Animation.swift"; sourceTree = "<group>"; };
-		3A97E97D23A6506D00E55B1E /* DRevesiControl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DRevesiControl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3A97E98023A6507100E55B1E /* DReversiUtil.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DReversiUtil.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A9A5A8D23A39279005C0E10 /* DReversi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DReversi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A9A5A9023A39279005C0E10 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3A9A5A9223A39279005C0E10 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,8 +99,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A97E98123A6507100E55B1E /* DReversiUtil.framework in Frameworks */,
-				3A97E97E23A6506D00E55B1E /* DRevesiControl.framework in Frameworks */,
+				3A2ABCB523AF991E0042BC54 /* DReversiUtil.framework in Frameworks */,
+				3A2ABCB323AF991E0042BC54 /* DReversiControl.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,6 +121,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A24930C23AB880A00E04C22 /* AI */ = {
+			isa = PBXGroup;
+			children = (
+				3A24930D23AB882500E04C22 /* DRGameAIBase.swift */,
+				3A24930F23AB88B200E04C22 /* DRGameAIEasy.swift */,
+				3A24931123AB893900E04C22 /* DRGameAINormal.swift */,
+				3A24931323AB89BB00E04C22 /* DRGameAIHard.swift */,
+			);
+			path = AI;
+			sourceTree = "<group>";
+		};
 		3A64EF5023A3A70A009DBE36 /* TItle */ = {
 			isa = PBXGroup;
 			children = (
@@ -121,8 +144,10 @@
 		3A64EF5123A3A844009DBE36 /* Game */ = {
 			isa = PBXGroup;
 			children = (
+				3A24930C23AB880A00E04C22 /* AI */,
 				3A64EF5223A3A85C009DBE36 /* DRGameViewController.swift */,
 				3A49BBF723A7BBFA007E9D48 /* DRGameViewSegue.swift */,
+				3A24931523AB8A3D00E04C22 /* DRGameManager.swift */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -163,8 +188,8 @@
 		3A97E97C23A6506D00E55B1E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3A97E98023A6507100E55B1E /* DReversiUtil.framework */,
-				3A97E97D23A6506D00E55B1E /* DRevesiControl.framework */,
+				3A2ABCB123AF991E0042BC54 /* DReversiControl.framework */,
+				3A2ABCB223AF991E0042BC54 /* DReversiUtil.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -210,6 +235,7 @@
 			isa = PBXGroup;
 			children = (
 				3A9A5AA723A3927B005C0E10 /* DReversiTests.swift */,
+				3A2ABC9F23AF8B570042BC54 /* DRGameManagerTests.swift */,
 				3A9A5AA923A3927B005C0E10 /* Info.plist */,
 			);
 			path = DReversiTests;
@@ -357,11 +383,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A64EF4F23A3A701009DBE36 /* DRTitleViewController.swift in Sources */,
+				3A24930E23AB882500E04C22 /* DRGameAIBase.swift in Sources */,
 				3A7C0E4423A503DE00B931C2 /* DRTitleViewController+Animation.swift in Sources */,
+				3A24931023AB88B200E04C22 /* DRGameAIEasy.swift in Sources */,
 				3A7C0E4223A4C9B500B931C2 /* String+Addtional.swift in Sources */,
 				3A9A5A9123A39279005C0E10 /* AppDelegate.swift in Sources */,
+				3A24931423AB89BB00E04C22 /* DRGameAIHard.swift in Sources */,
 				3A49BBF823A7BBFA007E9D48 /* DRGameViewSegue.swift in Sources */,
 				3A7C0E3F23A4C00400B931C2 /* DRConstants.swift in Sources */,
+				3A24931223AB893900E04C22 /* DRGameAINormal.swift in Sources */,
+				3A24931623AB8A3D00E04C22 /* DRGameManager.swift in Sources */,
 				3A64EF5323A3A85C009DBE36 /* DRGameViewController.swift in Sources */,
 				3A9A5A9323A39279005C0E10 /* SceneDelegate.swift in Sources */,
 			);
@@ -372,6 +403,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A9A5AA823A3927B005C0E10 /* DReversiTests.swift in Sources */,
+				3A2ABCA023AF8B570042BC54 /* DRGameManagerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -468,7 +500,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -522,7 +554,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
