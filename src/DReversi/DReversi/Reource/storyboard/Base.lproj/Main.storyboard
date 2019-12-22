@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xe1-gq-w80">
     <device id="retina6_5" orientation="landscape" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -218,19 +218,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T7k-B0-X82" customClass="DRBoardView" customModule="DRevesiControl">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T7k-B0-X82" customClass="DRBoardView" customModule="DReversiControl">
                                 <rect key="frame" x="64" y="20" width="353" height="353"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="T7k-B0-X82" secondAttribute="height" multiplier="1:1" id="qTc-ih-D4b"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cJR-Fl-daE">
+                                <rect key="frame" x="632" y="323" width="200" height="50"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="44B-6N-dwV"/>
+                                    <constraint firstAttribute="height" constant="50" id="A8O-pq-Jgo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="35"/>
+                                <state key="normal" title="石を置く">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="touchPutButton:" destination="xe1-gq-w80" eventType="touchUpInside" id="lS2-IU-NfB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.55634254220000001" green="0.97934550050000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="T7k-B0-X82" firstAttribute="leading" secondItem="qfW-bE-zYV" secondAttribute="leading" constant="20" id="D5l-c8-BPV"/>
                             <constraint firstItem="T7k-B0-X82" firstAttribute="top" secondItem="qfW-bE-zYV" secondAttribute="top" constant="20" id="Ql8-fj-aHs"/>
+                            <constraint firstItem="qfW-bE-zYV" firstAttribute="bottom" secondItem="cJR-Fl-daE" secondAttribute="bottom" constant="20" id="VpR-r2-6c3"/>
                             <constraint firstItem="T7k-B0-X82" firstAttribute="bottom" secondItem="qfW-bE-zYV" secondAttribute="bottom" constant="-20" id="krv-qU-6Kx"/>
+                            <constraint firstItem="qfW-bE-zYV" firstAttribute="trailing" secondItem="cJR-Fl-daE" secondAttribute="trailing" constant="20" id="r9x-yB-AAW"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qfW-bE-zYV"/>
                     </view>
