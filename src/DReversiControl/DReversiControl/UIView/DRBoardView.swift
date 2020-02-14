@@ -9,6 +9,10 @@
 import UIKit
 import DReversiUtil
 
+public protocol DRBoardViewDelegate: class {
+    func boardView(_ boardView: DRBoardView, didSelectPosition position: DRStonePosition)
+}
+
 public class DRBoardView: UIView {
     // 背景色
     private static let BgColor: UIColor = .white
@@ -22,8 +26,15 @@ public class DRBoardView: UIView {
     private var blockSize: CGFloat = 0
     private var boardRect: CGRect = CGRect.zero
     
-    // TODO: 選択中のインデックス
-    public private(set) var selectStonePosition: DRStonePosition = DRStonePosition(column: -1, row: -1)
+    // 選択中のポジション
+    public private(set) var selectStonePosition: DRStonePosition = DRStonePosition(column: -1, row: -1) {
+        didSet {
+            self.delegate?.boardView(self, didSelectPosition: self.selectStonePosition)
+        }
+    }
+    
+    // デリゲート
+    public weak var delegate: DRBoardViewDelegate?
     
     override public func layoutSubviews() {
         super.layoutSubviews()
