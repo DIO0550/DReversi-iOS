@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import DReversiControl
 
 class DRGameAIEasy: DRGameAIBase {
     let isPriorityCorner: Bool
@@ -15,8 +16,13 @@ class DRGameAIEasy: DRGameAIBase {
         self.isPriorityCorner = false
     }
     
-    func putStone() {
+    func putStonePosition(stoneReverseInfos: [DRStoneReverseInfo]) -> DRStonePosition {
         // TODO: 石を置く処理
+        guard let stoneReverseInfo = stoneReverseInfos.randomElement() else {
+            return DRStonePosition(column: -1, row: -1)
+        }
+        
+        return stoneReverseInfo.stonePosition
     }
     
 

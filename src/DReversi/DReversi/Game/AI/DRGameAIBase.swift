@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import DReversiControl
 
 protocol DRGameAIBase {
+    // 角を優先的に取るか
     var isPriorityCorner: Bool { get }
-    func putStone()
+    // 石を置く場所
+    func putStonePosition(stoneReverseInfos: [DRStoneReverseInfo]) -> DRStonePosition
 }
