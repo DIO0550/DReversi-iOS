@@ -13,8 +13,10 @@ extension UIBezierPath {
         guard let context: CGContext = UIGraphicsGetCurrentContext() else { return }
         context.saveGState()
         self.addClip()
+        let currentLineWidth = self.lineWidth
         self.lineWidth = self.lineWidth * 2
         self.stroke()
+        self.lineWidth = currentLineWidth;
         context.restoreGState()
     }
 }
