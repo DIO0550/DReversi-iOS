@@ -18,6 +18,8 @@ public class DRStoneCircleView: UIView {
     }
     
     required init?(coder: NSCoder) {
-        fatalError("please call init(frame: CGRect, color: UIColor)")
+        super.init(coder: coder)
+        let radius: CGFloat = frame.width > frame.height ? frame.width / 2.0 : frame.height / 2.0
+        self.layer.cornerRadius = radius
     }
 }
