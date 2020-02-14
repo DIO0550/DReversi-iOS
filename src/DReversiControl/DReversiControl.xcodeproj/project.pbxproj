@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A00768A23C9DEAB008A2758 /* DHamburgerMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A00768923C9DEAB008A2758 /* DHamburgerMenuButton.swift */; };
+		3A00768E23C9EFFC008A2758 /* DRStoneReverseInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A00768D23C9EFFC008A2758 /* DRStoneReverseInfo.swift */; };
 		3A2ABC8D23AF20020042BC54 /* DReversiControlConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2ABC8C23AF20020042BC54 /* DReversiControlConst.swift */; };
 		3A2ABC9923AF29590042BC54 /* DRMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2ABC9823AF29590042BC54 /* DRMenuView.swift */; };
 		3A2ABCBB23AF9D8F0042BC54 /* DReversiUtil.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A2ABCBA23AF9D8F0042BC54 /* DReversiUtil.framework */; };
@@ -46,6 +48,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3A00768923C9DEAB008A2758 /* DHamburgerMenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DHamburgerMenuButton.swift; sourceTree = "<group>"; };
+		3A00768D23C9EFFC008A2758 /* DRStoneReverseInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DRStoneReverseInfo.swift; sourceTree = "<group>"; };
 		3A2ABC8C23AF20020042BC54 /* DReversiControlConst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DReversiControlConst.swift; path = DReversiControl/DReversiControlConst.swift; sourceTree = SOURCE_ROOT; };
 		3A2ABC9823AF29590042BC54 /* DRMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DRMenuView.swift; sourceTree = "<group>"; };
 		3A2ABCBA23AF9D8F0042BC54 /* DReversiUtil.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DReversiUtil.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,6 +85,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A00768823C9DE78008A2758 /* UIButton */ = {
+			isa = PBXGroup;
+			children = (
+				3A00768923C9DEAB008A2758 /* DHamburgerMenuButton.swift */,
+			);
+			path = UIButton;
+			sourceTree = "<group>";
+		};
 		3A2ABC9023AF28020042BC54 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -122,7 +134,9 @@
 			children = (
 				3A97E95E23A644FB00E55B1E /* DReversiControl.h */,
 				3A97E97723A64F7700E55B1E /* UIView */,
+				3A00768823C9DE78008A2758 /* UIButton */,
 				3A832E5A23AA44D900D9674B /* DRStonePosition.swift */,
+				3A00768D23C9EFFC008A2758 /* DRStoneReverseInfo.swift */,
 				3A2ABC8C23AF20020042BC54 /* DReversiControlConst.swift */,
 				3A97E95F23A644FB00E55B1E /* Info.plist */,
 			);
@@ -265,7 +279,9 @@
 				3A97E97A23A64FA400E55B1E /* DRStoneView.swift in Sources */,
 				3A2ABC9923AF29590042BC54 /* DRMenuView.swift in Sources */,
 				3A832E5B23AA44D900D9674B /* DRStonePosition.swift in Sources */,
+				3A00768A23C9DEAB008A2758 /* DHamburgerMenuButton.swift in Sources */,
 				3A2ABC8D23AF20020042BC54 /* DReversiControlConst.swift in Sources */,
+				3A00768E23C9EFFC008A2758 /* DRStoneReverseInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
