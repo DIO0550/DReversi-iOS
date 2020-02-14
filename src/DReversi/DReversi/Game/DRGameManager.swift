@@ -20,15 +20,85 @@ public class DRGameManager {
                                      value: nil)
     }
     
-    public func canPutStoneBlack() -> [DRStonePosition] {
-        // TODO: 仮で返しているので、実際の使用する処理に修正する
-        return [DRStonePosition(column: -1, row: -1)]
+    public func canPutStonePositions(stoneType: DRStoneType) -> [DRStonePosition] {
+        var positions: [DRStonePosition] = []
+        for row in 0 ..< DReversiControlConst.BlockCount {
+            for column in 0 ..< DReversiControlConst.BlockCount {
+                let position: DRStonePosition = DRStonePosition(column: column, row: row)
+                if self.canPutReversePosition(stonePosition: position, stoneType: stoneType) {
+                    positions.append(position)
+                }
+            }
+        }
+        
+        return positions
     }
     
-    public func canPutStoneWhite() -> [DRStonePosition] {
-        // TODO: 仮で返しているので、実際の使用する処理に修正する
-        return [DRStonePosition(column: -1, row: -1)]
+    public func canPutPosition(stonePosition: DRStonePosition, stoneType: DRStoneType) -> Bool {
+        if stonePosition.isOutOfRange() { return false }
+        if self.stones.value(x: stonePosition.column, y: stonePosition.row) != nil { return false }
+        
+        return true
     }
+    
+    public func canPutReversePosition(stonePosition: DRStonePosition, stoneType: DRStoneType) -> Bool {
+        if !canPutPosition(stonePosition: stonePosition, stoneType: stoneType) { return false }
+    
+        // Top
+        if calcReverseCountLeftTop(putPosition: stonePosition, stoneType: stoneType) != 0 { return true }
+        if calcReverseCountTop(putPosition: stonePosition, stoneType: stoneType) != 0 { return true }
+        if calcReverseCountRightTop(putPosition: stonePosition, stoneType: stoneType) != 0 { return true }
+        
+        // side
+        if calcReverseCountLeft(putPosition: stonePosition, stoneType: stoneType) != 0 { return true }
+        if calcReverseCountRight(putPosition: stonePosition, stoneType: stoneType) != 0 { return true }
+        
+        // bottom
+        if calcReverseCountLeftBottom(putPosition: stonePosition, stoneType: stoneType) != 0 { return true }
+        if calcReverseCountBottom(putPosition: stonePosition, stoneType: stoneType) != 0 { return true }
+        if calcReverseCountRightBottom(putPosition: stonePosition, stoneType: stoneType) != 0 { return true }
+        
+        return false
+    }
+    
+    public func calcStoneReverseCount(stonePosition: DRStonePosition, stoneType: DRStoneType) -> Int {
+        var reverseCount: Int = 0
+        
+        if !canPutPosition(stonePosition: stonePosition, stoneType: stoneType) { return 0 }
+        
+        reverseCount += calcReverseCountLeftTop(putPosition: stonePosition, stoneType: stoneType)
+        reverseCount += calcReverseCountTop(putPosition: stonePosition, stoneType: stoneType)
+        reverseCount += calcReverseCountRightTop(putPosition: stonePosition, stoneType: stoneType)
+        
+        // side
+        reverseCount += calcReverseCountLeft(putPosition: stonePosition, stoneType: stoneType)
+        reverseCount += calcReverseCountRight(putPosition: stonePosition, stoneType: stoneType)
+        
+        // bottom
+        reverseCount += calcReverseCountLeftBottom(putPosition: stonePosition, stoneType: stoneType)
+        reverseCount += calcReverseCountBottom(putPosition: stonePosition, stoneType: stoneType)
+        reverseCount += calcReverseCountRightBottom(putPosition: stonePosition, stoneType: stoneType)
+        
+        return reverseCount
+    }
+    
+    public func stoneReverseInfos(stoneType: DRStoneType) -> [DRStoneReverseInfo] {
+        var stoneReverseInfos: [DRStoneReverseInfo] = []
+        for row in 0 ..< DReversiControlConst.BlockCount {
+            for column in 0 ..< DReversiControlConst.BlockCount {
+                let stonePosition: DRStonePosition = DRStonePosition(column: column, row: row)
+                let stoneReverseCount: Int = self.calcStoneReverseCount(stonePosition: stonePosition, stoneType: stoneType)
+                if stoneReverseCount == 0 {
+                    continue
+                }
+                let stoneReverseInfo: DRStoneReverseInfo = DRStoneReverseInfo(stonePosition: stonePosition, reverseCount: stoneReverseCount)
+                stoneReverseInfos.append(stoneReverseInfo)
+            }
+        }
+        
+        return stoneReverseInfos
+    }
+    
     
     public func reverseStone(putPosition: DRStonePosition, stoneType: DRStoneType) {
         self.reverseLeftTop(putPosition: putPosition, stoneType: stoneType)
@@ -43,7 +113,7 @@ public class DRGameManager {
     
     @discardableResult
     func addStone(stonePosition: DRStonePosition, boardView: DRBoardView, stoneType: DRStoneType) -> Bool {
-        if !self.canPutPosition(stonePosition: stonePosition) { return false }
+        if !self.canPutPosition(stonePosition: stonePosition, stoneType: stoneType) { return false }
         
         let stoneRect: CGRect = boardView.stonePositionRect(stonePosition)
         let stoneView: DRStoneView = DRStoneView(frame: stoneRect, type: stoneType)
@@ -61,13 +131,32 @@ public class DRGameManager {
 }
 
 extension DRGameManager {
-    private func canPutPosition(stonePosition: DRStonePosition) -> Bool {
-        if stonePosition.isOutOfRange() { return false }
-        if self.stones.value(x: stonePosition.column, y: stonePosition.row) != nil { return false }
-        return true
-    }
     
     // MARK: reverse method
+    
+    private func calcReverseCountLeftTop(putPosition: DRStonePosition, stoneType: DRStoneType) -> Int {
+        var position = putPosition
+        position.decrementColumnRow()
+        // 反転できる数
+        var reverseCount = 0
+        
+        // 最初の１つ目をチェック
+        let firstValue = self.stones.value(x: position.column, y: position.row)
+        guard let firstStoneView = firstValue as? DRStoneView else { return 0 }
+        if firstStoneView.stoneType == stoneType { return 0 }
+        reverseCount += 1
+        position.decrementColumnRow()
+        while(!position.isOutOfRange()) {
+            let value = self.stones.value(x: position.column, y: position.row)
+            guard let stoneView = value as? DRStoneView else { return 0 }
+            if stoneView.stoneType == stoneType { return reverseCount }
+            reverseCount += 1
+            position.decrementColumnRow()
+        }
+        
+        // 挟まれてないなら0
+        return 0
+    }
     
     private func canReverseLeftTop(putPosition: DRStonePosition, stoneType: DRStoneType) -> Bool {
         var position = putPosition
@@ -92,7 +181,7 @@ extension DRGameManager {
     
     private func reverseLeftTop(putPosition: DRStonePosition, stoneType: DRStoneType) {
         
-        if !self.canReverseLeftTop(putPosition: putPosition, stoneType: stoneType) { return }
+        if self.calcReverseCountLeftTop(putPosition: putPosition, stoneType: stoneType) == 0 { return }
         
         var position = putPosition
         position.decrementColumnRow()
@@ -103,6 +192,29 @@ extension DRGameManager {
             stoneView.flipStone()
             position.decrementColumnRow()
         }
+    }
+    
+    private func calcReverseCountTop(putPosition: DRStonePosition, stoneType: DRStoneType) -> Int {
+        var position = putPosition
+        position.decrementRow()
+        // 反転できる数
+        var reverseCount = 0
+        
+        // 最初の１つ目をチェック
+        let firstValue = self.stones.value(x: position.column, y: position.row)
+        guard let firstStoneView = firstValue as? DRStoneView else { return 0 }
+        if firstStoneView.stoneType == stoneType { return 0 }
+        reverseCount += 1
+        position.decrementRow()
+        while(!position.isOutOfRange()) {
+            let value = self.stones.value(x: position.column, y: position.row)
+            guard let stoneView = value as? DRStoneView else { return 0 }
+            if stoneView.stoneType == stoneType { return reverseCount }
+            reverseCount += 1
+            position.decrementRow()
+        }
+        
+        return 0
     }
     
     private func canReverseTop(putPosition: DRStonePosition, stoneType: DRStoneType) -> Bool {
@@ -127,7 +239,7 @@ extension DRGameManager {
     
     private func reverseTop(putPosition: DRStonePosition, stoneType: DRStoneType) {
         
-        if !self.canReverseTop(putPosition: putPosition, stoneType: stoneType) { return }
+        if self.calcReverseCountTop(putPosition: putPosition, stoneType: stoneType) == 0 { return }
         
         var position = putPosition
         position.decrementRow()
@@ -138,6 +250,29 @@ extension DRGameManager {
             stoneView.flipStone()
             position.decrementRow()
         }
+    }
+    
+    private func calcReverseCountRightTop(putPosition: DRStonePosition, stoneType: DRStoneType) -> Int {
+        var position = putPosition
+        position.incrementColumnDecrementRow()
+        // 反転できる数
+        var reverseCount = 0
+        
+        // 最初の１つ目をチェック
+        let firstValue = self.stones.value(x: position.column, y: position.row)
+        guard let firstStoneView = firstValue as? DRStoneView else { return 0 }
+        if firstStoneView.stoneType == stoneType { return 0 }
+        reverseCount += 1
+        position.incrementColumnDecrementRow()
+        while(!position.isOutOfRange()) {
+            let value = self.stones.value(x: position.column, y: position.row)
+            guard let stoneView = value as? DRStoneView else { return 0 }
+            if stoneView.stoneType == stoneType { return reverseCount }
+            reverseCount += 1
+            position.incrementColumnDecrementRow()
+        }
+        
+        return 0
     }
     
     private func canReverseRightTop(putPosition: DRStonePosition, stoneType: DRStoneType) -> Bool {
@@ -162,7 +297,7 @@ extension DRGameManager {
     
     private func reverseRightTop(putPosition: DRStonePosition, stoneType: DRStoneType) {
         
-        if !self.canReverseRightTop(putPosition: putPosition, stoneType: stoneType) { return }
+        if self.calcReverseCountRightTop(putPosition: putPosition, stoneType: stoneType) == 0 { return }
         
         var position = putPosition
         position.incrementColumnDecrementRow()
@@ -173,6 +308,29 @@ extension DRGameManager {
             stoneView.flipStone()
             position.incrementColumnDecrementRow()
         }
+    }
+    
+    private func calcReverseCountLeft(putPosition: DRStonePosition, stoneType: DRStoneType) -> Int {
+        var position = putPosition
+        position.decrementColumn()
+        // 反転できる数
+        var reverseCount = 0
+        
+        // 最初の１つ目をチェック
+        let firstValue = self.stones.value(x: position.column, y: position.row)
+        guard let firstStoneView = firstValue as? DRStoneView else { return 0 }
+        if firstStoneView.stoneType == stoneType { return 0 }
+        reverseCount += 1
+        position.decrementColumn()
+        while(!position.isOutOfRange()) {
+            let value = self.stones.value(x: position.column, y: position.row)
+            guard let stoneView = value as? DRStoneView else { return 0 }
+            if stoneView.stoneType == stoneType { return reverseCount }
+            reverseCount += 1
+            position.decrementColumn()
+        }
+        
+        return 0
     }
     
     private func canReverseLeft(putPosition: DRStonePosition, stoneType: DRStoneType) -> Bool {
@@ -197,7 +355,7 @@ extension DRGameManager {
     
     private func reverseLeft(putPosition: DRStonePosition, stoneType: DRStoneType) {
         
-        if !self.canReverseLeft(putPosition: putPosition, stoneType: stoneType) { return }
+        if self.calcReverseCountLeft(putPosition: putPosition, stoneType: stoneType) == 0 { return }
         
         var position = putPosition
         position.decrementColumn()
@@ -208,6 +366,29 @@ extension DRGameManager {
             stoneView.flipStone()
             position.decrementColumn()
         }
+    }
+    
+    private func calcReverseCountRight(putPosition: DRStonePosition, stoneType: DRStoneType) -> Int {
+        var position = putPosition
+        position.incrementColumn()
+        // 反転できる数
+        var reverseCount = 0
+        
+        // 最初の１つ目をチェック
+        let firstValue = self.stones.value(x: position.column, y: position.row)
+        guard let firstStoneView = firstValue as? DRStoneView else { return 0 }
+        if firstStoneView.stoneType == stoneType { return 0 }
+        reverseCount += 1
+        position.incrementColumn()
+        while(!position.isOutOfRange()) {
+            let value = self.stones.value(x: position.column, y: position.row)
+            guard let stoneView = value as? DRStoneView else { return 0 }
+            if stoneView.stoneType == stoneType { return reverseCount }
+            reverseCount += 1
+            position.incrementColumn()
+        }
+        
+        return 0
     }
     
     private func canReverseRight(putPosition: DRStonePosition, stoneType: DRStoneType) -> Bool {
@@ -232,7 +413,7 @@ extension DRGameManager {
     
     private func reverseRight(putPosition: DRStonePosition, stoneType: DRStoneType) {
         
-        if !self.canReverseRight(putPosition: putPosition, stoneType: stoneType) { return }
+        if self.calcReverseCountRight(putPosition: putPosition, stoneType: stoneType) == 0 { return }
         
         var position = putPosition
         position.incrementColumn()
@@ -243,6 +424,29 @@ extension DRGameManager {
             stoneView.flipStone()
             position.incrementColumn()
         }
+    }
+    
+    private func calcReverseCountLeftBottom(putPosition: DRStonePosition, stoneType: DRStoneType) -> Int {
+        var position = putPosition
+        position.decrementColumnIncrementRow()
+        // 反転できる数
+        var reverseCount = 0
+        
+        // 最初の１つ目をチェック
+        let firstValue = self.stones.value(x: position.column, y: position.row)
+        guard let firstStoneView = firstValue as? DRStoneView else { return 0 }
+        if firstStoneView.stoneType == stoneType { return 0 }
+        reverseCount += 1
+        position.decrementColumnIncrementRow()
+        while(!position.isOutOfRange()) {
+            let value = self.stones.value(x: position.column, y: position.row)
+            guard let stoneView = value as? DRStoneView else { return 0 }
+            if stoneView.stoneType == stoneType { return reverseCount }
+            reverseCount += 1
+            position.decrementColumnIncrementRow()
+        }
+        
+        return 0
     }
     
     private func canReverseLeftBottom(putPosition: DRStonePosition, stoneType: DRStoneType) -> Bool {
@@ -267,7 +471,7 @@ extension DRGameManager {
     
     private func reverseLeftBottom(putPosition: DRStonePosition, stoneType: DRStoneType) {
         
-        if !self.canReverseLeftBottom(putPosition: putPosition, stoneType: stoneType) { return }
+        if self.calcReverseCountLeftBottom(putPosition: putPosition, stoneType: stoneType) == 0 { return }
         
         var position = putPosition
         position.decrementColumnIncrementRow()
@@ -278,6 +482,29 @@ extension DRGameManager {
             stoneView.flipStone()
             position.decrementColumnIncrementRow()
         }
+    }
+    
+    private func calcReverseCountBottom(putPosition: DRStonePosition, stoneType: DRStoneType) -> Int {
+        var position = putPosition
+        position.incrementRow()
+        // 反転できる数
+        var reverseCount = 0
+        
+        // 最初の１つ目をチェック
+        let firstValue = self.stones.value(x: position.column, y: position.row)
+        guard let firstStoneView = firstValue as? DRStoneView else { return 0 }
+        if firstStoneView.stoneType == stoneType { return 0 }
+        reverseCount += 1
+        position.incrementRow()
+        while(!position.isOutOfRange()) {
+            let value = self.stones.value(x: position.column, y: position.row)
+            guard let stoneView = value as? DRStoneView else { return 0 }
+            if stoneView.stoneType == stoneType { return reverseCount }
+            reverseCount += 1
+            position.incrementRow()
+        }
+        
+        return 0
     }
     
     private func canReverseBottom(putPosition: DRStonePosition, stoneType: DRStoneType) -> Bool {
@@ -302,7 +529,7 @@ extension DRGameManager {
     
     private func reverseBottom(putPosition: DRStonePosition, stoneType: DRStoneType) {
         
-        if !self.canReverseBottom(putPosition: putPosition, stoneType: stoneType) { return }
+        if self.calcReverseCountBottom(putPosition: putPosition, stoneType: stoneType) == 0 { return }
         
         var position = putPosition
         position.incrementRow()
@@ -313,6 +540,29 @@ extension DRGameManager {
             stoneView.flipStone()
             position.incrementRow()
         }
+    }
+    
+    private func calcReverseCountRightBottom(putPosition: DRStonePosition, stoneType: DRStoneType) -> Int {
+        var position = putPosition
+        position.incrementColumnRow()
+        // 反転できる数
+        var reverseCount = 0
+        
+        // 最初の１つ目をチェック
+        let firstValue = self.stones.value(x: position.column, y: position.row)
+        guard let firstStoneView = firstValue as? DRStoneView else { return 0 }
+        if firstStoneView.stoneType == stoneType { return 0 }
+        reverseCount += 1
+        position.incrementColumnRow()
+        while(!position.isOutOfRange()) {
+            let value = self.stones.value(x: position.column, y: position.row)
+            guard let stoneView = value as? DRStoneView else { return 0 }
+            if stoneView.stoneType == stoneType { return reverseCount }
+            reverseCount += 1
+            position.incrementColumnRow()
+        }
+        
+        return 0
     }
     
     private func canReverseRightBottom(putPosition: DRStonePosition, stoneType: DRStoneType) -> Bool {
@@ -337,7 +587,7 @@ extension DRGameManager {
     
     private func reverseRightBottom(putPosition: DRStonePosition, stoneType: DRStoneType) {
         
-        if !self.canReverseRightBottom(putPosition: putPosition, stoneType: stoneType) { return }
+        if self.calcReverseCountRightBottom(putPosition: putPosition, stoneType: stoneType) == 0 { return }
         
         var position = putPosition
         position.incrementColumnRow()
