@@ -39,6 +39,7 @@ class DRGameViewController: UIViewController {
             guard let weakSelf = self else { return }
             weakSelf.initializeStones()
             weakSelf.computerPutStoneLoop()
+            weakSelf.updateStoneCountLabel()
         }
     }
     
@@ -53,6 +54,7 @@ class DRGameViewController: UIViewController {
         
         self.gameManager.reverseStone(putPosition: selectPosition, stoneType: self.playerStone)
         self.updatePutStoneButtonEnable()
+        self.updateStoneCountLabel()
         
         if self.canPutComStone() {
             self.gameTurn = .COM
@@ -86,6 +88,11 @@ extension DRGameViewController {
         self.putStoneButton.alpha = isEnabled ? 1.0 : 0.5
     }
     
+    private func updateStoneCountLabel() {
+        self.blackStoneCountLabel.text = self.gameManager.stoneCount(stoneType: .BLACK_STONE).description
+        self.whiteStoneCountLabel.text = self.gameManager.stoneCount(stoneType: .WHITE_STONE).description
+    }
+    
     private func canPutPlayerStone() -> Bool {
         return self.gameManager.canPutStonePositions(stoneType: self.playerStone).count > 0
     }
@@ -102,10 +109,13 @@ extension DRGameViewController {
                                   boardView: self.boardView,
                                   stoneType: self.comStone)
         self.gameManager.reverseStone(putPosition: aiPutPosition, stoneType: self.comStone)
+        
+        self.updatePutStoneButtonEnable()
+        self.updateStoneCountLabel()
+        
         if self.canPutPlayerStone() {
             self.gameTurn = .PLAYER
         }
-        self.updatePutStoneButtonEnable()
     }
     
     private func computerPutStoneLoop() {
