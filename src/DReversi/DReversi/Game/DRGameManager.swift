@@ -127,7 +127,17 @@ public class DRGameManager {
         return true
     }
     
-    
+    public func stoneCount(stoneType: DRStoneType) -> Int {
+        var count: Int = 0
+        for x in 0..<DReversiControlConst.BlockCount {
+            for y in 0..<DReversiControlConst.BlockCount {
+                let value = self.stones.value(x: x, y: y)
+                guard let stoneView = value as? DRStoneView else { continue }
+                count += (stoneView.stoneType == stoneType) ? 1 : 0
+            }
+        }
+        return count
+    }
 }
 
 extension DRGameManager {
