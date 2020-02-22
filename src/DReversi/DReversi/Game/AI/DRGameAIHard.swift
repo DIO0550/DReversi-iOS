@@ -11,14 +11,15 @@ import DReversiControl
 
 class DRGameAIHard: DRGameAIBase {
     
-    let isPriorityCorner: Bool
-    
-    init() {
-        self.isPriorityCorner = true
-    }
-    
     func putStonePosition(stoneReverseInfos: [DRStoneReverseInfo]) -> DRStonePosition {
-        return DRStonePosition(column: -1, row: -1)
+        let cornerInfos = stoneReverseInfos.filter {
+            DReversiControlConst.BoardCornerPosition.contains($0.stonePosition)
+        }
+        if cornerInfos.count > 0, let cornerInfo = cornerInfos.randomElement() {
+            return cornerInfo.stonePosition
+        }
+        
+        return self.maxReversePosition(stoneReverseInfos: stoneReverseInfos)
     }
     
     

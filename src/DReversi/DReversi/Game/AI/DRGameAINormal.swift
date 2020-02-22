@@ -11,14 +11,13 @@ import DReversiControl
 
 class DRGameAINormal: DRGameAIBase {
     
-    let isPriorityCorner: Bool
-    
-    init() {
-        self.isPriorityCorner = false
-    }
-    
     func putStonePosition(stoneReverseInfos: [DRStoneReverseInfo]) -> DRStonePosition {
-        return DRStonePosition(column: -1, row: -1)
+        let random = Int.random(in: 0..<2)
+        if random % 2 == 0 {
+            return self.maxReversePosition(stoneReverseInfos: stoneReverseInfos)
+        }
+        
+        return self.notMaxReversePostion(stoneReverseInfos: stoneReverseInfos)
     }
     
 
