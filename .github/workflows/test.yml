@@ -1,0 +1,27 @@
+name: test
+
+on:
+  push:
+    branches:
+      - master
+        
+  pull_request:
+    types: [opened, synchronize]
+  
+
+jobs:
+  test:
+
+    runs-on: macOS-latest
+
+    steps:
+    - uses: actions/checkout@v2
+      with:
+       ref: ${{ github.event.pull_request.head.sha }}
+    - name: xcode-select 
+      run: sudo xcode-select --switch /Applications/Xcode_11.3.app
+    - name: test
+      run: |
+            xcodebuild -workspace src/DRevesi.xcworkspace -scheme DReversi -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 11 Pro Max' -configuration Test test
+            xcodebuild -workspace src/DRevesi.xcworkspace -scheme DReversiControl -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 11 Pro Max' -configuration Test test
+            xcodebuild -workspace src/DRevesi.xcworkspace -scheme DReversiUtil -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 11 Pro Max' -configuration Test test
