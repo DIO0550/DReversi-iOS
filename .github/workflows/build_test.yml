@@ -1,0 +1,25 @@
+name: build_test
+
+on:
+  push:
+    branches:
+      - master
+        
+  pull_request:
+    types: [opened, synchronize]
+  
+
+jobs:
+  build:
+
+    runs-on: macOS-latest
+
+    steps:
+    - uses: actions/checkout@v2
+      with:
+       ref: ${{ github.event.pull_request.head.sha }}
+    - name: xcode-select 
+      run: sudo xcode-select --switch /Applications/Xcode_11.3.app
+    - name: build
+      run: xcodebuild -workspace src/DReversi.xcworkspace -scheme DReversi -sdk iphonesimulator -configuration BuildTest build
+
