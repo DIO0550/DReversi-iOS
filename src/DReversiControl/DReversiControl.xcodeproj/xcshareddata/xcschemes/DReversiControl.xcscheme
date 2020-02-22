@@ -23,16 +23,16 @@
       </BuildActionEntries>
    </BuildAction>
    <TestAction
-      buildConfiguration = "Debug"
+      buildConfiguration = "Test"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
          <TestableReference
-            skipped = "YES">
+            skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3A97E96323A644FB00E55B1E"
+               BlueprintIdentifier = "3A2ABCC123AF9DCB0042BC54"
                BuildableName = "DReversiControlTests.xctest"
                BlueprintName = "DReversiControlTests"
                ReferencedContainer = "container:DReversiControl.xcodeproj">
