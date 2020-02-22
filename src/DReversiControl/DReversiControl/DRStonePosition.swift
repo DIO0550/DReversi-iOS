@@ -8,7 +8,7 @@
 
 import UIKit
 
-public struct DRStonePosition {
+public struct DRStonePosition: Equatable {
     public var column: Int
     public var row: Int
     
@@ -22,6 +22,10 @@ public struct DRStonePosition {
         if self.row < 0 || self.row >= DReversiControlConst.BlockCount { return true }
         
         return false
+    }
+    
+    public static func == (lhs: Self, rhs: Self) -> Bool {
+        return lhs.column == rhs.column && lhs.row == rhs.row
     }
     
     public mutating func incrementColumnRow() {
