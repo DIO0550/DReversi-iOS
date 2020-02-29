@@ -27,6 +27,7 @@ class DRGameViewController: UIViewController {
     @IBOutlet weak var putStoneButton: UIButton!
     @IBOutlet weak var blackStoneCountLabel: UILabel!
     @IBOutlet weak var whiteStoneCountLabel: UILabel!
+    @IBOutlet weak var settingMenuView: DRSettingMenuView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +42,7 @@ class DRGameViewController: UIViewController {
             weakSelf.computerPutStoneLoop()
             weakSelf.updateStoneCountLabel()
         }
+        self.settingMenuView.setupMenuPosition()
     }
     
     @IBAction func touchPutButton(_ sender: Any) {
@@ -60,6 +62,11 @@ class DRGameViewController: UIViewController {
             self.gameTurn = .COM
         }
     }
+    
+    @IBAction func touchMenuButton(_ sender: Any) {
+         self.settingMenuView.displayMenu()
+    }
+    
 }
 
 extension DRGameViewController {
