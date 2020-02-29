@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DRSettingMenuView" customModule="DReversiControl" customModuleProvider="target">
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="MenuPosition">
+                    <integer key="value" value="1"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="365"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="avU-qf-JLh">
+                    <rect key="frame" x="20" y="54" width="374" height="30"/>
+                    <state key="normal" title="HARD"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lTy-FL-W2F">
+                    <rect key="frame" x="20" y="92" width="374" height="30"/>
+                    <state key="normal" title="NORMAL"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YVZ-I2-UGY">
+                    <rect key="frame" x="20" y="130" width="374" height="30"/>
+                    <state key="normal" title="EASY"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="YVZ-I2-UGY" firstAttribute="top" secondItem="lTy-FL-W2F" secondAttribute="bottom" constant="8" id="BeV-Uv-AOp"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="avU-qf-JLh" secondAttribute="trailing" constant="20" id="Iby-1i-5qV"/>
+                <constraint firstItem="avU-qf-JLh" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="b6M-hp-bbp"/>
+                <constraint firstItem="lTy-FL-W2F" firstAttribute="top" secondItem="avU-qf-JLh" secondAttribute="bottom" constant="8" id="bVp-LZ-EDl"/>
+                <constraint firstItem="lTy-FL-W2F" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="dPA-vN-WCF"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="lTy-FL-W2F" secondAttribute="trailing" constant="20" id="etA-xD-23d"/>
+                <constraint firstItem="YVZ-I2-UGY" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="guV-vf-aGs"/>
+                <constraint firstItem="avU-qf-JLh" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="10" id="mUN-23-Ahe"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="YVZ-I2-UGY" secondAttribute="trailing" constant="20" id="rLk-s5-3sI"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="131.8840579710145" y="-53.90625"/>
+        </view>
+    </objects>
+</document>
