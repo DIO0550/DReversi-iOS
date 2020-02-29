@@ -296,7 +296,15 @@
                                         <real key="value" value="8"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="touchMenuButton:" destination="xe1-gq-w80" eventType="touchUpInside" id="msM-Jv-0Y0"/>
+                                </connections>
                             </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TfG-1t-BNh" customClass="DRSettingMenuView" customModule="DReversiControl">
+                                <rect key="frame" x="844" y="20" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.55634254220000001" green="0.97934550050000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -322,6 +330,7 @@
                         <outlet property="blackStoneCountLabel" destination="tNq-oz-EWA" id="ty1-VZ-LIp"/>
                         <outlet property="boardView" destination="T7k-B0-X82" id="RHP-sS-kwA"/>
                         <outlet property="putStoneButton" destination="cJR-Fl-daE" id="gDP-K6-IUx"/>
+                        <outlet property="settingMenuView" destination="TfG-1t-BNh" id="8TM-Rn-gzX"/>
                         <outlet property="whiteStoneCountLabel" destination="DhM-DF-C9p" id="tiY-sU-Dxq"/>
                     </connections>
                 </viewController>
