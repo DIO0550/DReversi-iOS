@@ -9,7 +9,12 @@
 import UIKit
 
 public class DRSettingMenuView: DRMenuView {
-
+    
+    @IBOutlet weak var easyLevelButton: DRSettingMenuLevelButton!
+    @IBOutlet weak var normalLevelButton: DRSettingMenuLevelButton!
+    @IBOutlet weak var hardLevelButton: DRSettingMenuLevelButton!
+    
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.commonInit()
@@ -27,5 +32,19 @@ public class DRSettingMenuView: DRMenuView {
         topView.frame = CGRect(x: self.bounds.width - topView.bounds.width, y: 0, width: topView.bounds.width, height: self.bounds.height)
         self.addSubview(topView)
     }
-
+    
+    private func deselectedButtons() {
+        self.easyLevelButton.isSelected   = false
+        self.normalLevelButton.isSelected = false
+        self.hardLevelButton.isSelected   = false
+    }
+    
+    @IBAction func touchLevelButton(_ sender: UIButton) {
+        self.deselectedButtons()
+        sender.isSelected = true
+    }
+    
+    @IBAction func touchBackButton(_ sender: Any) {
+        self.hideMenu()
+    }
 }
