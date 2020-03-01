@@ -14,6 +14,7 @@
 		3A2ABCBC23AF9D8F0042BC54 /* DReversiUtil.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3A2ABCBA23AF9D8F0042BC54 /* DReversiUtil.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3A2ABCC723AF9DCB0042BC54 /* DReversiControl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A97E95B23A644FB00E55B1E /* DReversiControl.framework */; };
 		3A2ABCD023AF9DE40042BC54 /* DReversiControlTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2ABCCE23AF9DE40042BC54 /* DReversiControlTests.swift */; };
+		3A5B075C240B83D100AC2772 /* DRSettingMenuLevelButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5B075B240B83D100AC2772 /* DRSettingMenuLevelButton.swift */; };
 		3A832E5923AA2C3400D9674B /* DRBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A832E5823AA2C3400D9674B /* DRBoardView.swift */; };
 		3A832E5B23AA44D900D9674B /* DRStonePosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A832E5A23AA44D900D9674B /* DRStonePosition.swift */; };
 		3A8D195F240A441B0050422A /* DRSettingMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A8D195E240A441B0050422A /* DRSettingMenuView.xib */; };
@@ -57,6 +58,7 @@
 		3A2ABCC223AF9DCB0042BC54 /* DReversiControlTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DReversiControlTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A2ABCCD23AF9DE40042BC54 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A2ABCCE23AF9DE40042BC54 /* DReversiControlTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DReversiControlTests.swift; sourceTree = "<group>"; };
+		3A5B075B240B83D100AC2772 /* DRSettingMenuLevelButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DRSettingMenuLevelButton.swift; sourceTree = "<group>"; };
 		3A832E5823AA2C3400D9674B /* DRBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DRBoardView.swift; sourceTree = "<group>"; };
 		3A832E5A23AA44D900D9674B /* DRStonePosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DRStonePosition.swift; sourceTree = "<group>"; };
 		3A8D195E240A441B0050422A /* DRSettingMenuView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DRSettingMenuView.xib; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				3A00768923C9DEAB008A2758 /* DHamburgerMenuButton.swift */,
+				3A5B075B240B83D100AC2772 /* DRSettingMenuLevelButton.swift */,
 			);
 			path = UIButton;
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 				3A97E97B23A64FA400E55B1E /* DRStoneCircleView.swift in Sources */,
 				3A8D1963240A6AB40050422A /* DRSettingMenuView.swift in Sources */,
 				3A832E5923AA2C3400D9674B /* DRBoardView.swift in Sources */,
+				3A5B075C240B83D100AC2772 /* DRSettingMenuLevelButton.swift in Sources */,
 				3A97E97A23A64FA400E55B1E /* DRStoneView.swift in Sources */,
 				3A832E5B23AA44D900D9674B /* DRStonePosition.swift in Sources */,
 				3A00768A23C9DEAB008A2758 /* DHamburgerMenuButton.swift in Sources */,
