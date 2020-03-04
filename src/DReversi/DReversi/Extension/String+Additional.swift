@@ -1,5 +1,5 @@
 //
-//  String+Addtional.swift
+//  String+Additional.swift
 //  DReversi
 //
 //  Created by DIO on 2019/12/14.
