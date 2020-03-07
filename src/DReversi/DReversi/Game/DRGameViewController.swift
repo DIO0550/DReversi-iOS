@@ -8,11 +8,12 @@
 
 import UIKit
 import DReversiControl
+import DReversiUtil
 
 class DRGameViewController: UIViewController {
     
     // MARK: Public Instance
-    public var gameLevel: GameLevel = .NORMAL
+    public var gameLevel: DReversiUtilConst.GameLevel = .NORMAL
     public var playerStone: DRStoneType = .BLACK_STONE
     public var comStone: DRStoneType = .WHITE_STONE
     
@@ -32,6 +33,17 @@ class DRGameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.boardView.delegate = self
+        self.settingMenuView.setupSelectLevelButton(self.gameLevel)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.addNotifications()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        self.removeNotifications()
     }
     
     override func viewDidLayoutSubviews() {
@@ -70,6 +82,18 @@ class DRGameViewController: UIViewController {
 }
 
 extension DRGameViewController {
+    
+    private func addNotifications() {
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(selectLevelButton(aNotification:)),
+                                               name: NSNotification.Name.DRSettingMenuViewSelectLevelNotifiactionName,
+                                               object: nil)
+    }
+    
+    private func removeNotifications() {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
     private func initializeStones() {
         if self.isInitializeStone { return }
         
@@ -145,6 +169,24 @@ extension DRGameViewController {
                 }
                 semaphore.wait()
             }
+        }
+    }
+    
+    @objc func selectLevelButton(aNotification: NSNotification?) {
+        guard let notification = aNotification else { return }
+        
+        self.gameLevel = notification.userInfo![DReversiControlConst.SelectLevelButtonKey] as! DReversiUtilConst.GameLevel
+        
+        switch self.gameLevel {
+        case .EASY:
+            self.gameAI = DRGameAIEasy()
+            break
+        case .NORMAL:
+            self.gameAI = DRGameAINormal()
+            break
+        case .HARD:
+            self.gameAI = DRGameAIHard()
+            break
         }
     }
 }
