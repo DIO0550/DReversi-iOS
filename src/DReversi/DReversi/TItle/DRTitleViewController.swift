@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import DReversiUtil
 
 class DRTitleViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
@@ -22,7 +23,7 @@ class DRTitleViewController: UIViewController {
     
     
     var isAnimating: Bool = false
-    public var gameLevel: GameLevel = .NORMAL
+    public var gameLevel: DReversiUtilConst.GameLevel = .NORMAL
     
     override func viewDidLoad() {
         super.viewDidLoad()
