@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import DReversiUtil
 
 public class DRSettingMenuView: DRMenuView {
     
@@ -33,15 +34,51 @@ public class DRSettingMenuView: DRMenuView {
         self.addSubview(topView)
     }
     
+    public func setupSelectLevelButton(_ selectLevel:DReversiUtilConst.GameLevel) {
+        self.deselectedButtons()
+        switch selectLevel {
+        case .EASY:
+            self.easyLevelButton.isSelected = true
+            break
+        case .NORMAL:
+            self.normalLevelButton.isSelected = true
+            break
+        case .HARD:
+            self.hardLevelButton.isSelected = true
+            break
+        }
+    }
+    
     private func deselectedButtons() {
         self.easyLevelButton.isSelected   = false
         self.normalLevelButton.isSelected = false
         self.hardLevelButton.isSelected   = false
     }
     
+    private func selectLevel(_ sender: UIButton) -> DReversiUtilConst.GameLevel {
+        if sender == self.easyLevelButton {
+            return .EASY
+        }
+        
+        if sender == self.normalLevelButton {
+            return .NORMAL
+        }
+        
+        if sender == self.hardLevelButton {
+            return .HARD
+        }
+        
+        return .NORMAL
+    }
+    
     @IBAction func touchLevelButton(_ sender: UIButton) {
         self.deselectedButtons()
         sender.isSelected = true
+        let toucheLevel: DReversiUtilConst.GameLevel = self.selectLevel(sender);
+        
+        NotificationCenter.default.post(name: Notification.Name.DRSettingMenuViewSelectLevelNotifiactionName,
+                                        object: sender,
+                                        userInfo: [DReversiControlConst.SelectLevelButtonKey: toucheLevel])
     }
     
     @IBAction func touchBackButton(_ sender: Any) {
