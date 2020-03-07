@@ -12,6 +12,7 @@
 		3A97E91923A6447400E55B1E /* DReversiUtilTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A97E91823A6447400E55B1E /* DReversiUtilTests.swift */; };
 		3A97E91B23A6447400E55B1E /* DReversiUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A97E90D23A6447400E55B1E /* DReversiUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3A97E97623A6458300E55B1E /* DRArray2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A97E97523A6458300E55B1E /* DRArray2D.swift */; };
+		3AD16D942413B8ED0086A223 /* DReversiUtilConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD16D932413B8ED0086A223 /* DReversiUtilConst.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +34,7 @@
 		3A97E91823A6447400E55B1E /* DReversiUtilTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DReversiUtilTests.swift; sourceTree = "<group>"; };
 		3A97E91A23A6447400E55B1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A97E97523A6458300E55B1E /* DRArray2D.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DRArray2D.swift; sourceTree = "<group>"; };
+		3AD16D932413B8ED0086A223 /* DReversiUtilConst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DReversiUtilConst.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 				3A97E90D23A6447400E55B1E /* DReversiUtil.h */,
 				3A97E97523A6458300E55B1E /* DRArray2D.swift */,
 				3A2ABC8E23AF27220042BC54 /* UIBezierPath+Additional.swift */,
+				3AD16D932413B8ED0086A223 /* DReversiUtilConst.swift */,
 				3A97E90E23A6447400E55B1E /* Info.plist */,
 			);
 			path = DReversiUtil;
@@ -202,6 +205,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AD16D942413B8ED0086A223 /* DReversiUtilConst.swift in Sources */,
 				3A2ABC8F23AF27220042BC54 /* UIBezierPath+Additional.swift in Sources */,
 				3A97E97623A6458300E55B1E /* DRArray2D.swift in Sources */,
 			);

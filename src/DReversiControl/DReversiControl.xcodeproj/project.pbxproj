@@ -24,6 +24,7 @@
 		3A97E97A23A64FA400E55B1E /* DRStoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A97E97823A64FA400E55B1E /* DRStoneView.swift */; };
 		3A97E97B23A64FA400E55B1E /* DRStoneCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A97E97923A64FA400E55B1E /* DRStoneCircleView.swift */; };
 		3AB348392400FAE3002D2518 /* DRStonePositionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB348382400FAE3002D2518 /* DRStonePositionTests.swift */; };
+		3AD16D922413B6DC0086A223 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD16D912413B6DC0086A223 /* Notification.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		3A97E97823A64FA400E55B1E /* DRStoneView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DRStoneView.swift; sourceTree = "<group>"; };
 		3A97E97923A64FA400E55B1E /* DRStoneCircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DRStoneCircleView.swift; sourceTree = "<group>"; };
 		3AB348382400FAE3002D2518 /* DRStonePositionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DRStonePositionTests.swift; sourceTree = "<group>"; };
+		3AD16D912413B6DC0086A223 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +155,7 @@
 				3A97E97723A64F7700E55B1E /* UIView */,
 				3A00768823C9DE78008A2758 /* UIButton */,
 				3A8D195D240A43B20050422A /* nib */,
+				3AD16D902413B6760086A223 /* Extension */,
 				3A832E5A23AA44D900D9674B /* DRStonePosition.swift */,
 				3A00768D23C9EFFC008A2758 /* DRStoneReverseInfo.swift */,
 				3A2ABC8C23AF20020042BC54 /* DReversiControlConst.swift */,
@@ -171,6 +174,14 @@
 				3A8D1962240A6AB40050422A /* DRSettingMenuView.swift */,
 			);
 			path = UIView;
+			sourceTree = "<group>";
+		};
+		3AD16D902413B6760086A223 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				3AD16D912413B6DC0086A223 /* Notification.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -302,6 +313,7 @@
 				3A97E97A23A64FA400E55B1E /* DRStoneView.swift in Sources */,
 				3A832E5B23AA44D900D9674B /* DRStonePosition.swift in Sources */,
 				3A00768A23C9DEAB008A2758 /* DHamburgerMenuButton.swift in Sources */,
+				3AD16D922413B6DC0086A223 /* Notification.swift in Sources */,
 				3A2ABC8D23AF20020042BC54 /* DReversiControlConst.swift in Sources */,
 				3A00768E23C9EFFC008A2758 /* DRStoneReverseInfo.swift in Sources */,
 			);
