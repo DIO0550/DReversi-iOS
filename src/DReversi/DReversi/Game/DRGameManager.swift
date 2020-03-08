@@ -116,7 +116,7 @@ public class DRGameManager {
         if !self.canPutPosition(stonePosition: stonePosition, stoneType: stoneType) { return false }
         
         let stoneRect: CGRect = boardView.stonePositionRect(stonePosition)
-        let stoneView: DRStoneView = DRStoneView(frame: stoneRect, type: stoneType)
+        let stoneView: DRStoneView = DRStoneView(frame: stoneRect, type: stoneType, stonePosition: stonePosition)
         
         let success: Bool = self.stones.setValue(x: stonePosition.column, y: stonePosition.row, value: stoneView)
         

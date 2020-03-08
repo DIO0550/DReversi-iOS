@@ -30,8 +30,23 @@ public class DRStoneView: UIView {
     public var blackStoneView: DRStoneCircleView!
     public var whiteStoneView: DRStoneCircleView!
     private let stoneMargin: CGFloat = 4.0
+    public private(set) var stonePosition: DRStonePosition?
     
-    public init(frame: CGRect, type: DRStoneType) {
+    override public var frame: CGRect {
+        didSet {
+            let size = self.frame.width > self.frame.height ? self.frame.height : self.frame.width
+            if (self.blackStoneView != nil) {
+                self.blackStoneView.center = CGPoint(x: self.bounds.midX, y: self.bounds.midY)
+                self.blackStoneView.frame.size = CGSize(width: size - self.stoneMargin * 2, height: size - self.stoneMargin * 2)
+            }
+            if (self.whiteStoneView != nil) {
+                self.whiteStoneView.center = CGPoint(x: self.bounds.midX, y: self.bounds.midY)
+                self.whiteStoneView.frame.size = CGSize(width: size - self.stoneMargin * 2, height: size - self.stoneMargin * 2)
+            }
+        }
+    }
+    
+    public init(frame: CGRect, type: DRStoneType, stonePosition: DRStonePosition) {
         super.init(frame: frame)
         let size = frame.width > frame.height ? frame.height : frame.width
         self.blackStoneView = DRStoneCircleView.init(frame: CGRect(x: self.stoneMargin, y: self.stoneMargin, width: size - self.stoneMargin * 2, height: size - self.stoneMargin * 2),  color: .black)
@@ -39,9 +54,10 @@ public class DRStoneView: UIView {
         self.whiteStoneView = DRStoneCircleView.init(frame: CGRect(x: self.stoneMargin, y: self.stoneMargin, width: size - self.stoneMargin * 2, height: size - self.stoneMargin * 2),  color: .white)
         self.whiteStoneView.center = CGPoint(x: self.bounds.midX, y: self.bounds.midY)
         self.stoneType = type
-        
+        self.stonePosition = stonePosition
         if self.stoneType.isBlack() {
             self.addSubview(self.blackStoneView)
+
         } else {
             self.addSubview(self.whiteStoneView)
         }
