@@ -34,6 +34,10 @@ class DRGameViewController: UIViewController {
         super.viewDidLoad()
         self.boardView.delegate = self
         self.settingMenuView.setupSelectLevelButton(self.gameLevel)
+        self.initializeStones()
+        self.settingMenuView.setupMenuPosition()
+        self.computerPutStoneLoop()
+        self.updateStoneCountLabel()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -44,17 +48,6 @@ class DRGameViewController: UIViewController {
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         self.removeNotifications()
-    }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        DispatchQueue.main.asyncAfter(deadline: .now()) { [weak self] in
-            guard let weakSelf = self else { return }
-            weakSelf.initializeStones()
-            weakSelf.computerPutStoneLoop()
-            weakSelf.updateStoneCountLabel()
-        }
-        self.settingMenuView.setupMenuPosition()
     }
     
     @IBAction func touchPutButton(_ sender: Any) {
