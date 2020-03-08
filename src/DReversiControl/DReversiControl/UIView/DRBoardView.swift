@@ -39,6 +39,7 @@ public class DRBoardView: UIView {
     override public func layoutSubviews() {
         super.layoutSubviews()
         self.adjustBoardRect()
+        self.updateStoneViewFrame()
     }
     
     
@@ -156,5 +157,18 @@ extension DRBoardView {
             }
         }
         return DRStonePosition(column: -1, row: -1)
+    }
+    
+    private func updateStoneViewFrame() {
+        for subView in self.subviews {
+            if (type(of: subView) !== DRStoneView.self) {
+                continue
+            }
+            
+            let stoneView = subView as! DRStoneView
+            let stoneRect = self.stonePositionRect(stoneView.stonePosition!)
+            
+            stoneView.frame = stoneRect
+        }
     }
 }
