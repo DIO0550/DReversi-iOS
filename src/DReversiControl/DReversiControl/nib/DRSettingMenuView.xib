@@ -26,8 +26,11 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="avU-qf-JLh" customClass="DRSettingMenuLevelButton" customModule="DReversiControl" customModuleProvider="target">
-                    <rect key="frame" x="268.5" y="64" width="124" height="30"/>
+                    <rect key="frame" x="276.5" y="124" width="117.5" height="60"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="HeZ-Fw-OtT"/>
+                    </constraints>
                     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <state key="normal" title="HARD">
                         <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -61,8 +64,11 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lTy-FL-W2F" customClass="DRSettingMenuLevelButton" customModule="DReversiControl" customModuleProvider="target">
-                    <rect key="frame" x="144" y="64" width="124.5" height="30"/>
+                    <rect key="frame" x="159" y="124" width="117.5" height="60"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="Kal-8i-FpL"/>
+                    </constraints>
                     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <state key="normal" title="NORMAL">
                         <color key="titleColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -92,8 +98,11 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YVZ-I2-UGY" customClass="DRSettingMenuLevelButton" customModule="DReversiControl" customModuleProvider="target">
-                    <rect key="frame" x="20" y="64" width="124" height="30"/>
+                    <rect key="frame" x="40" y="124" width="119" height="60"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="TZO-HK-KGM"/>
+                    </constraints>
                     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <state key="normal" title="EASY">
                         <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -124,7 +133,6 @@
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Zb-AK-LTS">
                     <rect key="frame" x="274" y="315" width="120" height="30"/>
-                    <color key="backgroundColor" red="0.0" green="0.43015393610000002" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="120" id="uCY-NQ-z5z"/>
                     </constraints>
@@ -147,19 +155,20 @@
             </subviews>
             <color key="backgroundColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="avU-qf-JLh" secondAttribute="trailing" constant="20" id="9Fq-fk-zlN"/>
+                <constraint firstItem="YVZ-I2-UGY" firstAttribute="width" secondItem="lTy-FL-W2F" secondAttribute="width" multiplier="1.00803" id="BWl-IR-Jv9"/>
                 <constraint firstItem="avU-qf-JLh" firstAttribute="leading" secondItem="lTy-FL-W2F" secondAttribute="trailing" id="D8a-yN-WlK"/>
-                <constraint firstItem="avU-qf-JLh" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.3" id="DJP-GW-VUp"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="avU-qf-JLh" secondAttribute="trailing" constant="20" id="InG-NX-mOG"/>
                 <constraint firstItem="7EO-j1-bhP" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="Lbb-V8-da4"/>
                 <constraint firstItem="avU-qf-JLh" firstAttribute="centerY" secondItem="lTy-FL-W2F" secondAttribute="centerY" id="POD-v0-bQa"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="7EO-j1-bhP" secondAttribute="bottom" constant="20" id="Qrj-qK-FPA"/>
                 <constraint firstItem="YVZ-I2-UGY" firstAttribute="centerY" secondItem="lTy-FL-W2F" secondAttribute="centerY" id="ala-Ld-i4z"/>
-                <constraint firstItem="lTy-FL-W2F" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="ei5-Kt-MB3"/>
+                <constraint firstItem="avU-qf-JLh" firstAttribute="width" secondItem="lTy-FL-W2F" secondAttribute="width" multiplier="0.995984" id="czf-Q6-kvY"/>
+                <constraint firstItem="lTy-FL-W2F" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="80" id="ei5-Kt-MB3"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="8Zb-AK-LTS" secondAttribute="trailing" constant="20" id="f0E-Hn-l6p"/>
                 <constraint firstItem="lTy-FL-W2F" firstAttribute="leading" secondItem="YVZ-I2-UGY" secondAttribute="trailing" id="fgc-Zr-c1H"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="8Zb-AK-LTS" secondAttribute="bottom" constant="20" id="l3G-gy-OBL"/>
-                <constraint firstItem="YVZ-I2-UGY" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.3" id="ml0-Zk-CZe"/>
-                <constraint firstItem="lTy-FL-W2F" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.3" id="nsU-fl-2XH"/>
-                <constraint firstItem="YVZ-I2-UGY" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" id="pnR-YM-Cn8"/>
+                <constraint firstItem="YVZ-I2-UGY" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" constant="20" id="pnR-YM-Cn8"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
