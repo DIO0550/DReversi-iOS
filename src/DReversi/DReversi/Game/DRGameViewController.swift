@@ -29,6 +29,8 @@ class DRGameViewController: UIViewController {
     @IBOutlet weak var blackStoneCountLabel: UILabel!
     @IBOutlet weak var whiteStoneCountLabel: UILabel!
     @IBOutlet weak var settingMenuView: DRSettingMenuView!
+    @IBOutlet weak var turnLabel: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,6 +67,10 @@ class DRGameViewController: UIViewController {
         
         if self.canPutComStone() {
             self.gameTurn = .COM
+        }
+        
+        if self.isGameEnd() {
+            self.gameTurn = .GAME_END
         }
     }
     
@@ -125,6 +131,10 @@ extension DRGameViewController {
         return self.gameManager.canPutStonePositions(stoneType: self.comStone).count > 0
     }
     
+    private func isGameEnd() -> Bool {
+        return !self.canPutPlayerStone() && !self.canPutComStone()
+    }
+    
     private func comPutStone() {
         if !self.canPutPlayerStone() { return }
         let stoneReverseInfos = self.gameManager.stoneReverseInfos(stoneType: self.comStone)
@@ -139,6 +149,10 @@ extension DRGameViewController {
         
         if self.canPutPlayerStone() {
             self.gameTurn = .PLAYER
+        }
+        
+        if self.isGameEnd() {
+            self.gameTurn = .GAME_END
         }
     }
     
@@ -159,6 +173,7 @@ extension DRGameViewController {
                     }
                     weakSelf.comPutStone()
                     semaphore.signal()
+                    
                 }
                 semaphore.wait()
             }
