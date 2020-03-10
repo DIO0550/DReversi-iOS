@@ -1,7 +1,12 @@
-/* 
+/*
   Localizable.strings
   DReversi
 
   Created by DIO on 2020/03/10.
   Copyright © 2020 DIO. All rights reserved.
 */
+
+
+// MARK: Game
+"DRGameTurnPlayer" = "Playerのターンです。";
+"DRGameTurnComputer" = "Computerのターンです。";
