@@ -52,7 +52,7 @@ public class DRMenuView: UIView {
     }
     
     private func setupViewSize() {
-        guard let window: UIWindow = UIApplication.shared.delegate?.window ?? nil else {
+        guard let window: UIWindow = UIApplication.shared.windows.first ?? nil else {
             return;
         }
         
@@ -61,7 +61,7 @@ public class DRMenuView: UIView {
     }
     
     public func setupMenuPosition() {
-        guard let window: UIWindow = UIApplication.shared.delegate?.window ?? nil else {
+        guard let window: UIWindow = UIApplication.shared.windows.first ?? nil else {
             return;
         }
         
@@ -96,7 +96,7 @@ public class DRMenuView: UIView {
     }
     
     public func hideMenu() {
-        guard let window: UIWindow = UIApplication.shared.delegate?.window ?? nil else {
+        guard let window: UIWindow = UIApplication.shared.windows.first ?? nil else {
             return;
         }
         let windowBounds: CGRect = window.bounds
