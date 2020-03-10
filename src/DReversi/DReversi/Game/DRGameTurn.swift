@@ -11,8 +11,13 @@ import UIKit
 enum DRGameTurn {
     case PLAYER
     case COM
+    case GAME_END
     
     func isTurnPlayer() -> Bool {
         return self == .PLAYER
+    }
+    
+    func isGameEnd() -> Bool {
+        return self == .GAME_END
     }
 }
