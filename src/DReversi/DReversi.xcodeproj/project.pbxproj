@@ -31,6 +31,7 @@
 		3A9A5A9D23A3927A005C0E10 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A9A5A9B23A3927A005C0E10 /* LaunchScreen.storyboard */; };
 		3A9A5AA823A3927B005C0E10 /* DReversiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9A5AA723A3927B005C0E10 /* DReversiTests.swift */; };
 		3A9A5AB323A3927B005C0E10 /* DReversiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9A5AB223A3927B005C0E10 /* DReversiUITests.swift */; };
+		3AA0845A2417C57000469869 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3AA084592417C57000469869 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +95,7 @@
 		3A9A5AAE23A3927B005C0E10 /* DReversiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DReversiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A9A5AB223A3927B005C0E10 /* DReversiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DReversiUITests.swift; sourceTree = "<group>"; };
 		3A9A5AB423A3927B005C0E10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3AA084592417C57000469869 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				3A64EF5B23A3B108009DBE36 /* storyboard */,
+				3AA084592417C57000469869 /* Localizable.strings */,
 			);
 			path = Reource;
 			sourceTree = "<group>";
@@ -359,6 +362,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A9A5A9D23A3927A005C0E10 /* LaunchScreen.storyboard in Resources */,
+				3AA0845A2417C57000469869 /* Localizable.strings in Resources */,
 				3A9A5A9A23A3927A005C0E10 /* Assets.xcassets in Resources */,
 				3A9A5A9823A39279005C0E10 /* Main.storyboard in Resources */,
 			);
