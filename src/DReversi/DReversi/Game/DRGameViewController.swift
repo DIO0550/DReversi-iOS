@@ -22,6 +22,8 @@ class DRGameViewController: UIViewController {
     private var isInitializeStone: Bool = false
     private var gameAI: DRGameAIBase = DRGameAIEasy()
     private var gameTurn: DRGameTurn = .PLAYER
+    private let PLAYER_TURN_LABEL = NSLocalizedString("DRGameTurnPlayer", comment: "")
+    private let COMPUTER_TURN_LABEL = NSLocalizedString("DRGameTurnComputer", comment: "")
     
     // MARK: IBOutlet Instance
     @IBOutlet weak var boardView: DRBoardView!
@@ -67,6 +69,7 @@ class DRGameViewController: UIViewController {
         
         if self.canPutComStone() {
             self.gameTurn = .COM
+            self.turnLabel.text = COMPUTER_TURN_LABEL
         }
         
         if self.isGameEnd() {
@@ -149,6 +152,7 @@ extension DRGameViewController {
         
         if self.canPutPlayerStone() {
             self.gameTurn = .PLAYER
+            self.turnLabel.text = PLAYER_TURN_LABEL
         }
         
         if self.isGameEnd() {
