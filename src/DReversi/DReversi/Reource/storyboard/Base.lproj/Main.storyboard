@@ -263,17 +263,23 @@
                                     <action selector="touchMenuButton:" destination="xe1-gq-w80" eventType="touchUpInside" id="msM-Jv-0Y0"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Playerのターンです" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fWx-MJ-c6z">
-                                <rect key="frame" x="433" y="237" width="451" height="70"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fWx-MJ-c6z">
+                                <rect key="frame" x="660.66666666666663" y="237" width="223.33333333333337" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="xu0-3d-Id1"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="25"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Turn：" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oKR-Bj-LRi">
+                                <rect key="frame" x="425.00000000000006" y="260" width="235.66666666666669" height="24.333333333333314"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lib-ZD-CQJ">
-                                <rect key="frame" x="668" y="68" width="216" height="60"/>
+                                <rect key="frame" x="668" y="76" width="216" height="60"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x0C-fH-SfC" customClass="DRStoneCircleView" customModule="DReversiControl">
                                         <rect key="frame" x="8" y="5" width="50" height="50"/>
@@ -309,7 +315,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="28C-Q2-dmj">
-                                <rect key="frame" x="425" y="68" width="216" height="60"/>
+                                <rect key="frame" x="425" y="76" width="216" height="60"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f4v-UQ-O6m" customClass="DRStoneCircleView" customModule="DReversiControl">
                                         <rect key="frame" x="8" y="5" width="50" height="50"/>
@@ -349,32 +355,44 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QsW-RE-oyX" customClass="DRGameResultView" customModule="DReversi" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.55634254220000001" green="0.97934550050000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="fWx-MJ-c6z" secondAttribute="trailing" constant="12" id="0N2-zd-p0n"/>
-                            <constraint firstItem="lib-ZD-CQJ" firstAttribute="top" secondItem="52W-qe-nlX" secondAttribute="bottom" constant="8" id="197-JY-bZa"/>
+                            <constraint firstItem="lib-ZD-CQJ" firstAttribute="top" secondItem="52W-qe-nlX" secondAttribute="bottom" constant="16" id="197-JY-bZa"/>
+                            <constraint firstItem="oKR-Bj-LRi" firstAttribute="leading" secondItem="T7k-B0-X82" secondAttribute="trailing" constant="8" id="1ux-TR-aeF"/>
                             <constraint firstItem="lib-ZD-CQJ" firstAttribute="leading" secondItem="28C-Q2-dmj" secondAttribute="trailing" constant="27" id="4nd-9d-3WY"/>
                             <constraint firstAttribute="trailing" secondItem="lib-ZD-CQJ" secondAttribute="trailing" constant="12" id="5aE-jy-Pry"/>
-                            <constraint firstItem="fWx-MJ-c6z" firstAttribute="leading" secondItem="T7k-B0-X82" secondAttribute="trailing" constant="16" id="5rM-6O-MnL"/>
+                            <constraint firstItem="fWx-MJ-c6z" firstAttribute="width" secondItem="oKR-Bj-LRi" secondAttribute="width" multiplier="0.947368" id="6yE-Bv-L8y"/>
                             <constraint firstItem="52W-qe-nlX" firstAttribute="top" secondItem="qfW-bE-zYV" secondAttribute="top" constant="20" id="7ev-IZ-gEf"/>
+                            <constraint firstItem="QsW-RE-oyX" firstAttribute="top" secondItem="qfW-bE-zYV" secondAttribute="top" id="9py-nM-tKy"/>
                             <constraint firstItem="lib-ZD-CQJ" firstAttribute="width" secondItem="28C-Q2-dmj" secondAttribute="width" id="AUW-Qc-vse"/>
                             <constraint firstItem="T7k-B0-X82" firstAttribute="leading" secondItem="qfW-bE-zYV" secondAttribute="leading" constant="20" id="D5l-c8-BPV"/>
                             <constraint firstAttribute="trailing" secondItem="cJR-Fl-daE" secondAttribute="trailing" constant="12" id="H5a-md-qL1"/>
+                            <constraint firstAttribute="trailing" secondItem="QsW-RE-oyX" secondAttribute="trailing" id="NsL-jX-LjO"/>
                             <constraint firstItem="T7k-B0-X82" firstAttribute="top" secondItem="qfW-bE-zYV" secondAttribute="top" constant="20" id="Ql8-fj-aHs"/>
                             <constraint firstItem="cJR-Fl-daE" firstAttribute="top" secondItem="fWx-MJ-c6z" secondAttribute="bottom" constant="16" id="Tsd-yr-bRK"/>
                             <constraint firstItem="qfW-bE-zYV" firstAttribute="trailing" secondItem="52W-qe-nlX" secondAttribute="trailing" constant="16" id="UlP-of-nkD"/>
                             <constraint firstItem="qfW-bE-zYV" firstAttribute="bottom" secondItem="cJR-Fl-daE" secondAttribute="bottom" constant="20" id="VpR-r2-6c3"/>
+                            <constraint firstAttribute="bottom" secondItem="QsW-RE-oyX" secondAttribute="bottom" id="XMi-o4-K9G"/>
+                            <constraint firstItem="QsW-RE-oyX" firstAttribute="leading" secondItem="rKi-r9-Vt4" secondAttribute="leading" id="eGu-71-KGa"/>
                             <constraint firstItem="28C-Q2-dmj" firstAttribute="leading" secondItem="T7k-B0-X82" secondAttribute="trailing" constant="8" id="efI-7F-Txu"/>
                             <constraint firstItem="28C-Q2-dmj" firstAttribute="centerY" secondItem="lib-ZD-CQJ" secondAttribute="centerY" id="f7B-Nl-V1e"/>
                             <constraint firstItem="cJR-Fl-daE" firstAttribute="leading" secondItem="T7k-B0-X82" secondAttribute="trailing" constant="16" id="gFT-wJ-hwe"/>
                             <constraint firstItem="T7k-B0-X82" firstAttribute="bottom" secondItem="qfW-bE-zYV" secondAttribute="bottom" constant="-20" id="krv-qU-6Kx"/>
+                            <constraint firstItem="fWx-MJ-c6z" firstAttribute="leading" secondItem="oKR-Bj-LRi" secondAttribute="trailing" id="q3S-vY-8q8"/>
+                            <constraint firstItem="fWx-MJ-c6z" firstAttribute="centerY" secondItem="oKR-Bj-LRi" secondAttribute="centerY" id="vlF-KX-ddR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qfW-bE-zYV"/>
                     </view>
                     <connections>
                         <outlet property="blackStoneCountLabel" destination="tNq-oz-EWA" id="ty1-VZ-LIp"/>
                         <outlet property="boardView" destination="T7k-B0-X82" id="RHP-sS-kwA"/>
+                        <outlet property="gameResultView" destination="QsW-RE-oyX" id="JmI-1P-XsJ"/>
                         <outlet property="putStoneButton" destination="cJR-Fl-daE" id="gDP-K6-IUx"/>
                         <outlet property="settingMenuView" destination="TfG-1t-BNh" id="8TM-Rn-gzX"/>
                         <outlet property="turnLabel" destination="fWx-MJ-c6z" id="bd3-BT-180"/>
