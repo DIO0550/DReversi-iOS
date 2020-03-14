@@ -8,5 +8,5 @@
 
 
 // MARK: Game
-"DRGameTurnPlayer" = "Playerのターンです。";
-"DRGameTurnComputer" = "Computerのターンです。";
+"DRGameTurnPlayer" = "Player";
+"DRGameTurnComputer" = "Computer";
