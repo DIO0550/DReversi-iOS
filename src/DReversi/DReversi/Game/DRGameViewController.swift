@@ -15,13 +15,24 @@ class DRGameViewController: UIViewController {
     // MARK: Public Instance
     public var gameLevel: DReversiUtilConst.GameLevel = .NORMAL
     public var playerStone: DRStoneType = .BLACK_STONE
-    public var comStone: DRStoneType = .WHITE_STONE
+    public var comStone: DRStoneType = .WHITE_STONE {
+        didSet {
+            // TODO: issues #2
+            NSLog("change com stone")
+        }
+    }
     
     // MARK: Private Instance
     private var gameManager: DRGameManager = DRGameManager()
     private var isInitializeStone: Bool = false
     private var gameAI: DRGameAIBase = DRGameAIEasy()
-    private var gameTurn: DRGameTurn = .PLAYER
+    private var gameTurn: DRGameTurn = .PLAYER {
+        didSet {
+            if self.gameTurn.isGameEnd() {
+                self.gameResultView.isHidden = false
+            }
+        }
+    }
     private let PLAYER_TURN_LABEL = NSLocalizedString("DRGameTurnPlayer", comment: "")
     private let COMPUTER_TURN_LABEL = NSLocalizedString("DRGameTurnComputer", comment: "")
     
@@ -32,10 +43,12 @@ class DRGameViewController: UIViewController {
     @IBOutlet weak var whiteStoneCountLabel: UILabel!
     @IBOutlet weak var settingMenuView: DRSettingMenuView!
     @IBOutlet weak var turnLabel: UILabel!
+    @IBOutlet weak var gameResultView: DRGameResultView!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.gameResultView.isHidden = true
         self.boardView.delegate = self
         self.settingMenuView.setupSelectLevelButton(self.gameLevel)
         self.initializeStones()
