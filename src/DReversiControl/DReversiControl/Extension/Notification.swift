@@ -9,4 +9,5 @@
 import UIKit
 public extension Notification.Name {
     static let DRSettingMenuViewSelectLevelNotifiactionName = Notification.Name("DRSettingMenuViewSelectLevelNotifiactionName")
+    static let DRBackToTitleViewNotificationName = Notification.Name("DRBackToTitleViewNotificationName")
 }

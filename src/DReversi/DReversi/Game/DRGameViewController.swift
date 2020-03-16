@@ -45,7 +45,6 @@ class DRGameViewController: UIViewController {
     @IBOutlet weak var turnLabel: UILabel!
     @IBOutlet weak var gameResultView: DRGameResultView!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.gameResultView.isHidden = true
@@ -94,6 +93,9 @@ class DRGameViewController: UIViewController {
          self.settingMenuView.displayMenu()
     }
     
+    @objc func backToTitle() {
+        self.performSegue(withIdentifier: "DRSegueGameView", sender: self)
+    }
 }
 
 extension DRGameViewController {
@@ -101,7 +103,11 @@ extension DRGameViewController {
     private func addNotifications() {
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(selectLevelButton(aNotification:)),
-                                               name: NSNotification.Name.DRSettingMenuViewSelectLevelNotifiactionName,
+                                               name:.DRSettingMenuViewSelectLevelNotifiactionName,
+                                               object: nil)
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(backToTitle),
+                                               name: .DRBackToTitleViewNotificationName,
                                                object: nil)
     }
     
