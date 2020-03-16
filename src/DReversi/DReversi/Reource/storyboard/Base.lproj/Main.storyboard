@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xe1-gq-w80">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5H5-Q4-3xq">
     <device id="retina6_5" orientation="landscape" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -8,6 +8,21 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="HnG-qU-kF2">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="5H5-Q4-3xq" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nYa-V6-1gH">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="1Ux-u9-O3X"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dxa-bQ-HsX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-783" y="-769"/>
+        </scene>
         <!--Title View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -113,7 +128,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <segue destination="xe1-gq-w80" kind="custom" identifier="DRSegueGameView" customClass="DRGameViewSegue" customModule="DReversi" customModuleProvider="target" id="zkb-0D-odU"/>
+                                            <action selector="touchStoneButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="u7p-1l-m2k"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pez-je-tI0">
@@ -130,7 +145,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <segue destination="xe1-gq-w80" kind="custom" identifier="DRSegueGameView" customClass="DRGameViewSegue" customModule="DReversi" customModuleProvider="target" id="UjR-1X-wiG"/>
+                                            <action selector="touchStoneButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TEx-hz-XFC"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ido-Ms-tS8">
@@ -194,6 +209,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="jP6-kP-LLf"/>
                     <connections>
                         <outlet property="backButton" destination="ido-Ms-tS8" id="zXu-JB-twj"/>
                         <outlet property="blackButton" destination="Qq6-Hj-0fY" id="WkT-r1-XvK"/>
@@ -204,6 +220,7 @@
                         <outlet property="stoneLabel" destination="DQx-gx-kD9" id="qR8-cr-4Uw"/>
                         <outlet property="titleLabel" destination="tVt-bZ-U0c" id="5re-bq-vZq"/>
                         <outlet property="whiteButton" destination="Pez-je-tI0" id="3qc-g2-xXP"/>
+                        <segue destination="xe1-gq-w80" kind="presentation" identifier="DRSegueGameView" customClass="DRGameViewSegue" customModule="DReversi" customModuleProvider="target" id="g0w-Yt-dTW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -389,6 +406,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qfW-bE-zYV"/>
                     </view>
+                    <navigationItem key="navigationItem" id="qub-mk-xwk"/>
                     <connections>
                         <outlet property="blackStoneCountLabel" destination="tNq-oz-EWA" id="ty1-VZ-LIp"/>
                         <outlet property="boardView" destination="T7k-B0-X82" id="RHP-sS-kwA"/>
@@ -397,14 +415,13 @@
                         <outlet property="settingMenuView" destination="TfG-1t-BNh" id="8TM-Rn-gzX"/>
                         <outlet property="turnLabel" destination="fWx-MJ-c6z" id="bd3-BT-180"/>
                         <outlet property="whiteStoneCountLabel" destination="DhM-DF-C9p" id="tiY-sU-Dxq"/>
+                        <segue destination="tAL-Kf-Qum" kind="unwind" identifier="DRSegueGameView" customClass="DRGameViewSegue" customModule="DReversi" customModuleProvider="target" unwindAction="unwindBackTitleWithSegue:" id="hBZ-bJ-x3N"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PSS-Dc-LOD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="tAL-Kf-Qum" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="131.91964285714286" y="1071.0144927536232"/>
+            <point key="canvasLocation" x="132" y="1212"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="zkb-0D-odU"/>
-    </inferredMetricsTieBreakers>
 </document>
