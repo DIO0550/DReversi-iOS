@@ -76,7 +76,7 @@ public class DRSettingMenuView: DRMenuView {
         sender.isSelected = true
         let toucheLevel: DReversiUtilConst.GameLevel = self.selectLevel(sender);
         
-        NotificationCenter.default.post(name: Notification.Name.DRSettingMenuViewSelectLevelNotifiactionName,
+        NotificationCenter.default.post(name: .DRSettingMenuViewSelectLevelNotifiactionName,
                                         object: sender,
                                         userInfo: [DReversiControlConst.SelectLevelButtonKey: toucheLevel])
     }
@@ -84,4 +84,9 @@ public class DRSettingMenuView: DRMenuView {
     @IBAction func touchBackButton(_ sender: Any) {
         self.hideMenu()
     }
+    
+    @IBAction func touchBackTitleButton(_ sender: Any) {
+        NotificationCenter.default.post(name: .DRBackToTitleViewNotificationName, object: sender, userInfo: nil)
+    }
+    
 }
