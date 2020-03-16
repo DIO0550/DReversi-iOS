@@ -35,6 +35,7 @@ class DRTitleViewController: UIViewController {
         self.setupTitle()
         self.adjustSecondControls()
     }
+    
     @IBAction func touchLevelButton(_ sender: Any) {
         switch sender as! UIButton {
         case self.easyButton:
@@ -53,6 +54,13 @@ class DRTitleViewController: UIViewController {
         self.stoneControlFadeOutAnimation()
     }
     
+    @IBAction func touchStoneButton(_ sender: Any) {
+        self.performSegue(withIdentifier: "DRSegueGameView", sender: self)
+    }
+    
+    @IBAction func unwindBackTitle(segue: UIStoryboardSegue) {
+       
+    }
 }
 
 extension DRTitleViewController {
