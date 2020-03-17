@@ -19,7 +19,8 @@ class DRGameViewSegue: UIStoryboardSegue {
             UIView.transition(with: sourceVC.navigationController!.view, duration: 0.5, options: .transitionFlipFromTop, animations: {
                 sourceVC.navigationController!.pushViewController(destVC, animated: false)
             }) { finish in
-                
+                // back button action
+                (sourceVC as! DRTitleViewController).touchBackButton((sourceVC as! DRTitleViewController).backButton!)
             }
         } else {
             UIView.transition(with: sourceVC.navigationController!.view, duration: 0.5, options: .transitionFlipFromTop, animations: {

@@ -35,6 +35,6 @@ class DRGameResultView: UIView {
         let hConstraints = NSLayoutConstraint.constraints(withVisualFormat: hVisualFormat, options:.alignAllTop, metrics: nil, views: views)
         
         self.addConstraints(vConstraints)
-        self.addConstraints(vConstraints)
+        self.addConstraints(hConstraints)
     }
 }
