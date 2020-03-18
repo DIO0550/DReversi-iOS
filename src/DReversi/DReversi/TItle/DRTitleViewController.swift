@@ -8,6 +8,7 @@
 
 import UIKit
 import DReversiUtil
+import DReversiControl
 
 class DRTitleViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
@@ -23,7 +24,8 @@ class DRTitleViewController: UIViewController {
     
     
     var isAnimating: Bool = false
-    public var gameLevel: DReversiUtilConst.GameLevel = .NORMAL
+    private var gameLevel: DReversiUtilConst.GameLevel = .NORMAL
+    private var playerStone: DRStoneType = .BLACK_STONE
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,11 +57,25 @@ class DRTitleViewController: UIViewController {
     }
     
     @IBAction func touchStoneButton(_ sender: Any) {
+        self.playerStone = (self.blackButton == sender as? UIButton ?? nil) ? .BLACK_STONE : .WHITE_STONE
         self.performSegue(withIdentifier: "DRSegueGameView", sender: self)
     }
     
     @IBAction func unwindBackTitle(segue: UIStoryboardSegue) {
        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if !(segue.source is DRTitleViewController) || !(segue.destination is DRGameViewController) {
+            return
+        }
+        
+        let titleVC = segue.source as! DRTitleViewController
+        let gameVC = segue.destination as! DRGameViewController
+        
+        gameVC.gameLevel = titleVC.gameLevel
+        gameVC.playerStone = titleVC.playerStone
+        gameVC.comStone = titleVC.playerStone.reverse()
     }
 }
 

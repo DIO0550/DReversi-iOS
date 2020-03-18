@@ -13,7 +13,18 @@ import DReversiUtil
 class DRGameViewController: UIViewController {
     
     // MARK: Public Instance
-    public var gameLevel: DReversiUtilConst.GameLevel = .NORMAL
+    public var gameLevel: DReversiUtilConst.GameLevel = .NORMAL {
+        didSet {
+            switch self.gameLevel {
+            case .EASY:
+                self.gameAI = DRGameAIEasy()
+            case .NORMAL:
+                self.gameAI = DRGameAINormal()
+            case .HARD:
+                self.gameAI = DRGameAIHard()
+            }
+        }
+    }
     public var playerStone: DRStoneType = .BLACK_STONE
     public var comStone: DRStoneType = .WHITE_STONE {
         didSet {
@@ -30,6 +41,17 @@ class DRGameViewController: UIViewController {
         didSet {
             if self.gameTurn.isGameEnd() {
                 self.gameResultView.isHidden = false
+            }
+            
+            if self.turnLabel != nil {
+                switch self.gameTurn {
+                case .PLAYER:
+                    self.turnLabel.text = self.PLAYER_TURN_LABEL
+                case .COM:
+                    self.turnLabel.text = self.COMPUTER_TURN_LABEL
+                default:
+                    self.turnLabel.text = "終了"
+                }
             }
         }
     }
@@ -50,6 +72,7 @@ class DRGameViewController: UIViewController {
         self.gameResultView.isHidden = true
         self.boardView.delegate = self
         self.settingMenuView.setupSelectLevelButton(self.gameLevel)
+        self.initializeGameTurn()
         self.initializeStones()
         self.settingMenuView.setupMenuPosition()
         self.computerPutStoneLoop()
@@ -81,7 +104,6 @@ class DRGameViewController: UIViewController {
         
         if self.canPutComStone() {
             self.gameTurn = .COM
-            self.turnLabel.text = COMPUTER_TURN_LABEL
         }
         
         if self.isGameEnd() {
@@ -113,6 +135,10 @@ extension DRGameViewController {
     
     private func removeNotifications() {
         NotificationCenter.default.removeObserver(self)
+    }
+    
+    private func initializeGameTurn() {
+        self.gameTurn = (self.playerStone == .BLACK_STONE) ? .PLAYER : .COM
     }
     
     private func initializeStones() {
@@ -171,7 +197,6 @@ extension DRGameViewController {
         
         if self.canPutPlayerStone() {
             self.gameTurn = .PLAYER
-            self.turnLabel.text = PLAYER_TURN_LABEL
         }
         
         if self.isGameEnd() {
@@ -182,6 +207,7 @@ extension DRGameViewController {
     private func computerPutStoneLoop() {
         DispatchQueue.global().async {
             while true {
+                if self.gameTurn.isGameEnd() { break }
                 if self.gameTurn.isTurnPlayer() { continue }
                 Thread.sleep(forTimeInterval: 2.0)
                 let semaphore = DispatchSemaphore(value: 0)
@@ -207,18 +233,7 @@ extension DRGameViewController {
         guard let notification = aNotification else { return }
         
         self.gameLevel = notification.userInfo![DReversiControlConst.SelectLevelButtonKey] as! DReversiUtilConst.GameLevel
-        
-        switch self.gameLevel {
-        case .EASY:
-            self.gameAI = DRGameAIEasy()
-            break
-        case .NORMAL:
-            self.gameAI = DRGameAINormal()
-            break
-        case .HARD:
-            self.gameAI = DRGameAIHard()
-            break
-        }
+
     }
 }
 

@@ -14,8 +14,6 @@ class DRGameViewSegue: UIStoryboardSegue {
         let sourceVC = self.source
         
         if destVC is DRGameViewController && sourceVC is DRTitleViewController {
-            (destVC as! DRGameViewController).gameLevel = (sourceVC as! DRTitleViewController).gameLevel
-            
             UIView.transition(with: sourceVC.navigationController!.view, duration: 0.5, options: .transitionFlipFromTop, animations: {
                 sourceVC.navigationController!.pushViewController(destVC, animated: false)
             }) { finish in
