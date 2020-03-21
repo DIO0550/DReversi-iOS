@@ -9,6 +9,11 @@
 import UIKit
 
 class DRGameResultView: UIView {
+    
+    @IBOutlet weak var messageLabel: UILabel!
+    @IBOutlet weak var backTitleButton: UIButton!
+    @IBOutlet weak var retryButton: UIButton!
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.commonInit()
