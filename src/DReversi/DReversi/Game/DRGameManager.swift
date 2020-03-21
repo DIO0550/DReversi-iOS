@@ -20,6 +20,12 @@ public class DRGameManager {
                                      value: nil)
     }
     
+    public func reset() {
+        self.stones = DRArray2D.init(width: DReversiControlConst.BlockCount,
+                                     height:  DReversiControlConst.BlockCount,
+                                     value: nil)
+    }
+    
     public func canPutStonePositions(stoneType: DRStoneType) -> [DRStonePosition] {
         var positions: [DRStonePosition] = []
         for row in 0 ..< DReversiControlConst.BlockCount {
