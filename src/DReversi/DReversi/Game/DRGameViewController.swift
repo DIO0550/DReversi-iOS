@@ -76,6 +76,7 @@ class DRGameViewController: UIViewController {
         self.initializeStones()
         self.settingMenuView.setupMenuPosition()
         self.computerPutStoneLoop()
+        self.updatePutStoneButtonEnable()
         self.updateStoneCountLabel()
     }
     
