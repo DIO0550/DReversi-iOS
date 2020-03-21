@@ -12,7 +12,7 @@ import DReversiUtil
 
 class DRGameViewController: UIViewController {
     
-    // MARK: Public Instance
+    // MARK: Public
     public var gameLevel: DReversiUtilConst.GameLevel = .NORMAL {
         didSet {
             switch self.gameLevel {
@@ -33,13 +33,11 @@ class DRGameViewController: UIViewController {
         }
     }
     
-    // MARK: Private Instance
-    private var gameManager: DRGameManager = DRGameManager()
-    private var isInitializeStone: Bool = false
     private var gameAI: DRGameAIBase = DRGameAIEasy()
-    private var gameTurn: DRGameTurn = .PLAYER {
+    var gameTurn: DRGameTurn = .PLAYER {
         didSet {
             if self.gameTurn.isGameEnd() {
+                self.updateResultMessage()
                 self.gameResultView.isHidden = false
             }
             
@@ -55,8 +53,16 @@ class DRGameViewController: UIViewController {
             }
         }
     }
+    
+    // MARK INTERNAL
+    internal var gameManager: DRGameManager = DRGameManager()
+    
+    // MARK CONSTANT
     private let PLAYER_TURN_LABEL = NSLocalizedString("DRGameTurnPlayer", comment: "")
     private let COMPUTER_TURN_LABEL = NSLocalizedString("DRGameTurnComputer", comment: "")
+    internal let PLAYER_WIN_RESULT_LABEL = NSLocalizedString("DRGameResultPlayerWin", comment: "")
+    internal let COMPUTER_WIN_RESULT_LABEL = NSLocalizedString("DRGameResultComputerWin", comment: "")
+    internal let DRAW_RESULT_LABEL = NSLocalizedString("DRGameResultDraw", comment: "")
     
     // MARK: IBOutlet Instance
     @IBOutlet weak var boardView: DRBoardView!
@@ -69,15 +75,10 @@ class DRGameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.gameResultView.isHidden = true
+        self.setupResultViewButtonsAction()
         self.boardView.delegate = self
         self.settingMenuView.setupSelectLevelButton(self.gameLevel)
-        self.initializeGameTurn()
-        self.initializeStones()
-        self.settingMenuView.setupMenuPosition()
-        self.computerPutStoneLoop()
-        self.updatePutStoneButtonEnable()
-        self.updateStoneCountLabel()
+        self.gameStart()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -88,6 +89,42 @@ class DRGameViewController: UIViewController {
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         self.removeNotifications()
+    }
+    
+    func computerPutStoneLoop() {
+        DispatchQueue.global().async {
+            while true {
+                if self.gameTurn.isGameEnd() { break }
+                if self.gameTurn.isTurnPlayer() { continue }
+                Thread.sleep(forTimeInterval: 2.0)
+                let semaphore = DispatchSemaphore(value: 0)
+                DispatchQueue.main.sync { [weak self] in
+                    guard let weakSelf = self else {
+                        semaphore.signal()
+                        return
+                    }
+                    if weakSelf.gameTurn.isTurnPlayer() {
+                        semaphore.signal()
+                        return
+                    }
+                    weakSelf.comPutStone()
+                    semaphore.signal()
+                    
+                }
+                semaphore.wait()
+            }
+        }
+    }
+    
+    func updatePutStoneButtonEnable() {
+        let isEnabled = self.gameManager.canPutReversePosition(stonePosition: self.boardView.selectStonePosition, stoneType: self.playerStone) && self.gameTurn.isTurnPlayer()
+        self.putStoneButton.isEnabled = isEnabled
+        self.putStoneButton.alpha = isEnabled ? 1.0 : 0.5
+    }
+    
+    func updateStoneCountLabel() {
+        self.blackStoneCountLabel.text = self.gameManager.stoneCount(stoneType: .BLACK_STONE).description
+        self.whiteStoneCountLabel.text = self.gameManager.stoneCount(stoneType: .WHITE_STONE).description
     }
     
     @IBAction func touchPutButton(_ sender: Any) {
@@ -112,6 +149,8 @@ class DRGameViewController: UIViewController {
         }
     }
     
+    
+    
     @IBAction func touchMenuButton(_ sender: Any) {
          self.settingMenuView.displayMenu()
     }
@@ -119,6 +158,8 @@ class DRGameViewController: UIViewController {
     @objc func backToTitle() {
         self.performSegue(withIdentifier: "DRSegueGameView", sender: self)
     }
+    
+    
 }
 
 extension DRGameViewController {
@@ -136,40 +177,6 @@ extension DRGameViewController {
     
     private func removeNotifications() {
         NotificationCenter.default.removeObserver(self)
-    }
-    
-    private func initializeGameTurn() {
-        self.gameTurn = (self.playerStone == .BLACK_STONE) ? .PLAYER : .COM
-    }
-    
-    private func initializeStones() {
-        if self.isInitializeStone { return }
-        
-        self.isInitializeStone = true;
-        self.gameManager.addStone(stonePosition: DRStonePosition(column: 3, row: 3),
-                                  boardView: self.boardView,
-                                  stoneType: .WHITE_STONE)
-        self.gameManager.addStone(stonePosition: DRStonePosition(column: 4, row: 3),
-                                  boardView: self.boardView,
-                                  stoneType: .BLACK_STONE)
-        self.gameManager.addStone(stonePosition: DRStonePosition(column: 4, row: 4),
-                                  boardView: self.boardView,
-                                  stoneType: .WHITE_STONE)
-        self.gameManager.addStone(stonePosition: DRStonePosition(column: 3, row: 4),
-                                  boardView: self.boardView,
-                                  stoneType: .BLACK_STONE)
-        
-    }
-
-    private func updatePutStoneButtonEnable() {
-        let isEnabled = self.gameManager.canPutReversePosition(stonePosition: self.boardView.selectStonePosition, stoneType: self.playerStone) && self.gameTurn.isTurnPlayer()
-        self.putStoneButton.isEnabled = isEnabled
-        self.putStoneButton.alpha = isEnabled ? 1.0 : 0.5
-    }
-    
-    private func updateStoneCountLabel() {
-        self.blackStoneCountLabel.text = self.gameManager.stoneCount(stoneType: .BLACK_STONE).description
-        self.whiteStoneCountLabel.text = self.gameManager.stoneCount(stoneType: .WHITE_STONE).description
     }
     
     private func canPutPlayerStone() -> Bool {
@@ -205,30 +212,6 @@ extension DRGameViewController {
         }
     }
     
-    private func computerPutStoneLoop() {
-        DispatchQueue.global().async {
-            while true {
-                if self.gameTurn.isGameEnd() { break }
-                if self.gameTurn.isTurnPlayer() { continue }
-                Thread.sleep(forTimeInterval: 2.0)
-                let semaphore = DispatchSemaphore(value: 0)
-                DispatchQueue.main.sync { [weak self] in
-                    guard let weakSelf = self else {
-                        semaphore.signal()
-                        return
-                    }
-                    if weakSelf.gameTurn.isTurnPlayer() {
-                        semaphore.signal()
-                        return
-                    }
-                    weakSelf.comPutStone()
-                    semaphore.signal()
-                    
-                }
-                semaphore.wait()
-            }
-        }
-    }
     
     @objc func selectLevelButton(aNotification: NSNotification?) {
         guard let notification = aNotification else { return }
