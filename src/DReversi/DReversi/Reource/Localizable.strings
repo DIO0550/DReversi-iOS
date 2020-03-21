@@ -8,5 +8,10 @@
 
 
 // MARK: Game
+/// ターン
 "DRGameTurnPlayer" = "Player";
 "DRGameTurnComputer" = "Computer";
+/// リザルト
+"DRGameResultPlayerWin" = "Player Win";
+"DRGameResultComputerWin" = "Computer Win";
+"DRGameResultDraw" = "Draw";
