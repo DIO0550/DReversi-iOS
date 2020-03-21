@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3A2ABC8F23AF27220042BC54 /* UIBezierPath+Additional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2ABC8E23AF27220042BC54 /* UIBezierPath+Additional.swift */; };
+		3A4C70952425F77D00A0CEA0 /* UIView+Additional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4C70942425F77D00A0CEA0 /* UIView+Additional.swift */; };
 		3A97E91423A6447400E55B1E /* DReversiUtil.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A97E90A23A6447400E55B1E /* DReversiUtil.framework */; };
 		3A97E91923A6447400E55B1E /* DReversiUtilTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A97E91823A6447400E55B1E /* DReversiUtilTests.swift */; };
 		3A97E91B23A6447400E55B1E /* DReversiUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A97E90D23A6447400E55B1E /* DReversiUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -27,6 +28,7 @@
 
 /* Begin PBXFileReference section */
 		3A2ABC8E23AF27220042BC54 /* UIBezierPath+Additional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBezierPath+Additional.swift"; sourceTree = "<group>"; };
+		3A4C70942425F77D00A0CEA0 /* UIView+Additional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Additional.swift"; sourceTree = "<group>"; };
 		3A97E90A23A6447400E55B1E /* DReversiUtil.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DReversiUtil.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A97E90D23A6447400E55B1E /* DReversiUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DReversiUtil.h; sourceTree = "<group>"; };
 		3A97E90E23A6447400E55B1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -56,6 +58,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A4C70932425F75B00A0CEA0 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				3A2ABC8E23AF27220042BC54 /* UIBezierPath+Additional.swift */,
+				3A4C70942425F77D00A0CEA0 /* UIView+Additional.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		3A97E90023A6447400E55B1E = {
 			isa = PBXGroup;
 			children = (
@@ -78,8 +89,8 @@
 			isa = PBXGroup;
 			children = (
 				3A97E90D23A6447400E55B1E /* DReversiUtil.h */,
+				3A4C70932425F75B00A0CEA0 /* Extension */,
 				3A97E97523A6458300E55B1E /* DRArray2D.swift */,
-				3A2ABC8E23AF27220042BC54 /* UIBezierPath+Additional.swift */,
 				3AD16D932413B8ED0086A223 /* DReversiUtilConst.swift */,
 				3A97E90E23A6447400E55B1E /* Info.plist */,
 			);
@@ -208,6 +219,7 @@
 				3AD16D942413B8ED0086A223 /* DReversiUtilConst.swift in Sources */,
 				3A2ABC8F23AF27220042BC54 /* UIBezierPath+Additional.swift in Sources */,
 				3A97E97623A6458300E55B1E /* DRArray2D.swift in Sources */,
+				3A4C70952425F77D00A0CEA0 /* UIView+Additional.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
