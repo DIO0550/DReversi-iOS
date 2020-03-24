@@ -58,11 +58,11 @@ class DRTitleViewController: UIViewController {
     
     @IBAction func touchStoneButton(_ sender: Any) {
         self.playerStone = (self.blackButton == sender as? UIButton ?? nil) ? .BLACK_STONE : .WHITE_STONE
-        self.performSegue(withIdentifier: "DRSegueGameView", sender: self)
+        self.performSegue(withIdentifier: DRGameViewPushSegue.DRGameViewPushSegueIdentifier, sender: self)
     }
     
     @IBAction func unwindBackTitle(segue: UIStoryboardSegue) {
-       
+       // do nothing
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

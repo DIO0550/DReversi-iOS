@@ -156,7 +156,7 @@ class DRGameViewController: UIViewController {
     }
     
     @objc func backToTitle() {
-        self.performSegue(withIdentifier: "DRSegueGameView", sender: self)
+        self.performSegue(withIdentifier: DRGameViewPopSegue.DRGameViewPopSegueSegueIdentifier, sender: self)
     }
     
     
