@@ -220,7 +220,7 @@
                         <outlet property="stoneLabel" destination="DQx-gx-kD9" id="qR8-cr-4Uw"/>
                         <outlet property="titleLabel" destination="tVt-bZ-U0c" id="5re-bq-vZq"/>
                         <outlet property="whiteButton" destination="Pez-je-tI0" id="3qc-g2-xXP"/>
-                        <segue destination="xe1-gq-w80" kind="presentation" identifier="DRSegueGameView" customClass="DRGameViewSegue" customModule="DReversi" customModuleProvider="target" id="g0w-Yt-dTW"/>
+                        <segue destination="xe1-gq-w80" kind="presentation" identifier="DRGameViewPushSegue" customClass="DRGameViewPushSegue" customModule="DReversi" customModuleProvider="target" id="g0w-Yt-dTW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -415,7 +415,7 @@
                         <outlet property="settingMenuView" destination="TfG-1t-BNh" id="8TM-Rn-gzX"/>
                         <outlet property="turnLabel" destination="fWx-MJ-c6z" id="bd3-BT-180"/>
                         <outlet property="whiteStoneCountLabel" destination="DhM-DF-C9p" id="tiY-sU-Dxq"/>
-                        <segue destination="tAL-Kf-Qum" kind="unwind" identifier="DRSegueGameView" customClass="DRGameViewSegue" customModule="DReversi" customModuleProvider="target" unwindAction="unwindBackTitleWithSegue:" id="hBZ-bJ-x3N"/>
+                        <segue destination="tAL-Kf-Qum" kind="unwind" identifier="DRGameViewPopSegue" customClass="DRGameViewPopSegue" customModule="DReversi" customModuleProvider="target" unwindAction="unwindBackTitleWithSegue:" id="hBZ-bJ-x3N"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PSS-Dc-LOD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
