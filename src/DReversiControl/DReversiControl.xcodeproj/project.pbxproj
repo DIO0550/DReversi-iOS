@@ -23,6 +23,7 @@
 		3A97E96C23A644FB00E55B1E /* DReversiControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A97E95E23A644FB00E55B1E /* DReversiControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3A97E97A23A64FA400E55B1E /* DRStoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A97E97823A64FA400E55B1E /* DRStoneView.swift */; };
 		3A97E97B23A64FA400E55B1E /* DRStoneCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A97E97923A64FA400E55B1E /* DRStoneCircleView.swift */; };
+		3AA9D59F242CDB4E009E381C /* DRGhostButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA9D59E242CDB4E009E381C /* DRGhostButton.swift */; };
 		3AB348392400FAE3002D2518 /* DRStonePositionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB348382400FAE3002D2518 /* DRStonePositionTests.swift */; };
 		3AD16D922413B6DC0086A223 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD16D912413B6DC0086A223 /* Notification.swift */; };
 /* End PBXBuildFile section */
@@ -70,6 +71,7 @@
 		3A97E95F23A644FB00E55B1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A97E97823A64FA400E55B1E /* DRStoneView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DRStoneView.swift; sourceTree = "<group>"; };
 		3A97E97923A64FA400E55B1E /* DRStoneCircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DRStoneCircleView.swift; sourceTree = "<group>"; };
+		3AA9D59E242CDB4E009E381C /* DRGhostButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DRGhostButton.swift; sourceTree = "<group>"; };
 		3AB348382400FAE3002D2518 /* DRStonePositionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DRStonePositionTests.swift; sourceTree = "<group>"; };
 		3AD16D912413B6DC0086A223 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -99,6 +101,7 @@
 			children = (
 				3A00768923C9DEAB008A2758 /* DHamburgerMenuButton.swift */,
 				3A5B075B240B83D100AC2772 /* DRSettingMenuLevelButton.swift */,
+				3AA9D59E242CDB4E009E381C /* DRGhostButton.swift */,
 			);
 			path = UIButton;
 			sourceTree = "<group>";
@@ -306,6 +309,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A8D1965240A70BB0050422A /* DRMenuView.swift in Sources */,
+				3AA9D59F242CDB4E009E381C /* DRGhostButton.swift in Sources */,
 				3A97E97B23A64FA400E55B1E /* DRStoneCircleView.swift in Sources */,
 				3A8D1963240A6AB40050422A /* DRSettingMenuView.swift in Sources */,
 				3A832E5923AA2C3400D9674B /* DRBoardView.swift in Sources */,
