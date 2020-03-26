@@ -20,36 +20,55 @@
             <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ctw-m9-5p3">
-                    <rect key="frame" x="586" y="348" width="250" height="29"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ctw-m9-5p3" customClass="DRGhostButton" customModule="DReversiControl">
+                    <rect key="frame" x="586" y="343" width="250" height="34"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="250" id="eg8-FX-gQB"/>
                     </constraints>
-                    <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="17"/>
                     <size key="titleShadowOffset" width="10" height="0.0"/>
-                    <state key="normal" title="再挑戦"/>
+                    <state key="normal" title="再挑戦">
+                        <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="highlighted">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="buttonColor">
+                            <color key="value" red="0.55634254220000001" green="0.97934550050000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="color">
+                            <color key="value" red="0.0067587140422857945" green="0.37949823633299484" blue="0.015402138254218671" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player Win" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XXo-2A-EeB">
-                    <rect key="frame" x="298" y="166.5" width="300" height="60"/>
+                    <rect key="frame" x="198" y="96.5" width="500" height="200"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="300" id="H4S-do-Epd"/>
-                        <constraint firstAttribute="height" constant="60" id="i4W-5b-r1m"/>
+                        <constraint firstAttribute="width" constant="500" id="H4S-do-Epd"/>
+                        <constraint firstAttribute="height" constant="200" id="i4W-5b-r1m"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                    <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="100"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
+                    <color key="shadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <size key="shadowOffset" width="9" height="1"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bvE-2q-B60">
-                    <rect key="frame" x="60" y="348" width="250" height="29"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bvE-2q-B60" customClass="DRGhostButton" customModule="DReversiControl">
+                    <rect key="frame" x="60" y="343" width="250" height="34"/>
+                    <color key="backgroundColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="250" id="y0p-Tg-8JO"/>
                     </constraints>
-                    <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="17"/>
                     <size key="titleShadowOffset" width="10" height="0.0"/>
                     <state key="normal" title="タイトルに戻る"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="color">
+                            <color key="value" red="0.0067587140419999997" green="0.37949823630000001" blue="0.015402138250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                 </button>
             </subviews>
-            <color key="backgroundColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.37133877927619369" green="0.65227142055076137" blue="0.0048454579970126808" alpha="0.94999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="XXo-2A-EeB" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="5yk-Ll-bSM"/>
                 <constraint firstItem="bvE-2q-B60" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="GbU-nY-89t"/>

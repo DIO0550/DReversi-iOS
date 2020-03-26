@@ -1,5 +1,5 @@
 //
-//  UIView+Additional.swift
+//  UIViewEx.swift
 //  DReversiUtil
 //
 //  Created by DIO on 2020/03/21.
