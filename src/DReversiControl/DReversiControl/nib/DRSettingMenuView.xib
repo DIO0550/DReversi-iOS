@@ -131,32 +131,42 @@
                         <action selector="touchLevelButton:" destination="-1" eventType="touchUpInside" id="GGw-wT-SPI"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Zb-AK-LTS">
-                    <rect key="frame" x="274" y="315" width="120" height="30"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Zb-AK-LTS" customClass="DRGhostButton" customModule="DReversiControl" customModuleProvider="target">
+                    <rect key="frame" x="274" y="311" width="120" height="34"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="120" id="uCY-NQ-z5z"/>
                     </constraints>
                     <state key="normal" title="戻る">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="color">
+                            <color key="value" red="0.0067587140419999997" green="0.37949823630000001" blue="0.015402138250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <action selector="touchBackButton:" destination="-1" eventType="touchUpInside" id="k0O-U4-yUq"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7EO-j1-bhP">
-                    <rect key="frame" x="20" y="315" width="120" height="30"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7EO-j1-bhP" customClass="DRGhostButton" customModule="DReversiControl" customModuleProvider="target">
+                    <rect key="frame" x="20" y="311" width="120" height="34"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="120" id="eiJ-bo-YOi"/>
                     </constraints>
                     <state key="normal" title="タイトルに戻る">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="color">
+                            <color key="value" red="0.0067587140419999997" green="0.37949823630000001" blue="0.015402138250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <action selector="touchBackTitleButton:" destination="-1" eventType="touchUpInside" id="Dti-aX-Scs"/>
                     </connections>
                 </button>
             </subviews>
-            <color key="backgroundColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.83216959239999999" green="0.98548370600000001" blue="0.47333085539999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="avU-qf-JLh" secondAttribute="trailing" constant="20" id="9Fq-fk-zlN"/>
                 <constraint firstItem="YVZ-I2-UGY" firstAttribute="width" secondItem="lTy-FL-W2F" secondAttribute="width" multiplier="1.00803" id="BWl-IR-Jv9"/>
