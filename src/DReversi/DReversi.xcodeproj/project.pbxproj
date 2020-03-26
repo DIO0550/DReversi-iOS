@@ -25,7 +25,6 @@
 		3A64EF4F23A3A701009DBE36 /* DRTitleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A64EF4E23A3A701009DBE36 /* DRTitleViewController.swift */; };
 		3A64EF5323A3A85C009DBE36 /* DRGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A64EF5223A3A85C009DBE36 /* DRGameViewController.swift */; };
 		3A7C0E3F23A4C00400B931C2 /* DRConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7C0E3E23A4C00400B931C2 /* DRConstants.swift */; };
-		3A7C0E4223A4C9B500B931C2 /* String+Additional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7C0E4123A4C9B500B931C2 /* String+Additional.swift */; };
 		3A7C0E4423A503DE00B931C2 /* DRTitleViewController+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7C0E4323A503DE00B931C2 /* DRTitleViewController+Animation.swift */; };
 		3A9A5A9123A39279005C0E10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9A5A9023A39279005C0E10 /* AppDelegate.swift */; };
 		3A9A5A9323A39279005C0E10 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9A5A9223A39279005C0E10 /* SceneDelegate.swift */; };
@@ -88,7 +87,6 @@
 		3A64EF4E23A3A701009DBE36 /* DRTitleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DRTitleViewController.swift; sourceTree = "<group>"; };
 		3A64EF5223A3A85C009DBE36 /* DRGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DRGameViewController.swift; sourceTree = "<group>"; };
 		3A7C0E3E23A4C00400B931C2 /* DRConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DRConstants.swift; sourceTree = "<group>"; };
-		3A7C0E4123A4C9B500B931C2 /* String+Additional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Additional.swift"; sourceTree = "<group>"; };
 		3A7C0E4323A503DE00B931C2 /* DRTitleViewController+Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DRTitleViewController+Animation.swift"; sourceTree = "<group>"; };
 		3A9A5A8D23A39279005C0E10 /* DReversi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DReversi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A9A5A9023A39279005C0E10 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -204,14 +202,6 @@
 			path = storyboard;
 			sourceTree = "<group>";
 		};
-		3A7C0E4023A4C99900B931C2 /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-				3A7C0E4123A4C9B500B931C2 /* String+Additional.swift */,
-			);
-			path = Extension;
-			sourceTree = "<group>";
-		};
 		3A97E97C23A6506D00E55B1E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -247,7 +237,6 @@
 			children = (
 				3A9A5A9023A39279005C0E10 /* AppDelegate.swift */,
 				3A9A5A9223A39279005C0E10 /* SceneDelegate.swift */,
-				3A7C0E4023A4C99900B931C2 /* Extension */,
 				3A9E639A242A271A00BAF704 /* Segue */,
 				3A64EF5123A3A844009DBE36 /* Game */,
 				3A64EF5023A3A70A009DBE36 /* TItle */,
@@ -427,7 +416,6 @@
 				3A7C0E4423A503DE00B931C2 /* DRTitleViewController+Animation.swift in Sources */,
 				3A24931023AB88B200E04C22 /* DRGameAIEasy.swift in Sources */,
 				3A9E63A0242A29DD00BAF704 /* DRGameViewPopSegue.swift in Sources */,
-				3A7C0E4223A4C9B500B931C2 /* String+Additional.swift in Sources */,
 				3A9A5A9123A39279005C0E10 /* AppDelegate.swift in Sources */,
 				3A24931423AB89BB00E04C22 /* DRGameAIHard.swift in Sources */,
 				3A7C0E3F23A4C00400B931C2 /* DRConstants.swift in Sources */,
