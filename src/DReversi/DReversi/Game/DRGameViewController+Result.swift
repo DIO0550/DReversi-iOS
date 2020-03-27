@@ -8,32 +8,15 @@
 
 import UIKit
 
-enum DRGamaResult {
-    case PLAYER
-    case COMPUTER
-    case DRAW
-    
-    func gameResultText() -> String {
-        switch self {
-        case .PLAYER:
-            return NSLocalizedString("DRGameResultPlayerWin", comment: "")
-        case .COMPUTER:
-            return NSLocalizedString("DRGameResultComputerWin", comment: "")
-        case .DRAW:
-            return NSLocalizedString("DRGameResultDraw", comment: "")
-        }
-    }
-}
-
 extension DRGameViewController {
     func updateResultMessage() {
         let palyerStoneCount = self.gameManager.stoneCount(stoneType: self.playerStone)
         let computerStoneCount = self.gameManager.stoneCount(stoneType: self.comStone)
         let result = self.gameResult(playerStoneCount: palyerStoneCount, computerStoneCount: computerStoneCount)
-        self.gameResultView.messageLabel.text = result.gameResultText()
+        self.gameResultView.gameResult = result
     }
     
-    func gameResult(playerStoneCount: Int, computerStoneCount: Int) -> DRGamaResult {
+    func gameResult(playerStoneCount: Int, computerStoneCount: Int) -> DRGameResult {
         if playerStoneCount == computerStoneCount { return .DRAW }
         if playerStoneCount > computerStoneCount  { return .PLAYER }
         if playerStoneCount < computerStoneCount  { return .COMPUTER }
