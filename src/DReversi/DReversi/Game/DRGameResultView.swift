@@ -14,6 +14,12 @@ class DRGameResultView: UIView {
     @IBOutlet weak var backTitleButton: UIButton!
     @IBOutlet weak var retryButton: UIButton!
     
+    var gameResult: DRGameResult = .DRAW {
+        didSet {
+            self.updateMessage()
+        }
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.commonInit()
@@ -41,5 +47,15 @@ class DRGameResultView: UIView {
         
         self.addConstraints(vConstraints)
         self.addConstraints(hConstraints)
+    }
+    
+    private func updateMessage() {
+        let attributedMessage: NSMutableAttributedString = NSMutableAttributedString.init(string: self.gameResult.gameResultText())
+        let font: UIFont = self.messageLabel.font
+        let color: UIColor = self.gameResult.gemeResultTextColor()
+        let attributes: [NSAttributedString.Key : Any] = [.font: font, .foregroundColor: color, .kern : 20.0];
+        attributedMessage.setAttributes(attributes, range: NSRange(location: 0, length: attributedMessage.length))
+        
+        self.messageLabel.attributedText = attributedMessage
     }
 }
