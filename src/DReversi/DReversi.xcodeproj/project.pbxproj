@@ -36,6 +36,8 @@
 		3A9E639E242A27DF00BAF704 /* DRGameViewPushSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9E639D242A27DF00BAF704 /* DRGameViewPushSegue.swift */; };
 		3A9E63A0242A29DD00BAF704 /* DRGameViewPopSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9E639F242A29DD00BAF704 /* DRGameViewPopSegue.swift */; };
 		3AA0845A2417C57000469869 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3AA084592417C57000469869 /* Localizable.strings */; };
+		3AA37564242E2C01006010FC /* DRGameResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA37563242E2C01006010FC /* DRGameResult.swift */; };
+		3AA37567242E33B0006010FC /* UIColorEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA37566242E33B0006010FC /* UIColorEx.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +106,8 @@
 		3A9E639D242A27DF00BAF704 /* DRGameViewPushSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DRGameViewPushSegue.swift; sourceTree = "<group>"; };
 		3A9E639F242A29DD00BAF704 /* DRGameViewPopSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DRGameViewPopSegue.swift; sourceTree = "<group>"; };
 		3AA084592417C57000469869 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		3AA37563242E2C01006010FC /* DRGameResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DRGameResult.swift; sourceTree = "<group>"; };
+		3AA37566242E33B0006010FC /* UIColorEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorEx.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +174,7 @@
 				3A4C70912425F50D00A0CEA0 /* DRGameViewController+Initialize.swift */,
 				3A24931523AB8A3D00E04C22 /* DRGameManager.swift */,
 				3A3C267223F640BE00F7CF40 /* DRGameTurn.swift */,
+				3AA37563242E2C01006010FC /* DRGameResult.swift */,
 				3A02B703241D035300C6AD96 /* DRGameResultView.swift */,
 			);
 			path = Game;
@@ -237,6 +242,7 @@
 			children = (
 				3A9A5A9023A39279005C0E10 /* AppDelegate.swift */,
 				3A9A5A9223A39279005C0E10 /* SceneDelegate.swift */,
+				3AA37565242E339E006010FC /* Extention */,
 				3A9E639A242A271A00BAF704 /* Segue */,
 				3A64EF5123A3A844009DBE36 /* Game */,
 				3A64EF5023A3A70A009DBE36 /* TItle */,
@@ -274,6 +280,14 @@
 				3A9E639F242A29DD00BAF704 /* DRGameViewPopSegue.swift */,
 			);
 			path = Segue;
+			sourceTree = "<group>";
+		};
+		3AA37565242E339E006010FC /* Extention */ = {
+			isa = PBXGroup;
+			children = (
+				3AA37566242E33B0006010FC /* UIColorEx.swift */,
+			);
+			path = Extention;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -418,10 +432,12 @@
 				3A9E63A0242A29DD00BAF704 /* DRGameViewPopSegue.swift in Sources */,
 				3A9A5A9123A39279005C0E10 /* AppDelegate.swift in Sources */,
 				3A24931423AB89BB00E04C22 /* DRGameAIHard.swift in Sources */,
+				3AA37567242E33B0006010FC /* UIColorEx.swift in Sources */,
 				3A7C0E3F23A4C00400B931C2 /* DRConstants.swift in Sources */,
 				3A24931223AB893900E04C22 /* DRGameAINormal.swift in Sources */,
 				3A24931623AB8A3D00E04C22 /* DRGameManager.swift in Sources */,
 				3A64EF5323A3A85C009DBE36 /* DRGameViewController.swift in Sources */,
+				3AA37564242E2C01006010FC /* DRGameResult.swift in Sources */,
 				3A9E639E242A27DF00BAF704 /* DRGameViewPushSegue.swift in Sources */,
 				3A3C267323F640BE00F7CF40 /* DRGameTurn.swift in Sources */,
 				3A02B704241D035300C6AD96 /* DRGameResultView.swift in Sources */,
