@@ -60,9 +60,6 @@ class DRGameViewController: UIViewController {
     // MARK CONSTANT
     private let PLAYER_TURN_LABEL = NSLocalizedString("DRGameTurnPlayer", comment: "")
     private let COMPUTER_TURN_LABEL = NSLocalizedString("DRGameTurnComputer", comment: "")
-    internal let PLAYER_WIN_RESULT_LABEL = NSLocalizedString("DRGameResultPlayerWin", comment: "")
-    internal let COMPUTER_WIN_RESULT_LABEL = NSLocalizedString("DRGameResultComputerWin", comment: "")
-    internal let DRAW_RESULT_LABEL = NSLocalizedString("DRGameResultDraw", comment: "")
     
     // MARK: IBOutlet Instance
     @IBOutlet weak var boardView: DRBoardView!
