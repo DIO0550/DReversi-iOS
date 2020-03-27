@@ -36,12 +36,12 @@ public class DRStoneView: UIView {
         didSet {
             let size = self.frame.width > self.frame.height ? self.frame.height : self.frame.width
             if (self.blackStoneView != nil) {
-                self.blackStoneView.center = CGPoint(x: self.bounds.midX, y: self.bounds.midY)
                 self.blackStoneView.frame.size = CGSize(width: size - self.stoneMargin * 2, height: size - self.stoneMargin * 2)
+                self.blackStoneView.center = CGPoint(x: self.bounds.midX, y: self.bounds.midY)
             }
             if (self.whiteStoneView != nil) {
-                self.whiteStoneView.center = CGPoint(x: self.bounds.midX, y: self.bounds.midY)
                 self.whiteStoneView.frame.size = CGSize(width: size - self.stoneMargin * 2, height: size - self.stoneMargin * 2)
+                self.whiteStoneView.center = CGPoint(x: self.bounds.midX, y: self.bounds.midY)
             }
         }
     }
