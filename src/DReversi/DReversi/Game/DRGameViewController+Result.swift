@@ -29,7 +29,7 @@ extension DRGameViewController {
     }
     
     @objc func backTitleButtonAction(_ sender: Any) {
-        self.performSegue(withIdentifier: "DRSegueGameView", sender: self)
+        self.performSegue(withIdentifier: "DRGameViewPopSegue", sender: self)
     }
     
     @objc func retryButtonAction(_ sender: Any) {
