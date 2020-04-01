@@ -149,9 +149,9 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7EO-j1-bhP" customClass="DRGhostButton" customModule="DReversiControl" customModuleProvider="target">
-                    <rect key="frame" x="20" y="311" width="120" height="34"/>
+                    <rect key="frame" x="20" y="311" width="130" height="34"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="120" id="eiJ-bo-YOi"/>
+                        <constraint firstAttribute="width" constant="130" id="eiJ-bo-YOi"/>
                     </constraints>
                     <state key="normal" title="タイトルに戻る">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
