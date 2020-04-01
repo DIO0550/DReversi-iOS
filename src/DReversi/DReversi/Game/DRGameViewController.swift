@@ -41,25 +41,30 @@ class DRGameViewController: UIViewController {
                 self.gameResultView.isHidden = false
             }
             
-            if self.turnLabel != nil {
-                switch self.gameTurn {
-                case .PLAYER:
-                    self.turnLabel.text = self.PLAYER_TURN_LABEL
-                case .COM:
-                    self.turnLabel.text = self.COMPUTER_TURN_LABEL
-                default:
-                    self.turnLabel.text = "終了"
-                }
+            if self.gameTurn.isTurnPlayer() {
+                let blackInfoColor = self.playerStone.isBlack() ? TURN_BACKGROUND_COLOR : NOT_TURN_BACKGROUND_COLOR
+                let whiteInfoColor = self.playerStone.isBlack() ? NOT_TURN_BACKGROUND_COLOR : TURN_BACKGROUND_COLOR
+                
+                self.blackStoneInfoView.backgroundColor = blackInfoColor
+                self.whiteStoneInfoView.backgroundColor = whiteInfoColor
+            } else {
+                let blackInfoColor = self.comStone.isBlack() ? TURN_BACKGROUND_COLOR : NOT_TURN_BACKGROUND_COLOR
+                let whiteInfoColor = self.comStone.isBlack() ? NOT_TURN_BACKGROUND_COLOR : TURN_BACKGROUND_COLOR
+                
+                self.blackStoneInfoView.backgroundColor = blackInfoColor
+                self.whiteStoneInfoView.backgroundColor = whiteInfoColor
             }
         }
     }
     
     // MARK INTERNAL
     internal var gameManager: DRGameManager = DRGameManager()
+    internal let STONE_HOLDER_PLAYER = NSLocalizedString("DRGameStoneHolderPlayer", comment: "")
+    internal let STONE_HOLDER_COM = NSLocalizedString("DRGameStoneHolderComputer", comment: "")
     
     // MARK CONSTANT
-    private let PLAYER_TURN_LABEL = NSLocalizedString("DRGameTurnPlayer", comment: "")
-    private let COMPUTER_TURN_LABEL = NSLocalizedString("DRGameTurnComputer", comment: "")
+    private let TURN_BACKGROUND_COLOR = UIColor(named: "DRGameTurnBackgroundColor", in: Bundle.main, compatibleWith: nil)
+    private let NOT_TURN_BACKGROUND_COLOR = UIColor(named: "DRGameNotTurnBackgroundColor", in: Bundle.main, compatibleWith: nil)
     
     // MARK: IBOutlet Instance
     @IBOutlet weak var boardView: DRBoardView!
@@ -67,8 +72,12 @@ class DRGameViewController: UIViewController {
     @IBOutlet weak var blackStoneCountLabel: UILabel!
     @IBOutlet weak var whiteStoneCountLabel: UILabel!
     @IBOutlet weak var settingMenuView: DRSettingMenuView!
-    @IBOutlet weak var turnLabel: UILabel!
     @IBOutlet weak var gameResultView: DRGameResultView!
+    @IBOutlet weak var blackStoneInfoView: UIView!
+    @IBOutlet weak var whiteStoneInfoView: UIView!
+    @IBOutlet weak var blackStoneHolderLabel: UILabel!
+    @IBOutlet weak var whiteStoneHolderLabel: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
