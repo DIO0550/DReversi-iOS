@@ -21,7 +21,7 @@ public enum DRStoneType {
         }
     }
     
-    func isBlack() -> Bool {
+    public func isBlack() -> Bool {
         return self == .BLACK_STONE
     }
 }

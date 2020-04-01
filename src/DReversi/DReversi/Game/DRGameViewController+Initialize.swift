@@ -21,6 +21,7 @@ extension DRGameViewController {
         self.gameResultView.isHidden = true
         self.initializeGameTurn()
         self.initializeStones()
+        self.initializeStoneHolderLabel()
         self.computerPutStoneLoop()
         self.settingMenuView.setupMenuPosition()
         self.computerPutStoneLoop()
@@ -46,5 +47,10 @@ extension DRGameViewController {
     
     func initializeGameTurn() {
         self.gameTurn = (self.playerStone == .BLACK_STONE) ? .PLAYER : .COM
+    }
+    
+    func initializeStoneHolderLabel() {
+        self.blackStoneHolderLabel.text = self.playerStone.isBlack() ? STONE_HOLDER_PLAYER : STONE_HOLDER_COM
+        self.whiteStoneHolderLabel.text = self.playerStone.isBlack() ? STONE_HOLDER_COM : STONE_HOLDER_PLAYER
     }
 }

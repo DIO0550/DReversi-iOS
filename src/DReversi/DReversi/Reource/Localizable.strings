@@ -8,9 +8,9 @@
 
 
 // MARK: Game
-/// ターン
-"DRGameTurnPlayer" = "Player";
-"DRGameTurnComputer" = "Computer";
+/// 石の所持者
+"DRGameStoneHolderPlayer" = "PLAYER";
+"DRGameStoneHolderComputer" = "COM";
 /// リザルト
 "DRGameResultPlayerWin" = "WIN";
 "DRGameResultComputerWin" = "LOSE";
