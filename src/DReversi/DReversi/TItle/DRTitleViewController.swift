@@ -10,6 +10,11 @@ import UIKit
 import DReversiUtil
 import DReversiControl
 
+enum DRTitleDisplayButtonType {
+    case LEVEL
+    case STONE
+}
+
 class DRTitleViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var levelLabel: UILabel!
@@ -22,6 +27,21 @@ class DRTitleViewController: UIViewController {
     @IBOutlet weak var whiteButton: UIButton!
     @IBOutlet weak var backButton: UIButton!
     
+    @IBOutlet weak var levelButtonView: UIView!
+    @IBOutlet weak var stoneButtonView: UIView!
+    
+    var displayButtonType: DRTitleDisplayButtonType = .LEVEL {
+        didSet {
+            switch self.displayButtonType {
+            case .LEVEL:
+                self.levelButtonView.isUserInteractionEnabled = true
+                self.stoneButtonView.isUserInteractionEnabled = false
+            case .STONE:
+                self.levelButtonView.isUserInteractionEnabled = false
+                self.stoneButtonView.isUserInteractionEnabled = true
+            }
+        }
+    }
     
     var isAnimating: Bool = false
     private var gameLevel: DReversiUtilConst.GameLevel = .NORMAL
@@ -51,9 +71,12 @@ class DRTitleViewController: UIViewController {
         }
         
         self.levelControlFadeOutAnimation()
+        self.displayButtonType = .STONE
     }
+    
     @IBAction func touchBackButton(_ sender: Any) {
         self.stoneControlFadeOutAnimation()
+        self.displayButtonType = .LEVEL
     }
     
     @IBAction func touchStoneButton(_ sender: Any) {

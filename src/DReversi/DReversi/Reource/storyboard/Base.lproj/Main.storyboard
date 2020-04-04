@@ -51,150 +51,174 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yTi-ay-a5x">
                                 <rect key="frame" x="450" y="20" width="386" height="353"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="LEVEL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Q6-Un-6Ff">
-                                        <rect key="frame" x="40" y="60" width="306" height="55"/>
-                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="35"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="byM-1a-wGG">
-                                        <rect key="frame" x="40" y="119" width="306" height="58"/>
-                                        <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="35"/>
-                                        <state key="normal" title="EASY">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="10"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="touchLevelButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vFq-0v-c7S"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ozx-6w-ojM">
-                                        <rect key="frame" x="40" y="187" width="306" height="58"/>
-                                        <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="35"/>
-                                        <state key="normal" title="NORMAL">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="10"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="touchLevelButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ksg-oA-mpv"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0yx-Fb-tQu">
-                                        <rect key="frame" x="40" y="255" width="306" height="58"/>
-                                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="35"/>
-                                        <state key="normal" title="HARD">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="10"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="touchLevelButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lf3-Dr-Cgr"/>
-                                        </connections>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="STONE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DQx-gx-kD9">
-                                        <rect key="frame" x="40" y="63.333333333333329" width="306" height="45.666666666666671"/>
-                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="35"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qq6-Hj-0fY">
-                                        <rect key="frame" x="40" y="119" width="306" height="58"/>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="35"/>
-                                        <state key="normal" title="BLACK">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="10"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="touchStoneButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="u7p-1l-m2k"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pez-je-tI0">
-                                        <rect key="frame" x="40" y="187" width="306" height="58"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="35"/>
-                                        <state key="normal" title="WHITE">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="10"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="touchStoneButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TEx-hz-XFC"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ido-Ms-tS8" customClass="DRGhostButton" customModule="DReversiControl">
-                                        <rect key="frame" x="40" y="255" width="306" height="58"/>
-                                        <color key="backgroundColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="35"/>
-                                        <state key="normal" title="戻る">
-                                            <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="10"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="color">
-                                                <color key="value" red="0.0" green="0.43015393610000002" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="touchBackButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Gj-xj-9fF"/>
-                                        </connections>
-                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aWc-Ig-YXh">
+                                        <rect key="frame" x="20" y="46.666666666666686" width="346" height="260"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LEVEL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Q6-Un-6Ff">
+                                                <rect key="frame" x="0.0" y="8" width="346" height="46"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="46" id="uJr-5l-H2Z"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="35"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ozx-6w-ojM">
+                                                <rect key="frame" x="20" y="128" width="306" height="58"/>
+                                                <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="35"/>
+                                                <state key="normal" title="NORMAL">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="touchLevelButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P2X-Z7-RGH"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0yx-Fb-tQu">
+                                                <rect key="frame" x="20" y="194" width="306" height="58"/>
+                                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="35"/>
+                                                <state key="normal" title="HARD">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="touchLevelButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9bU-pM-2Pf"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="byM-1a-wGG">
+                                                <rect key="frame" x="20" y="61.999999999999986" width="306" height="58"/>
+                                                <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="35"/>
+                                                <state key="normal" title="EASY">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="touchLevelButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CWZ-lQ-CPb"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="Ozx-6w-ojM" secondAttribute="trailing" constant="20" id="HB1-z9-W3U"/>
+                                            <constraint firstItem="1Q6-Un-6Ff" firstAttribute="top" secondItem="aWc-Ig-YXh" secondAttribute="top" constant="8" id="Re0-mR-5lf"/>
+                                            <constraint firstItem="byM-1a-wGG" firstAttribute="top" secondItem="1Q6-Un-6Ff" secondAttribute="bottom" constant="8" id="VDl-da-MLM"/>
+                                            <constraint firstItem="1Q6-Un-6Ff" firstAttribute="leading" secondItem="aWc-Ig-YXh" secondAttribute="leading" id="VIk-cc-TMv"/>
+                                            <constraint firstItem="0yx-Fb-tQu" firstAttribute="leading" secondItem="aWc-Ig-YXh" secondAttribute="leading" constant="20" id="WWn-Uw-sOE"/>
+                                            <constraint firstAttribute="trailing" secondItem="byM-1a-wGG" secondAttribute="trailing" constant="20" id="XoR-s9-v7S"/>
+                                            <constraint firstItem="Ozx-6w-ojM" firstAttribute="top" secondItem="byM-1a-wGG" secondAttribute="bottom" constant="8" id="Zl4-oo-ka9"/>
+                                            <constraint firstItem="0yx-Fb-tQu" firstAttribute="top" secondItem="Ozx-6w-ojM" secondAttribute="bottom" constant="8" id="cdZ-Ef-ycH"/>
+                                            <constraint firstItem="byM-1a-wGG" firstAttribute="leading" secondItem="aWc-Ig-YXh" secondAttribute="leading" constant="20" id="iXY-jF-G5q"/>
+                                            <constraint firstAttribute="trailing" secondItem="1Q6-Un-6Ff" secondAttribute="trailing" id="j9p-mw-Z74"/>
+                                            <constraint firstItem="Ozx-6w-ojM" firstAttribute="leading" secondItem="aWc-Ig-YXh" secondAttribute="leading" constant="20" id="jV1-yu-a6L"/>
+                                            <constraint firstAttribute="trailing" secondItem="0yx-Fb-tQu" secondAttribute="trailing" constant="20" id="rza-KT-eTC"/>
+                                            <constraint firstAttribute="bottom" secondItem="0yx-Fb-tQu" secondAttribute="bottom" constant="8" id="x8i-vZ-OLe"/>
+                                        </constraints>
+                                    </view>
+                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rqR-dU-CiL">
+                                        <rect key="frame" x="20" y="54.666666666666686" width="346" height="244"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="STONE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DQx-gx-kD9">
+                                                <rect key="frame" x="0.0" y="0.0" width="346" height="46"/>
+                                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="35"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qq6-Hj-0fY">
+                                                <rect key="frame" x="20" y="53.999999999999986" width="306" height="58"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="35"/>
+                                                <state key="normal" title="BLACK">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="touchStoneButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="u7p-1l-m2k"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ido-Ms-tS8" customClass="DRGhostButton" customModule="DReversiControl">
+                                                <rect key="frame" x="20" y="186" width="306" height="58"/>
+                                                <color key="backgroundColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="35"/>
+                                                <state key="normal" title="戻る">
+                                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                        <color key="value" red="0.0" green="0.43015393610000002" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="touchBackButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Gj-xj-9fF"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pez-je-tI0">
+                                                <rect key="frame" x="20" y="120" width="306" height="58"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="35"/>
+                                                <state key="normal" title="WHITE">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="touchStoneButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TEx-hz-XFC"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="DQx-gx-kD9" firstAttribute="leading" secondItem="rqR-dU-CiL" secondAttribute="leading" id="2NM-no-Nt2"/>
+                                            <constraint firstItem="Pez-je-tI0" firstAttribute="top" secondItem="Qq6-Hj-0fY" secondAttribute="bottom" constant="8" id="F3A-gr-oW3"/>
+                                            <constraint firstItem="ido-Ms-tS8" firstAttribute="top" secondItem="Pez-je-tI0" secondAttribute="bottom" constant="8" id="Ir6-9z-fpJ"/>
+                                            <constraint firstItem="Qq6-Hj-0fY" firstAttribute="leading" secondItem="rqR-dU-CiL" secondAttribute="leading" constant="20" id="KTR-tL-aRm"/>
+                                            <constraint firstAttribute="bottom" secondItem="ido-Ms-tS8" secondAttribute="bottom" id="RzY-Nh-Gnl"/>
+                                            <constraint firstAttribute="trailing" secondItem="Qq6-Hj-0fY" secondAttribute="trailing" constant="20" id="SEm-Iq-6Cg"/>
+                                            <constraint firstItem="ido-Ms-tS8" firstAttribute="leading" secondItem="rqR-dU-CiL" secondAttribute="leading" constant="20" id="X0A-2a-gPa"/>
+                                            <constraint firstAttribute="trailing" secondItem="DQx-gx-kD9" secondAttribute="trailing" id="dcm-h7-SEZ"/>
+                                            <constraint firstItem="DQx-gx-kD9" firstAttribute="top" secondItem="rqR-dU-CiL" secondAttribute="top" id="fcP-Sg-ojg"/>
+                                            <constraint firstAttribute="trailing" secondItem="Pez-je-tI0" secondAttribute="trailing" constant="20" id="fe4-r5-Ri8"/>
+                                            <constraint firstItem="Qq6-Hj-0fY" firstAttribute="top" secondItem="DQx-gx-kD9" secondAttribute="bottom" constant="8" id="i8U-ef-lTd"/>
+                                            <constraint firstAttribute="trailing" secondItem="ido-Ms-tS8" secondAttribute="trailing" constant="20" id="rDr-Zx-ILL"/>
+                                            <constraint firstItem="Pez-je-tI0" firstAttribute="leading" secondItem="rqR-dU-CiL" secondAttribute="leading" constant="20" id="rhv-gm-02B"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="ido-Ms-tS8" secondAttribute="trailing" constant="40" id="1mU-4a-IAw"/>
-                                    <constraint firstItem="Ozx-6w-ojM" firstAttribute="leading" secondItem="yTi-ay-a5x" secondAttribute="leading" constant="40" id="1wM-CO-SHj"/>
-                                    <constraint firstItem="1Q6-Un-6Ff" firstAttribute="leading" secondItem="yTi-ay-a5x" secondAttribute="leading" constant="40" id="3AK-Aw-V3Q"/>
-                                    <constraint firstAttribute="trailing" secondItem="Qq6-Hj-0fY" secondAttribute="trailing" constant="40" id="3gk-At-y2a"/>
-                                    <constraint firstItem="ido-Ms-tS8" firstAttribute="leading" secondItem="yTi-ay-a5x" secondAttribute="leading" constant="40" id="56h-ZC-zxY"/>
-                                    <constraint firstItem="0yx-Fb-tQu" firstAttribute="top" secondItem="Pez-je-tI0" secondAttribute="bottom" constant="10" id="7xi-Xs-SQu"/>
-                                    <constraint firstItem="byM-1a-wGG" firstAttribute="leading" secondItem="yTi-ay-a5x" secondAttribute="leading" constant="40" id="8gN-kt-0QL"/>
-                                    <constraint firstItem="byM-1a-wGG" firstAttribute="top" secondItem="1Q6-Un-6Ff" secondAttribute="bottom" constant="20" id="93D-Qa-dg8"/>
-                                    <constraint firstAttribute="trailing" secondItem="byM-1a-wGG" secondAttribute="trailing" constant="40" id="D7t-b0-myV"/>
-                                    <constraint firstItem="0yx-Fb-tQu" firstAttribute="leading" secondItem="yTi-ay-a5x" secondAttribute="leading" constant="40" id="EXz-Uv-2fZ"/>
-                                    <constraint firstItem="0yx-Fb-tQu" firstAttribute="top" secondItem="Ozx-6w-ojM" secondAttribute="bottom" constant="10" id="J4t-g9-jG4"/>
-                                    <constraint firstItem="byM-1a-wGG" firstAttribute="top" secondItem="DQx-gx-kD9" secondAttribute="bottom" constant="10" id="SG3-ly-ldS"/>
-                                    <constraint firstItem="Ozx-6w-ojM" firstAttribute="top" secondItem="Qq6-Hj-0fY" secondAttribute="bottom" constant="10" id="Uub-Ro-1iF"/>
-                                    <constraint firstAttribute="trailing" secondItem="1Q6-Un-6Ff" secondAttribute="trailing" constant="40" id="Vo2-wv-1Cu"/>
-                                    <constraint firstAttribute="bottom" secondItem="0yx-Fb-tQu" secondAttribute="bottom" constant="40" id="aNH-F9-qYq"/>
-                                    <constraint firstItem="Qq6-Hj-0fY" firstAttribute="leading" secondItem="yTi-ay-a5x" secondAttribute="leading" constant="40" id="c4P-q6-uiS"/>
-                                    <constraint firstAttribute="trailing" secondItem="DQx-gx-kD9" secondAttribute="trailing" constant="40" id="fxR-Cc-9Qn"/>
-                                    <constraint firstAttribute="trailing" secondItem="Ozx-6w-ojM" secondAttribute="trailing" constant="40" id="iZ0-AO-rHl"/>
-                                    <constraint firstAttribute="bottom" secondItem="ido-Ms-tS8" secondAttribute="bottom" constant="40" id="jFo-1X-t4y"/>
-                                    <constraint firstItem="DQx-gx-kD9" firstAttribute="leading" secondItem="yTi-ay-a5x" secondAttribute="leading" constant="40" id="jX7-U2-ovZ"/>
-                                    <constraint firstAttribute="trailing" secondItem="Pez-je-tI0" secondAttribute="trailing" constant="40" id="lDc-vg-QLe"/>
-                                    <constraint firstItem="ido-Ms-tS8" firstAttribute="top" secondItem="Ozx-6w-ojM" secondAttribute="bottom" constant="10" id="mMW-qa-NCi"/>
-                                    <constraint firstItem="Ozx-6w-ojM" firstAttribute="top" secondItem="byM-1a-wGG" secondAttribute="bottom" constant="10" id="qE9-NI-XYn"/>
-                                    <constraint firstAttribute="trailing" secondItem="0yx-Fb-tQu" secondAttribute="trailing" constant="40" id="xDz-w1-AbK"/>
-                                    <constraint firstItem="Pez-je-tI0" firstAttribute="leading" secondItem="yTi-ay-a5x" secondAttribute="leading" constant="40" id="yo2-1l-EFq"/>
+                                    <constraint firstAttribute="trailing" secondItem="aWc-Ig-YXh" secondAttribute="trailing" constant="20" id="CIN-j1-2PG"/>
+                                    <constraint firstItem="aWc-Ig-YXh" firstAttribute="leading" secondItem="yTi-ay-a5x" secondAttribute="leading" constant="20" id="GuW-2n-9K4"/>
+                                    <constraint firstAttribute="trailing" secondItem="rqR-dU-CiL" secondAttribute="trailing" constant="20" id="ffn-St-mM4"/>
+                                    <constraint firstItem="rqR-dU-CiL" firstAttribute="leading" secondItem="yTi-ay-a5x" secondAttribute="leading" constant="20" id="jmf-U7-8c6"/>
+                                    <constraint firstItem="aWc-Ig-YXh" firstAttribute="centerY" secondItem="yTi-ay-a5x" secondAttribute="centerY" id="lNF-jg-UZZ"/>
+                                    <constraint firstItem="rqR-dU-CiL" firstAttribute="centerY" secondItem="yTi-ay-a5x" secondAttribute="centerY" id="u4L-CE-tBR"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -217,8 +241,10 @@
                         <outlet property="blackButton" destination="Qq6-Hj-0fY" id="WkT-r1-XvK"/>
                         <outlet property="easyButton" destination="byM-1a-wGG" id="hP3-Mg-kJU"/>
                         <outlet property="hardButton" destination="0yx-Fb-tQu" id="IEO-4d-eKR"/>
+                        <outlet property="levelButtonView" destination="aWc-Ig-YXh" id="acJ-ML-T0s"/>
                         <outlet property="levelLabel" destination="1Q6-Un-6Ff" id="rra-ev-ezj"/>
                         <outlet property="normalButton" destination="Ozx-6w-ojM" id="MAP-M0-bHG"/>
+                        <outlet property="stoneButtonView" destination="rqR-dU-CiL" id="oIG-0r-YYi"/>
                         <outlet property="stoneLabel" destination="DQx-gx-kD9" id="qR8-cr-4Uw"/>
                         <outlet property="titleLabel" destination="tVt-bZ-U0c" id="5re-bq-vZq"/>
                         <outlet property="whiteButton" destination="Pez-je-tI0" id="3qc-g2-xXP"/>
@@ -227,7 +253,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131.91964285714286" y="137.68115942028987"/>
+            <point key="canvasLocation" x="-783" y="93"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="R7z-DR-luS">
@@ -449,7 +475,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PSS-Dc-LOD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="tAL-Kf-Qum" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="132" y="1212"/>
+            <point key="canvasLocation" x="-783" y="1075"/>
         </scene>
     </scenes>
 </document>
