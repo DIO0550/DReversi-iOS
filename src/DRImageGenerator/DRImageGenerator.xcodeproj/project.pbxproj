@@ -8,19 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		3A675ED32439ADAE00B55373 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A675ED22439ADAE00B55373 /* AppDelegate.swift */; };
-		3A675ED52439ADAE00B55373 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A675ED42439ADAE00B55373 /* ViewController.swift */; };
 		3A675ED72439ADB000B55373 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A675ED62439ADB000B55373 /* Assets.xcassets */; };
 		3A675EDA2439ADB000B55373 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A675ED82439ADB000B55373 /* Main.storyboard */; };
+		3A675EE52439AF4900B55373 /* DRImageGeneratorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A675EE42439AF4900B55373 /* DRImageGeneratorViewController.swift */; };
+		3A675EE92439AFC300B55373 /* DRImageGeneratorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A675EE82439AFC300B55373 /* DRImageGeneratorView.swift */; };
+		3A675EEB2439AFF100B55373 /* DRImageGeneratorBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A675EEA2439AFF100B55373 /* DRImageGeneratorBoardView.swift */; };
+		3A675EED2439B16D00B55373 /* DRImageGeneratorStoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A675EEC2439B16D00B55373 /* DRImageGeneratorStoneView.swift */; };
+		3A675EEF2439B18300B55373 /* DRImageGeneratorCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A675EEE2439B18300B55373 /* DRImageGeneratorCircleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3A675ECF2439ADAE00B55373 /* DRImageGenerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DRImageGenerator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A675ED22439ADAE00B55373 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3A675ED42439ADAE00B55373 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3A675ED62439ADB000B55373 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A675ED92439ADB000B55373 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3A675EDB2439ADB000B55373 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A675EDC2439ADB000B55373 /* DRImageGenerator.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DRImageGenerator.entitlements; sourceTree = "<group>"; };
+		3A675EE42439AF4900B55373 /* DRImageGeneratorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DRImageGeneratorViewController.swift; sourceTree = "<group>"; };
+		3A675EE82439AFC300B55373 /* DRImageGeneratorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DRImageGeneratorView.swift; sourceTree = "<group>"; };
+		3A675EEA2439AFF100B55373 /* DRImageGeneratorBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DRImageGeneratorBoardView.swift; sourceTree = "<group>"; };
+		3A675EEC2439B16D00B55373 /* DRImageGeneratorStoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DRImageGeneratorStoneView.swift; sourceTree = "<group>"; };
+		3A675EEE2439B18300B55373 /* DRImageGeneratorCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DRImageGeneratorCircleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,13 +62,33 @@
 			isa = PBXGroup;
 			children = (
 				3A675ED22439ADAE00B55373 /* AppDelegate.swift */,
-				3A675ED42439ADAE00B55373 /* ViewController.swift */,
+				3A675EE62439AF9300B55373 /* View */,
+				3A675EE22439AF0E00B55373 /* ViewController */,
 				3A675ED62439ADB000B55373 /* Assets.xcassets */,
 				3A675ED82439ADB000B55373 /* Main.storyboard */,
 				3A675EDB2439ADB000B55373 /* Info.plist */,
 				3A675EDC2439ADB000B55373 /* DRImageGenerator.entitlements */,
 			);
 			path = DRImageGenerator;
+			sourceTree = "<group>";
+		};
+		3A675EE22439AF0E00B55373 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3A675EE42439AF4900B55373 /* DRImageGeneratorViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		3A675EE62439AF9300B55373 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3A675EE82439AFC300B55373 /* DRImageGeneratorView.swift */,
+				3A675EEA2439AFF100B55373 /* DRImageGeneratorBoardView.swift */,
+				3A675EEC2439B16D00B55373 /* DRImageGeneratorStoneView.swift */,
+				3A675EEE2439B18300B55373 /* DRImageGeneratorCircleView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -133,8 +161,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A675ED52439ADAE00B55373 /* ViewController.swift in Sources */,
+				3A675EE52439AF4900B55373 /* DRImageGeneratorViewController.swift in Sources */,
+				3A675EEB2439AFF100B55373 /* DRImageGeneratorBoardView.swift in Sources */,
+				3A675EEF2439B18300B55373 /* DRImageGeneratorCircleView.swift in Sources */,
 				3A675ED32439ADAE00B55373 /* AppDelegate.swift in Sources */,
+				3A675EED2439B16D00B55373 /* DRImageGeneratorStoneView.swift in Sources */,
+				3A675EE92439AFC300B55373 /* DRImageGeneratorView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

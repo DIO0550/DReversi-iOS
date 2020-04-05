@@ -702,13 +702,26 @@
             </objects>
             <point key="canvasLocation" x="75" y="250"/>
         </scene>
-        <!--View Controller-->
+        <!--Image Generator View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="DRImageGenerator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="XfG-lQ-9wD" customClass="DRImageGeneratorViewController" customModule="DRImageGenerator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="800" height="800"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="XLU-Hh-gmq" customClass="DRImageGeneratorBoardView" customModule="DRImageGenerator" customModuleProvider="target">
+                                <rect key="frame" x="20" y="200" width="400" height="400"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="2jG-MX-KGi"/>
+                                    <constraint firstAttribute="width" constant="400" id="wNZ-AP-4Dn"/>
+                                </constraints>
+                            </customView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="XLU-Hh-gmq" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="5HP-re-UQW"/>
+                            <constraint firstItem="XLU-Hh-gmq" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" id="P8B-DC-Fzb"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
