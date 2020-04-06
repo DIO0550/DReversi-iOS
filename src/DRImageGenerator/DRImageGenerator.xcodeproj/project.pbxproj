@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A49E69E243B56700032EB63 /* DRStonePosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A49E69D243B56700032EB63 /* DRStonePosition.swift */; };
 		3A675ED32439ADAE00B55373 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A675ED22439ADAE00B55373 /* AppDelegate.swift */; };
 		3A675ED72439ADB000B55373 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A675ED62439ADB000B55373 /* Assets.xcassets */; };
 		3A675EDA2439ADB000B55373 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A675ED82439ADB000B55373 /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3A49E69D243B56700032EB63 /* DRStonePosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DRStonePosition.swift; sourceTree = "<group>"; };
 		3A675ECF2439ADAE00B55373 /* DRImageGenerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DRImageGenerator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A675ED22439ADAE00B55373 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3A675ED62439ADB000B55373 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				3A675ED22439ADAE00B55373 /* AppDelegate.swift */,
+				3A49E69D243B56700032EB63 /* DRStonePosition.swift */,
 				3A675EE62439AF9300B55373 /* View */,
 				3A675EE22439AF0E00B55373 /* ViewController */,
 				3A675ED62439ADB000B55373 /* Assets.xcassets */,
@@ -165,6 +168,7 @@
 				3A675EEB2439AFF100B55373 /* DRImageGeneratorBoardView.swift in Sources */,
 				3A675EEF2439B18300B55373 /* DRImageGeneratorCircleView.swift in Sources */,
 				3A675ED32439ADAE00B55373 /* AppDelegate.swift in Sources */,
+				3A49E69E243B56700032EB63 /* DRStonePosition.swift in Sources */,
 				3A675EED2439B16D00B55373 /* DRImageGeneratorStoneView.swift in Sources */,
 				3A675EE92439AFC300B55373 /* DRImageGeneratorView.swift in Sources */,
 			);

@@ -687,9 +687,10 @@
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
                     <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
-                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="800" height="800"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+                        <value key="minSize" type="size" width="800" height="800"/>
+                        <value key="maxSize" type="size" width="800" height="800"/>
                         <connections>
                             <outlet property="delegate" destination="B8D-0N-5wS" id="98r-iN-zZc"/>
                         </connections>
@@ -711,18 +712,30 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="XLU-Hh-gmq" customClass="DRImageGeneratorBoardView" customModule="DRImageGenerator" customModuleProvider="target">
-                                <rect key="frame" x="20" y="200" width="400" height="400"/>
+                                <rect key="frame" x="100" y="100" width="600" height="600"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="400" id="2jG-MX-KGi"/>
-                                    <constraint firstAttribute="width" constant="400" id="wNZ-AP-4Dn"/>
+                                    <constraint firstAttribute="height" constant="600" id="2jG-MX-KGi"/>
+                                    <constraint firstAttribute="width" constant="600" id="wNZ-AP-4Dn"/>
                                 </constraints>
                             </customView>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="CSj-8q-IVp">
+                                <rect key="frame" x="368" y="13" width="65" height="32"/>
+                                <buttonCell key="cell" type="push" title="保存" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ZQz-4g-sna">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="XLU-Hh-gmq" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="5HP-re-UQW"/>
                             <constraint firstItem="XLU-Hh-gmq" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" id="P8B-DC-Fzb"/>
+                            <constraint firstAttribute="bottom" secondItem="CSj-8q-IVp" secondAttribute="bottom" constant="20" id="i6k-Wl-j1w"/>
+                            <constraint firstItem="XLU-Hh-gmq" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="jvj-AX-VwP"/>
+                            <constraint firstItem="CSj-8q-IVp" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="xLr-nj-MfW"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageGeneratorBoardView" destination="XLU-Hh-gmq" id="lkg-UG-UZM"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>

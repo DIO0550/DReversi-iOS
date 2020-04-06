@@ -11,17 +11,21 @@ import Cocoa
 class DRImageGeneratorBoardView: NSView {
     
     // 背景色
-    private static let BgColor: NSColor = .black
+    private static let BgColor: NSColor = .brown
     // 盤面色
     private static let BoardColor: NSColor = .systemGreen
     // マージン
-    private static let BoardMargin: CGFloat = 2.0
+    private static let BoardMargin: CGFloat = 16.0
     // 線の太さ
-    private static let BlockBorderWidth = 8.0
-    private static let BlockCount = 2
+    private static let BlockBorderWidth = 4.0
+    public static let BlockCount = 4
     
     private var blockSize: CGFloat = 0
     private var boardRect: CGRect = CGRect.zero
+    
+    override public var isFlipped: Bool {
+        return true
+    }
     
     override public func updateConstraints() {
         super.updateConstraints()
@@ -101,19 +105,27 @@ class DRImageGeneratorBoardView: NSView {
         context.restoreGraphicsState()
     }
     
+    public func stonePositionRect(_ stonePosition: DRStonePosition) -> CGRect {
+        let x = self.boardRect.origin.x + self.blockSize * CGFloat(stonePosition.column)
+        let y = self.boardRect.origin.y + self.blockSize * CGFloat(stonePosition.row)
+        
+        return CGRect(x: x, y: y, width: self.blockSize, height: self.blockSize)
+    }
+    
 }
 
 extension DRImageGeneratorBoardView {
     
     private func updateStoneViewFrame() {
-//        for subView in self.subviews {
-//            if (type(of: subView) !== DRImageGeneratorStoneView.self) {
-//                continue
-//            }
-//
-//            let stoneView = subView as! DRImageGeneratorStoneView
-//
-//            stoneView.frame = stoneRect
-//        }
+        for subView in self.subviews {
+            if (type(of: subView) !== DRImageGeneratorStoneView.self) {
+                continue
+            }
+
+            let stoneView = subView as! DRImageGeneratorStoneView
+            let stoneRect = self.stonePositionRect(stoneView.stonePosition!)
+            
+            stoneView.frame = stoneRect
+        }
     }
 }
