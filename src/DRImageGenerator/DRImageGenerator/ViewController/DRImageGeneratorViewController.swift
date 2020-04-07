@@ -30,6 +30,19 @@ class DRImageGeneratorViewController: NSViewController {
         
         self.imageGeneratorBoardView.addSubview(stoneView)
     }
+    @IBAction func saveImage(_ sender: Any) {
+        let image: NSImage = NSImage(size: imageGeneratorBoardView.bounds.size)
+        image.lockFocus()
+        let ctx = NSGraphicsContext.current
+        self.imageGeneratorBoardView.layer?.render(in: ctx!.cgContext)
+        image.unlockFocus()
+        let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
+        do {
+            try image.tiffRepresentation!.write(to: NSURL.init(fileURLWithPath:(documentsPath + "/icon.png")) as URL)
+        } catch {
+        
+        }
+    }
     
 }
 
