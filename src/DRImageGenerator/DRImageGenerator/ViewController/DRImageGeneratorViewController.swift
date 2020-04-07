@@ -32,7 +32,7 @@ class DRImageGeneratorViewController: NSViewController {
     }
     @IBAction func saveImage(_ sender: Any) {
         let image: NSImage = NSImage(size: imageGeneratorBoardView.bounds.size)
-        image.lockFocus()
+        image.lockFocusFlipped(true)
         let ctx = NSGraphicsContext.current
         self.imageGeneratorBoardView.layer?.render(in: ctx!.cgContext)
         image.unlockFocus()
