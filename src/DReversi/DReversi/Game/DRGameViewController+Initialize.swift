@@ -19,8 +19,8 @@ extension DRGameViewController {
     
     func gameStart() {
         self.gameResultView.isHidden = true
-        self.initializeGameTurn()
         self.initializeStones()
+        self.initializeGameTurn()
         self.initializeStoneHolderLabel()
         self.computerPutStoneLoop()
         self.settingMenuView.setupMenuPosition()
