@@ -14,17 +14,26 @@ public protocol DRBoardViewDelegate: class {
 }
 
 public class DRBoardView: UIView {
-    // 背景色
+    /// 背景色
     private static let BgColor: UIColor = .white
-    // 盤面色
+    /// 盤面色
     private static let BoardColor: UIColor = .systemGreen
-    // マージン
+    /// マージン
     private static let BoardMargin: CGFloat = 8.0
-    // 線の太さ
+    /// 線の太さ
     private static let BlockBorderWidth = 2.0
     
+    /// 1ブロックのサイズ
     private var blockSize: CGFloat = 0
+    /// ボードの矩形
     private var boardRect: CGRect = CGRect.zero
+    
+    /// 石の置ける場所
+    public var canPutStonePositons: [DRStonePosition] = [] {
+        didSet {
+            self.setNeedsDisplay()
+        }
+    }
     
     // 選択中のポジション
     public private(set) var selectStonePosition: DRStonePosition = DRStonePosition(column: -1, row: -1) {
@@ -65,6 +74,7 @@ public class DRBoardView: UIView {
         super.draw(rect)
         self.drawBackground(rect)
         self.drawBoard(rect)
+        self.drawCanPutStonePositionsBorder()
         self.drawSelectBorder()
     }
     
@@ -124,6 +134,19 @@ public class DRBoardView: UIView {
         UIColor.systemYellow.setStroke()
         bezierPath.lineWidth = 2.0
         bezierPath.strokeInside()
+        context.restoreGState()
+    }
+    
+    private func drawCanPutStonePositionsBorder() {
+        if self.canPutStonePositons.count <= 0 { return }
+        guard let context = UIGraphicsGetCurrentContext() else { return }
+        for stonePosition in self.canPutStonePositons {
+            let rect = self.stonePositionRect(stonePosition)
+            context.saveGState()
+            let bezierPath = UIBezierPath(rect: rect)
+            UIColor(named: "DRGameCanPutStonePositionFillColor", in: Bundle(for: type(of: self)), compatibleWith: nil)?.setFill()
+            bezierPath.fill()
+        }
         context.restoreGState()
     }
     

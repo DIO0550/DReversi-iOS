@@ -36,6 +36,7 @@ class DRGameViewController: UIViewController {
     private var gameAI: DRGameAIBase = DRGameAIEasy()
     var gameTurn: DRGameTurn = .PLAYER {
         didSet {
+            self.boardView.canPutStonePositons = [];
             if self.gameTurn.isGameEnd() {
                 self.updateResultMessage()
                 self.gameResultView.isHidden = false
@@ -44,7 +45,7 @@ class DRGameViewController: UIViewController {
             if self.gameTurn.isTurnPlayer() {
                 let blackInfoColor = self.playerStone.isBlack() ? TURN_BACKGROUND_COLOR : NOT_TURN_BACKGROUND_COLOR
                 let whiteInfoColor = self.playerStone.isBlack() ? NOT_TURN_BACKGROUND_COLOR : TURN_BACKGROUND_COLOR
-                
+                self.boardView.canPutStonePositons = self.gameManager.canPutStonePositions(stoneType: self.playerStone);
                 self.blackStoneInfoView.backgroundColor = blackInfoColor
                 self.whiteStoneInfoView.backgroundColor = whiteInfoColor
             } else {
